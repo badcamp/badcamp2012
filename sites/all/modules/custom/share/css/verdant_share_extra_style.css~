@@ -1,0 +1,93 @@
+
+/* This is specific to BAD Camp, and should be commented out or removed,
+ *  may provide ideas for quickly theming on a dark background
+ */   
+#below-title {
+	background: #eee;
+	padding: 6px 0px 6px 10px;
+	border-top: 4px solid #54B2EB;
+}
+#left  h2.block-title {
+	margin-top: 16px;
+	color: #54B2EB;
+}	
+.block-verdant_share #instructs {
+	color: #eee;
+	margin-top: -2px;
+}
+
+/*** Gmap
+ */
+.gmap-popup h2 {
+	font-size:  1.05em;
+	padding: 5px 5px 0 5px;
+}
+.gmap-popup {
+	background: #54B2EB;
+}
+.gmap-popup .field-field-ride-request {
+	font-size: 1.2em;
+	font-weight: bold;
+	border-bottom: 2px solid #54B2EB;
+}
+.gmap-popup .group-travel-times {
+	margin-top: -.2em;
+}
+.gmap-popup .location-locations-header,
+.gmap-popup .location-locations-wrapper {
+	display: none;
+}
+.gmap-popup .node-submitted {
+	display: none;
+}
+
+/* chart */
+.view-verdant-module-rideshare {
+	font-size: .9em;
+	display: block;
+	width: 440px; /* won't force table smaller */
+ }	
+.view-verdant-module-rideshare table {
+	margin-left: -10px;
+}
+/*table .views-table { /* ??? not kicking in
+	width: 150px;
+	background: red;
+}*/
+
+
+
+/*** This is from gmic2010, and not sure if it is implemented or not ****/
+/* needs lots of cleanup just to see what is being used and what isn't,
+ * after the first section */
+
+/*** tighten up block for form-entry for rideshare */
+#verdant_rideshare .node-form div.standard {
+	overflow: hidden;
+}
+#verdant_rideshare .node-form div.standard:hover {
+	overflow: visible;
+		/* this could be improved, clearer block look */
+}
+#verdant_rideshare .location .form-item label {
+	float: none;
+	  /* not inline in tight space */
+}
+#verdant_rideshare .location-current-coordinates-fieldset {
+	display: none;
+}
+
+
+/* removing latitude tools surprisingly difficult, other form changes
+ * done in module */
+#verdant_rideshare #gmap-auto2map-locpick_latitude0-wrapper,
+#verdant_rideshare div.description,
+#verdant_rideshare #gmap-auto2map-locpick_longitude0-wrapper {
+	  display: none; /* If you wish to supply your own latitude and longitude ... */
+}
+#gmap-auto1map-locpick_longitude0-wrapper,
+#gmap-auto1map-locpick_latitude0-wrapper {
+	display: none;
+}
+
+

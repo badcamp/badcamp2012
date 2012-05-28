@@ -1,0 +1,72 @@
+/*
+ * webfonts (Handled using the @fontyourface Module, which is installed. edit there!)
+ */
+
+/*
+ * Main
+ */
+body {
+ 	color: #000000;
+ 	font-size: 16px;
+	font-family: 'Dinot', Helvetica, sans-serif;
+	line-height: 145%;
+	margin: 0;
+	}
+
+p {
+	size: 15px;
+	font-family: 'Adelle', Georgia, serif;
+	}
+
+h1, h2, h3, h4, h5 {
+	font-weight: bold;
+	}
+
+h1 {
+	font-size: 36px;
+	}
+
+h2 {
+	font-size: 24px;
+	}
+
+h3 {
+	font-size: 16px;
+	line-height: 20px;	
+	}
+	
+h4 {
+	text-transform: uppercase;
+	font-size: 14px;
+	}
+
+/*
+ * Links
+ */
+a {
+ 	color: #54b2eb;
+	text-decoration: none;
+	font-weight: bold;
+	}
+
+a:visited {
+	color: #6699cc;
+}
+
+a:hover, a:focus {
+	color: #6699cc;
+	text-decoration: underline;
+}
+
+/*
+ * Blockquote
+ */
+blockquote {
+  font-family: 'Adelle'; Georgia, serif;
+  font-style: italic;
+  margin-left: 150px;
+  margin-right: 0;
+}
+blockquote p {
+  margin: 25px 0;
+}

@@ -1,0 +1,329 @@
+body.front #content #node-3 .node-content {
+  text-align: center;
+  height: 315px; 
+  padding-left: 440px;
+  padding-right: 36px;
+  padding-top: 46px;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+#block-menu-secondary-links ul.menu li.leaf a, 
+.view-sessions table tr td.views-field-ops a.flag {
+	font-size: 15px;
+	color: white;
+	padding: 4px 5px;
+	margin-bottom: 7px;
+	}
+	
+#block-views-slideshow-block_2 {
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	}
+	
+#tabs {
+	margin-bottom: 20px;
+	}
+	
+body.front #below-title {
+	margin-top: 30px;
+	position: relative;
+	}
+	
+.section-program-training #below-title, 
+#node-3 .node-content, 
+body.page-node .node-content, .view .node-teaser .node-content {
+	padding: 16px 16px 0 16px;
+	}
+	
+	
+#block-on_the_web-0 .on-the-web {
+	padding: 0 4px 0 0;
+	}
+	
+.footer-message {
+	padding: 8px;
+	}
+	
+body.front #block-menu-secondary-links {
+	position: absolute;
+	top: 197px;
+	left: 454px;
+	border: 0;
+	}
+	
+.node-teaser, div.panel-pane div.node-teaser {
+	border-bottom: 0px solid #E6E6E6;
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+	}
+	
+th, td {
+	padding: 10px 10px;
+	}
+	
+	
+	
+	
+	
+/* SESSION CALENDAR */
+	
+.session-calendar .flag-session-schedule a {
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0;
+    padding: 0 5px;
+    position: relative;
+    text-align: center;
+    width: 80px;
+	}
+.session-calendar .flag-session-schedule a:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    text-decoration: none;
+	}
+	
+	
+.session-calendar a.unflag-action {
+	color:red;
+	}
+	
+
+
+
+
+
+
+/* TABS */
+
+/* could cause trouble; look out */
+div#main div#content {
+	position: relative;
+}
+
+div#main div#content div#tabs {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+
+div#main div#content div#tabs ul.tabs {
+	display: block !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+div#main div#content div#tabs ul.tabs.primary {
+	margin: 0 0 -13px auto !important;
+	display: table !important;
+}
+div#main div#content div#tabs ul.tabs.secondary {
+	margin: 0 0 5px auto !important;
+	display: table !important;
+}
+
+#tabs ul.tabs.secondary li a {
+    border-radius: 10px  !important;
+}
+
+h1.page-title {
+    margin: 0;
+    padding: 26px 0 22px;
+}
+
+#tabs ul.tabs li a:link, ul.tabs li a:visited {
+    border: 0 solid #333333;
+    border-radius: 10px 10px 0 0;
+}
+
+div#main div#content div#tabs {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    top: 65px;
+}
+
+form#user-profile-form div.fieldset {
+    margin: 20px 0 10px;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
+ * Right column
+ */
+	
+#right {
+    float: right;
+    margin-left: 10px;
+    padding-top: 30px;
+    width: 200px;
+}	
+	
+div.view-attendees div.views-row {
+	padding: 0 0 19px 0;
+	margin: 0;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
+ * Navigation
+ */
+#dropdown a {
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  // border-bottom-color: #6ab4e8;
+  border-bottom-color: #55b2eb;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+#dropdown ul ul a {
+  font-size: 12px;
+}
+
+#dropdown #nice-menu-1 li.menu-21 a,
+#dropdown #nice-menu-1 li.menu-807 a,
+#dropdown #nice-menu-1 li.menu-808 a,
+#dropdown #nice-menu-1 li.menu-575 a,
+#dropdown #nice-menu-1 li.menu-690 a {
+  color: #ffffff;
+}
+
+#dropdown a:hover,
+#dropdown li.active a  {
+  border-bottom-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  color: #FFFFFF;
+}
+
+ul.nice-menu-down .menuparent a {
+  padding-right:0px;
+}
+
+ul.nice-menu li {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #FFFFFF;
+}
+
+ul.nice-menu ul li {
+  // padding-left: 5px;
+  // padding-right: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+ul.nice-menu li.last,
+ul.nice-menu li ul li {
+  border-right: none;
+  }
+  
+ul.nice-menu ul li {
+  width:13.5em;
+}
+
+.nice-menu ul li a {
+  font-size: 13px;
+  color: #ffffff;
+  padding: 7px 7px 3px 7px;
+  margin-bottom: 9px;
+  background: -moz-linear-gradient(
+    top,
+    #55b2eb 0%,
+    #55b2eb);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#55b2eb),
+    to(#55b2eb));
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border: 0px solid #59616f;
+  -moz-box-shadow:
+    4px 4px 0px rgba(40,109,152,1),
+    inset 0px 0px 10px rgba(087,087,087,0);
+  -webkit-box-shadow:
+    4px 4px 0px rgba(40,109,152,1),
+    inset 0px 0px 10px rgba(087,087,087,0);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.4),
+    0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.nice-menu ul li a {
+  font-size: 13px;
+  color: #ffffff;
+  padding: 4px 15px 3px 15px;
+  margin-bottom: 0;
+  background-color: #55b2eb;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border: 0px solid #59616f;
+  -moz-box-shadow:
+    0px 0px 0px rgba(40,109,152,1),
+    inset 0px 0px 0px rgba(087,087,087,0);
+  -webkit-box-shadow:
+    0px 0px 0px rgba(40,109,152,1),
+    inset 0px 0px 0px rgba(087,087,087,0);
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.4),
+    0px 1px 0px rgba(255,255,255,0.3);
+}
+
+
+
+
+#nice-menu-1 li ul {
+  // background-color: #FFFFFF;
+  // margin-top: 10px;  
+  background-color: orange;
+  margin-top: 9px;  
+  padding-bottom: 0px;
+  padding-top: 0px;
+}

@@ -1,0 +1,31 @@
+name = Badasstheme
+description = for badcamp 2011
+core = 6.x
+engine = phptemplate
+base theme = clean
+
+stylesheets[all][] = css/nice_menus_default.css
+stylesheets[all][] = css/text.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/styles_richard.css
+
+scripts[] = js/script.js
+
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[blimp] = Blimp
+regions[dropdown] = Dropdown
+regions[footer] = Footer
+
+;features[] = logo
+;features[] = name
+;features[] = slogan
+;features[] = mission
+;features[] = node_user_picture
+;features[] = comment_user_picture
+;features[] = search
+;features[] = favicon
+;features[] = primary_links
+;features[] = secondary_links

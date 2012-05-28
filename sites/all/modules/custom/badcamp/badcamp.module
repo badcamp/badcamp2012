@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * Implements hook_link_alter().
+ * Hijacks read more link for event nodes that aren't really events.
+ */
+function badcamp_link_alter(&$links, $node, $comment = NULL) {
+  if ($node->nid == 51) {
+    $links['node_read_more']['href'] = 'program/training';
+  }
+  else if ($node->nid == 52) {
+    $links['node_read_more']['href'] = 'program/bofs';
+  }
+}
+
+/**
+ * Preprocess function for nodes.
+ * Hijacks node title link for event nodes that aren't really events.
+ */
+function badcamp_preprocess_node(&$vars) {
+  if ($vars['node']->nid == 51 && $vars['title']) {
+    $vars['title'] = l($vars['node']->title, 'program/training');
+  }
+  else if ($vars['node']->nid == 52 && $vars['title']) {
+    $vars['title'] = l($vars['node']->title, 'program/bofs');
+  }
+}
+
+/**
+ * Implements hook_block().
+ * Adds a block with the current number of event signups.
+ */
+function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
+  if ($op == 'list') {
+    $blocks['blimp'] = array(
+      'info' => t('Attendee Count'), 
+    );
+    // BLOCK_CACHE_PER_ROLE will be assumed for block 0.
+
+    return $blocks;
+  }
+  else if ($op == 'view') {
+    switch ($delta) {
+      case 'blimp':
+        // Your module will need to define this function to render the block.
+        $block = array(
+          'subject' => t('Current registered Attendees'), 
+          'content' => badcamp_display_block(),
+        );
+        break;
+    }
+    return $block;
+  }
+}
+
+function badcamp_display_block() {
+  $output = '<div class="badcamp-attendee-count">' . count(signup_get_signups(3)) . '</div>';
+  $output .= '<div class="badcamp-attending">attending</div>';
+  return $output;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function badcamp_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_register') {
+    // Hide signup button and enable by default.
+    $form['signup'][3]['#default_value'] = 1;
+    /*$form['signup'][3]['#access'] = FALSE;*/
+    
+    // Remove all the ugly help text.
+    unset($form['account']['name']['#description']);
+    unset($form['account']['mail']['#description']);
+    unset($form['signup']['#description']);
+    
+    // Unset unsightly fieldset labels
+    unset($form['account']['#title']);
+    unset($form['signup']['#title']);
+    unset($form['Personal information']['#title']);
+    
+    // Change the order of the elements.
+    $form['signup']['#weight'] = -10;
+  }
+}
