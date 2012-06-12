@@ -165,6 +165,7 @@ ini_set('session.use_cookies',      1);
 ini_set('session.use_only_cookies', 1);
 ini_set('session.use_trans_sid',    0);
 ini_set('url_rewriter.tags',        '');
+ini_set('error_reporting', 'E_ALL & ~E_NOTICE');
 
 /**
  * If you encounter a situation where users post a large amount of text, and
@@ -269,3 +270,8 @@ ini_set('url_rewriter.tags',        '');
  * threshold has elapsed since installation.
  */
 # $conf['pressflow_smart_start'] = TRUE;
+
+/* Added by Pantheon */
+if (file_exists('../pantheon6.settings.php')) {
+    include_once '../pantheon6.settings.php';
+}
