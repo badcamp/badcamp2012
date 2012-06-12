@@ -3,9 +3,9 @@ description = Change single list selection to multi-select or replace options wi
 dependencies[] = profile
 core = 6.x
 
-; Information added by drupal.org packaging script on 2011-07-18
-version = "6.x-2.0"
+; Information added by drupal.org packaging script on 2011-11-07
+version = "6.x-2.2"
 core = "6.x"
 project = "profile_checkboxes"
-datestamp = "1311013921"
+datestamp = "1320707735"
 

@@ -17,6 +17,9 @@ function profile_checkboxes_views_handlers() {
       'profile_checkboxes_handler_field_unserialize_selection' => array(
         'parent' => 'views_handler_field',
       ),
+    'profile_checkboxes_handler_filter_selection' => array(
+      'parent' => 'views_handler_filter_profile_selection',
+      ),
     ),
   );
 }
@@ -31,7 +34,8 @@ function profile_checkboxes_views_data_alter(&$data) {
       if ($delimiter = profile_checkboxes_field_delimiter($field->fid)) {
         $handle_name = 'profile_values_' . $field->name;
         $data[$handle_name]['value']['field']['delimiter'] = $delimiter;
-        $data[$handle_name]['value']['field']['handler'] = 'profile_checkboxes_handler_field_unserialize_selection'; 
+        $data[$handle_name]['value']['field']['handler'] = 'profile_checkboxes_handler_field_unserialize_selection';
+        $data[$handle_name]['value']['filter']['handler'] = 'profile_checkboxes_handler_filter_selection';
       }
     }
   }

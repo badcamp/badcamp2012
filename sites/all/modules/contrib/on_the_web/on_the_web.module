@@ -5,11 +5,11 @@
  */
 function on_the_web_block($op = 'list', $delta = 0, $edit = array()) {
   if ($op == 'list') {
-    $blocks[0] = array('info' => t('On The Web'),
+    $blocks['web'] = array('info' => t('On The Web'),
       'weight' => 0, 'status' => 1, 'region' => 'right');
     return $blocks;
   }
-  elseif ($op == 'configure' && $delta == 0) {
+  elseif ($op == 'configure' && $delta == 'web') {
     $services = on_the_web_get_services();
     foreach ($services as $service => $info){
       $form['services'][$service] = array(
@@ -25,11 +25,20 @@ function on_the_web_block($op = 'list', $delta = 0, $edit = array()) {
       '#default_value' => variable_get('on_the_web_feed', FALSE),
       '#description' => t('Checking this box his will add an RSS feed icon from this block.'),
     );
+    $form['size'] = array(
+      '#type' => 'select',
+      '#title' => t('Icon size'),
+      '#options' => array(
+        'sm' => t('Small: 32px square'),
+        'lg' => t('Large: 64px square'),
+      ),
+      '#default_value' => array(variable_get('on_the_web_size', 'sm')),
+    );
     $form['sitename'] = array(
       '#type' => 'checkbox',
       '#title' => t('Use Site Name in link titles'),
       '#default_value' => variable_get('on_the_web_sitename', TRUE),
-      '#description' => t('You would prefer to use your !sitename in the title for these links.', array('!sitename' => l(t('Site name'), 'admin/settings/site-information'))),
+      '#description' => t('Use the !sitename as the title for these links.', array('!sitename' => l(t('Site name'), 'admin/settings/site-information'))),
     );
     $form['target'] = array(
       '#type' => 'checkbox',
@@ -39,20 +48,21 @@ function on_the_web_block($op = 'list', $delta = 0, $edit = array()) {
     );
     return $form;
   }
-  else if ($op == 'save' && $delta == 0) {
+  else if ($op == 'save' && $delta == 'web') {
     $services = on_the_web_get_services();
     foreach ($services as $service => $info){
       variable_set('on_the_web_' . $service . '_page', $edit[$service]);
     }
     variable_set('on_the_web_feed', $edit['feed']); 
+    variable_set('on_the_web_size', $edit['size']); 
     variable_set('on_the_web_sitename', $edit['sitename']);
     variable_set('on_the_web_target', $edit['target']);
   }
   else if ($op == 'view') {
     switch($delta) {
-      case 0:
+      case 'web':
         $block = array('subject' => t('Find Us On...'),
-          'content' => on_the_web_display_block_0());
+          'content' => on_the_web_display_block_web());
         break;
     }
     return $block;
@@ -65,7 +75,7 @@ function on_the_web_block($op = 'list', $delta = 0, $edit = array()) {
  * @return 
  *    Content for block.
  */
-function on_the_web_display_block_0(){
+function on_the_web_display_block_web(){
   $module_path = drupal_get_path('module', 'on_the_web');
   
   if (!(variable_get('on_the_web_sitename', TRUE) && ($name = variable_get('site_name', FALSE)))){
@@ -79,7 +89,8 @@ function on_the_web_display_block_0(){
     $page = variable_get('on_the_web_'.$service.'_page', FALSE);
     if ($page){
       $title = t('Find !us on !service', array('!us' => $name, '!service' => $info['name']));
-      $image = theme('image', $module_path.'/images/logo-' . $service . '.png', $title, $title);
+      $size = variable_get('on_the_web_size', 'sm'); 
+      $image = theme('image', $module_path.'/images/' . $size . '/' . $service . '.png', $title, $title);
       $attributes  = array('title' => $title);
       if (variable_get('on_the_web_target', TRUE) == TRUE) {
         $attributes['target'] = '_blank';
@@ -93,7 +104,7 @@ function on_the_web_display_block_0(){
   if ($feed) {
     $link =  'rss.xml';
     $title = t('!us RSS feed', array('!us' => $name));
-    $image = theme('image', $module_path.'/images/logo-rss.png', $title, $title);
+    $image = theme('image', $module_path.'/images/' . $size . '/rss.png', $title, $title);
     $item = l($image, $link, array('attributes' => $attributes, 'html' => TRUE));
     $output .= theme('on_the_web_icon', $item);
   }
@@ -101,7 +112,6 @@ function on_the_web_display_block_0(){
   if (variable_get('on_the_web_target', TRUE) == TRUE) {
     $attributes['target'] = '_blank';
   }
-  $output .='<div class="attribution">' . t('Icons by !link', array('!link' => l('komodomedia.com', "http://komodomedia.com", array('attributes' => $attributes)))) . '</div>';
 
   return $output;
 }
@@ -116,13 +126,13 @@ function on_the_web_get_services(){
   return array(
     'twitter' => array('name' => 'Twitter'),
     'facebook' => array('name' => 'Facebook'),
-    'youtube' => array('name' => 'YouTube'),
-    'flickr' => array('name' => 'Flickr'),
-    'myspace' => array('name' => 'MySpace'),
     'linkedin' => array('name' => 'LinkedIn'),
-    'itunes' => array('name' => 'iTunes'),
     'delicious' => array('name' => 'Delicious'),
-    'friendfeed' => array('name' => 'FriendFeed')
+    'flickr' => array('name' => 'Flickr'),
+    'youtube' => array('name' => 'YouTube'),
+    'itunes' => array('name' => 'iTunes'),
+    'friendfeed' => array('name' => 'FriendFeed'),
+    'myspace' => array('name' => 'MySpace'),
     );
 }
 

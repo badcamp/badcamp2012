@@ -494,13 +494,12 @@ function fontyourface_settings_form_submit($form, &$form_state) {
 function fontyourface_preprocess_page(&$vars) {
 
   $fonts = fontyourface_font_registry();
+  $css = '';
 
   $destination = dirname($_SERVER['SCRIPT_FILENAME']) . '/' . file_directory_path() . '/fontyourface/font.css';
   $destination_directory = dirname($destination);
 
   if (file_check_directory($destination_directory,  FILE_CREATE_DIRECTORY)) {
-
-    $css = '';
 
     if (strpos($_GET['q'], 'admin/build/themes/fontyourface/edit/') === 0) {
 
@@ -824,6 +823,26 @@ function fontyourface_add_font_tags(&$font) {
   } // while
 
 } // fontyourface_add_tags_to_font
+
+/**
+ * Runs the font import of the given provider. Triggered
+ * from the UI interface and when a provider is enabled.
+ */
+function fontyourface_import_fonts($provider) {
+
+  if (module_exists($provider)) {
+
+    $info_function = $provider . '_fontyourface_info';
+    $provider_info = $info_function();
+
+    $import_function = $provider . '_fontyourface_import';
+    if ($import_function()) {
+      drupal_set_message(t('@provider import complete.', array('@provider' => $provider_info['name'])));
+    }
+
+  } // if
+
+} // fontyourface_import_fonts
 
 /**
  * Enables a single font.
