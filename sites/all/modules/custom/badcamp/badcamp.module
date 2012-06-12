@@ -1,32 +1,6 @@
 <?php
 
 /**
- * Implements hook_link_alter().
- * Hijacks read more link for event nodes that aren't really events.
- */
-function badcamp_link_alter(&$links, $node, $comment = NULL) {
-  if ($node->nid == 51) {
-    $links['node_read_more']['href'] = 'program/training';
-  }
-  else if ($node->nid == 52) {
-    $links['node_read_more']['href'] = 'program/bofs';
-  }
-}
-
-/**
- * Preprocess function for nodes.
- * Hijacks node title link for event nodes that aren't really events.
- */
-function badcamp_preprocess_node(&$vars) {
-  if ($vars['node']->nid == 51 && $vars['title']) {
-    $vars['title'] = l($vars['node']->title, 'program/training');
-  }
-  else if ($vars['node']->nid == 52 && $vars['title']) {
-    $vars['title'] = l($vars['node']->title, 'program/bofs');
-  }
-}
-
-/**
  * Implements hook_block().
  * Adds a block with the current number of event signups.
  */
@@ -53,8 +27,25 @@ function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
   }
 }
 
+/**
+ * Get's the signup count for a certain event, or the whole camp.
+ */
+function badcamp_get_signup_count($nid = NULL) {
+  if ($nid != NULL) {
+    $query = db_query("SELECT DISTINCT u.uid  FROM {signup_log} s_l INNER JOIN {users} u ON u.uid = s_l.uid WHERE s_l.nid = %d", $nid);
+  }
+  else {
+    $query = db_query("SELECT DISTINCT u.uid  FROM {signup_log} s_l INNER JOIN {users} u ON u.uid = s_l.uid");
+  }
+  $count = count(db_result($query));
+  return $count;
+}
+
+/**
+ * Block view callback.
+ */
 function badcamp_display_block() {
-  $output = '<div class="badcamp-attendee-count">' . count(signup_get_signups(3)) . '</div>';
+  $output = '<div class="badcamp-attendee-count">' . badcamp_get_signup_count() . '</div>';
   $output .= '<div class="badcamp-attending">attending</div>';
   return $output;
 }
@@ -82,3 +73,32 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['signup']['#weight'] = -10;
   }
 }
+
+
+/**
+ * Implements hook_link_alter().
+ * Hijacks read more link for event nodes that aren't really events.
+ 
+function badcamp_link_alter(&$links, $node, $comment = NULL) {
+  if ($node->nid == 51) {
+    $links['node_read_more']['href'] = 'program/training';
+  }
+  else if ($node->nid == 52) {
+    $links['node_read_more']['href'] = 'program/bofs';
+  }
+}
+*/
+
+/**
+ * Preprocess function for nodes.
+ * Hijacks node title link for event nodes that aren't really events.
+
+function badcamp_preprocess_node(&$vars) {
+  if ($vars['node']->nid == 51 && $vars['title']) {
+    $vars['title'] = l($vars['node']->title, 'program/training');
+  }
+  else if ($vars['node']->nid == 52 && $vars['title']) {
+    $vars['title'] = l($vars['node']->title, 'program/bofs');
+  }
+}
+ */
