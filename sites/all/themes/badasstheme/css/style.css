@@ -681,6 +681,9 @@ table thead a:visited {
 .view-events .node .node-title {
   padding-top: 21px;
 }
+.view-events #node-498 .node-title,
+.view-events #node-497 .node-title,
+.view-events #node-496 .node-title,
 .view-events #node-493 .node-title {
   background-image: url(../img/new.png);
   background-position: top right;
