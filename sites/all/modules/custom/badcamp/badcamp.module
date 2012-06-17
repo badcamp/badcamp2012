@@ -57,21 +57,57 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register') {
     // Hide signup button and enable by default.
     $form['signup'][3]['#default_value'] = 1;
-    /*$form['signup'][3]['#access'] = FALSE;*/
-    
+
     // Remove all the ugly help text.
     unset($form['account']['name']['#description']);
     unset($form['account']['mail']['#description']);
     unset($form['signup']['#description']);
-    
+
     // Unset unsightly fieldset labels
     unset($form['account']['#title']);
     unset($form['signup']['#title']);
     unset($form['Personal information']['#title']);
-    
+
     // Change the order of the elements.
     $form['signup']['#weight'] = -10;
+    $dates = array();
+    // Nodes are already loaded in signup_user.
+    foreach (element_children($form['signup']) as $nid) {
+      if (is_numeric($nid) && !empty($form['signup'][$nid]['#title']) && ($node = node_load($nid)) && (!empty($node->field_dates[0]['value']))) {
+        $dates[date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/Y')][$node->nid] = $form['signup'][$nid]['#title'];
+      }
+    }
+    if ($dates) {
+      ksort($dates);
+      $form['signup']['#access'] = FALSE;
+      $form['badcamp_signup'] = array(
+        '#type' => 'fieldset',
+        '#tree' => TRUE,
+        '#weight' => -40,
+      );
+      foreach ($dates as $date => $options) {
+        $form['badcamp_signup'][$date] = array(
+          '#type' => 'radios',
+          '#options' => array('' => t('None')) + $options,
+          '#title' => t('Events on @date', array('@date' => $date)),
+        );
+        $form['#validate'][] = 'badcamp_user_register_combine_signups';
+      }
+    }
   }
+}
+
+/**
+ * Validation form that sets the badcamp signup values to signup.
+ */
+function badcamp_user_register_combine_signups($form, &$form_state) {
+  $signups = array();
+  foreach ($form_state['values']['badcamp_signup'] as $date => $value) {
+    if ($value) {
+      $signups[$value] = 1;
+    }
+  }
+  form_set_value($form['signup'], $signups, $form_state);
 }
 
 
