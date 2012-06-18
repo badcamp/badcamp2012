@@ -1,5 +1,7 @@
 <?php
 
+define('BADCAMP_DATE_FORMAT', 'D, M jS');
+
 /**
  * Implements hook_block().
  * Adds a block with the current number of event signups.
@@ -78,28 +80,32 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     // Change the order of the elements.
     $form['signup']['#weight'] = -10;
     $dates = array();
+    $dates_formated = array();
     // Nodes are already loaded in signup_user.
     foreach (element_children($form['signup']) as $nid) {
       if (is_numeric($nid) && !empty($form['signup'][$nid]['#title']) && ($node = node_load($nid)) && (!empty($node->field_dates[0]['value']))) {
-        $dates[date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/Y')][$node->nid] = $form['signup'][$nid]['#title'];
+        $date = date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/y');
+        $dates_formated[$date] = date_format_date($node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT);
+        $dates[$date][$node->nid] = $form['signup'][$nid]['#title'];
       }
     }
     if ($dates) {
-      ksort($dates);
+      ksort($dates_formated);
       $form['signup']['#access'] = FALSE;
       $form['badcamp_signup'] = array(
         '#type' => 'fieldset',
         '#tree' => TRUE,
+        '#title' => t('Sign up for BADCamp daily events'),
         '#weight' => 10,
         '#attributes' => array(
           'id' => 'badcamp-registration-events'
         ),
       );
-      foreach ($dates as $date => $options) {
+      foreach ($dates_formated as $date => $formated) {
         $form['badcamp_signup'][$date] = array(
           '#type' => 'radios',
-          '#options' => array('' => t('None')) + $options,
-          '#title' => t('Events on @date', array('@date' => $date)),
+          '#options' => array('' => t('None')) + $dates[$date],
+          '#title' => $formated,
         );
         $form['#validate'][] = 'badcamp_user_register_combine_signups';
       }
@@ -127,11 +133,11 @@ function badcamp_user_register_combine_signups($form, &$form_state) {
 function badcamp_signup_sign_up($node, $account) {
   $canceled = 0;
   $notify = arg(0) == 'node';
-  if (!empty($node->field_dates[0]['value']) && $account->uid && ($date = date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/Y'))) {
+  if (!empty($node->field_dates[0]['value']) && $account->uid && ($date = date_format_date($node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT))) {
     $result = db_query('SELECT nid, sid FROM {signup_log} WHERE uid = %d', $account->uid);
     while ($row = db_fetch_object($result)) {
       $existing_signup_node = node_load($row->nid);
-      if (!empty($existing_signup_node->field_dates[0]['value']) && ($date2 = date_format_date($existing_signup_node->field_dates[0]['value'], 'custom', 'm/d/Y')) && ($date2 === $date)) {
+      if (!empty($existing_signup_node->field_dates[0]['value']) && ($date2 = date_format_date($existing_signup_node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT)) && ($date2 === $date)) {
         signup_cancel_signup($row->sid, $notify);
         $canceled++;
       }
@@ -153,9 +159,13 @@ function badcamp_signup_form() {
   // If there is at least one node, add the Signup fieldset.
   if (!empty($nids)) {
     // Each node gets a checkbox.
+    $dates_formated = array();
+    $dates = array();
     foreach ($nids as $nid) {
       if (($node = node_load($nid)) && (!empty($node->field_dates[0]['value']))) {
-        $dates[date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/Y')][$node->nid] = l($node->title, 'node/' . $node->nid, array('attributes' => array('target' => '_blank')));
+        $date = date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/y');
+        $dates_formated[$date] = date_format_date($node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT);
+        $dates[$date][$node->nid] = l($node->title, 'node/' . $node->nid, array('attributes' => array('target' => '_blank')));
       }
     }
     $result = db_query('SELECT nid FROM {signup_log} WHERE uid = %d', $user->uid);
@@ -175,7 +185,7 @@ function badcamp_signup_form() {
         $form['badcamp_signup'][$date] = array(
           '#type' => 'radios',
           '#options' => array('' => t('None')) + $options,
-          '#title' => $date,
+          '#title' => $dates_formated[$date],
           '#default_value' => reset(array_intersect(array_keys($options), $already_signedup_for)),
         );
       }
