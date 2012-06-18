@@ -85,7 +85,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
         '#tree' => TRUE,
         '#weight' => 10,
         '#attributes' => array(
-          'class' => 'badcamp-registration-events'
+          'id' => 'badcamp-registration-events'
         ),
       );
       foreach ($dates as $date => $options) {

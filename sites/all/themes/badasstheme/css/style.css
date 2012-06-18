@@ -776,6 +776,10 @@ table.session-calendar tbody {
   margin-bottom: 0;
 }
 
+#user-register #badcamp-registration-events {
+  float: none;
+}
+
 #user-register  div.fieldset-content {
   border: 0;
 }
@@ -952,5 +956,10 @@ span.individual40  {
   border-top: 5px solid #000;
   background-color: #fff;
   padding: 15px;
+}
+
+#badcamp-registration-events .fieldset-content > .form-item {
+  float: left;
+  padding-right: 10px;
 }
 
