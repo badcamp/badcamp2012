@@ -106,6 +106,8 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
           '#type' => 'radios',
           '#options' => array('' => t('None')) + $dates[$date],
           '#title' => $formated,
+          // Hard coded saturday and sunday
+          '#default_value' => !empty($dates[$date][3]) ? 3 : (!empty($dates[$date][490]) ? 490 : ''),
         );
         $form['#validate'][] = 'badcamp_user_register_combine_signups';
       }
