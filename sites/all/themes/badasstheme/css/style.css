@@ -958,8 +958,13 @@ span.individual40  {
   padding: 15px;
 }
 
-#badcamp-registration-events .fieldset-content > .form-item {
+#badcamp-registration-events .fieldset-content > .form-item,
+#badcamp-signup-form > div > .form-item {
   float: left;
-  padding-right: 10px;
+  padding-right: 5px;
+  width: 160px;
 }
 
+#edit-submit {
+  clear: both;
+}
