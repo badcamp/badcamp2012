@@ -67,6 +67,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     unset($form['account']['#title']);
     unset($form['signup']['#title']);
     unset($form['Personal information']['#title']);
+    unset($form['Volunteer']['#title']);
 
     // Change the order of the elements.
     $form['signup']['#weight'] = -10;
