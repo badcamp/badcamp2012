@@ -83,7 +83,10 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
       $form['badcamp_signup'] = array(
         '#type' => 'fieldset',
         '#tree' => TRUE,
-        '#weight' => -40,
+        '#weight' => 10,
+        '#attributes' => array(
+          'class' => 'badcamp-registration-events'
+        ),
       );
       foreach ($dates as $date => $options) {
         $form['badcamp_signup'][$date] = array(
@@ -113,28 +116,20 @@ function badcamp_user_register_combine_signups($form, &$form_state) {
 
 /**
  * Implements hook_link_alter().
- * Hijacks read more link for event nodes that aren't really events.
- 
-function badcamp_link_alter(&$links, $node, $comment = NULL) {
-  if ($node->nid == 51) {
-    $links['node_read_more']['href'] = 'program/training';
-  }
-  else if ($node->nid == 52) {
-    $links['node_read_more']['href'] = 'program/bofs';
-  }
-}
-*/
-
-/**
- * Preprocess function for nodes.
- * Hijacks node title link for event nodes that aren't really events.
-
-function badcamp_preprocess_node(&$vars) {
-  if ($vars['node']->nid == 51 && $vars['title']) {
-    $vars['title'] = l($vars['node']->title, 'program/training');
-  }
-  else if ($vars['node']->nid == 52 && $vars['title']) {
-    $vars['title'] = l($vars['node']->title, 'program/bofs');
-  }
-}
  */
+function badcamp_signup_sign_up($node, $account) {
+  $canceled = 0;
+  if (!empty($node->field_dates[0]['value']) && $account->uid && ($date = date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/Y'))) {
+    $result = db_query('SELECT nid, sid FROM {signup_log} WHERE uid = %d', $account->uid);
+    while ($row = db_fetch_object($result)) {
+      $existing_signup_node = node_load($row->nid);
+      if (!empty($existing_signup_node->field_dates[0]['value']) && ($date2 = date_format_date($existing_signup_node->field_dates[0]['value'], 'custom', 'm/d/Y')) && ($date2 === $date)) {
+        signup_cancel_signup($row->sid);
+        $canceled++;
+      }
+    }
+  }
+  if ($canceled) {
+    drupal_set_message(format_plural($canceled, 'Event canceled due to conflicting schedule', 'Events canceled due to conflicting schedule'), 'warning');
+  }
+}
