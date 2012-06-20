@@ -96,7 +96,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
         '#type' => 'fieldset',
         '#tree' => TRUE,
         '#title' => t('Sign up for BADCamp daily events'),
-        '#weight' => 10,
+        '#weight' => -10,
         '#attributes' => array(
           'id' => 'badcamp-registration-events'
         ),
