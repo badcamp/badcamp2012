@@ -65,6 +65,10 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register') {
     // Hide signup button and enable by default.
     $form['signup'][3]['#default_value'] = 1;
+    
+    // Put a wrapper around the account info
+    $form['account']['#prefix'] = '<div class="clear-block">';
+    $form['Personal information']['#suffix'] = '</div>';
 
     // Remove all the ugly help text.
     unset($form['account']['name']['#description']);
@@ -75,7 +79,6 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     unset($form['account']['#title']);
     unset($form['signup']['#title']);
     unset($form['Personal information']['#title']);
-    unset($form['Volunteer']['#title']);
 
     // Change the order of the elements.
     $form['signup']['#weight'] = -10;
@@ -201,7 +204,6 @@ function badcamp_signup_form() {
     }
   }
   return $form;
-
 }
 
 /**
