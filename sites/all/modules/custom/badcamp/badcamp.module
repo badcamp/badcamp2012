@@ -121,6 +121,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
 
     // remove ugly description.
     unset($form['Personal information']['profile_volunteer']['#description']);
+    unset($form['Personal information']['profile_want_job']['#description']);
     
     // Make a 3rd column
     $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20);
@@ -128,6 +129,8 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     unset($form['Personal information']['profile_org']);
     $form['colthree']['profile_volunteer'] = $form['Personal information']['profile_volunteer'];
     unset($form['Personal information']['profile_volunteer']);
+    $form['colthree']['profile_want_job'] = $form['Personal information']['profile_want_job'];
+    unset($form['Personal information']['profile_want_job']);
     
     // Put a box around submit.
     $form['submit']['#prefix'] = '<div class="submit-box">';
@@ -232,9 +235,12 @@ function badcamp_signup_form() {
   if (!empty($fields['Personal information']['profile_volunteer'])) {
     $form['profile_volunteer'] = $fields['Personal information']['profile_volunteer'];
     $form['profile_volunteer']['#weight'] = 11;
+    unset($form['profile_volunteer']['#description']);
+  }
+  if (!empty($fields['Personal information']['profile_want_job'])) {
+    $form['profile_want_job']  = $fields['Personal information']['profile_want_job'];
     $form['profile_want_job']['#weight'] = 12;
     unset($form['profile_want_job']['#description']);
-    unset($form['profile_volunteer']['#description']);
   }
   $form['submit'] = array(
     '#value' => t('Signup for BADCamp'),
