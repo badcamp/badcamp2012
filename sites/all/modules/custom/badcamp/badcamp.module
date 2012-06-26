@@ -220,11 +220,12 @@ function badcamp_signup_form() {
   }
   
   // Add explanation for the asterisks
+  /*
   $form['asterisk'] = array(
     '#type' => 'markup',
     '#value' => '<div id="asterisk">' . t('* Summits may be canceled or rescheduled based on interest.') . '</div>',
     '#weight' => 10,
-  );
+  );*/
   
   profile_load_profile($user);
   $fields = profile_form_profile((array)$user, $user, 'Personal information', TRUE);
