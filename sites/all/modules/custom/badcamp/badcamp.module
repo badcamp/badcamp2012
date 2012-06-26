@@ -134,8 +134,12 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['submit']['#suffix'] = '</div>';
   }
   else if ($form_id == 'user_login_block') {
-    // remove links on block.
-    unset($form['links']);
+    // remove only create account link.
+    $options = array('attributes' => array('title' => 'Request new password via e-mail.'));
+    $form['links']['#value'] = l(t('Request new password'), 'user/password');
+    
+    // unset destination parameter
+    $form['#action'] = 'register';
   }
 }
 
