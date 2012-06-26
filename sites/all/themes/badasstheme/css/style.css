@@ -816,8 +816,9 @@ body.page-register .panel-2col .panel-panel .inside,
 }
 #user-register .camp-message {
   font-weight: bold;
+  font-size: 14px;
   text-align: center;
-  padding: 20px 10px 10px 10px;
+  padding: 20px 10px 20px 10px;
 }
 #user-register .fieldset {
   float: left;
