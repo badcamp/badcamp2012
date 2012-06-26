@@ -232,6 +232,8 @@ function badcamp_signup_form() {
   if (!empty($fields['Personal information']['profile_volunteer'])) {
     $form['profile_volunteer'] = $fields['Personal information']['profile_volunteer'];
     $form['profile_volunteer']['#weight'] = 11;
+    $form['profile_want_job']['#weight'] = 12;
+    unset($form['profile_want_job']['#description']);
     unset($form['profile_volunteer']['#description']);
   }
   $form['submit'] = array(
