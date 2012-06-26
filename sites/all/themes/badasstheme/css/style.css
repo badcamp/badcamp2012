@@ -764,6 +764,12 @@ body.page-register .panel-2col .panel-panel .inside .pane-1 p {
   margin-top: 75px;
 }
 body.page-register .panel-2col .panel-panel .inside .pane-1 p a {
+  color: #FFFFFF;
+  font-weight: normal;
+  text-decoration: none;
+  font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+  font-size: 13px;
+  padding: 5px 10px;
   background: -moz-linear-gradient(
     top,
     #55b1eb 0%,
@@ -772,15 +778,19 @@ body.page-register .panel-2col .panel-panel .inside .pane-1 p a {
     linear, left top, left bottom, 
     from(#55b1eb),
     to(#55b1eb));
-  border: 0 solid #CBCBCB;
-  border-radius: 5px 5px 5px 5px;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: normal;
-  padding: 5px 10px;
-  text-shadow: 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0);
-  text-decoration: none;
-  font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 0px solid #cbcbcb;
+  -moz-box-shadow:
+    0px 3px 0px rgba(40,109,152,1),
+    inset 0px 0px 1px rgba(255,255,255,0);
+  -webkit-box-shadow:
+    0px 3px 0px rgba(40,109,152,1),
+    inset 0px 0px 1px rgba(255,255,255,0);
+  text-shadow:
+    0px 0px 0px rgba(000,000,000,0),
+    0px 0px 0px rgba(255,255,255,0);
 }
 body.page-register .panel-2col .panel-panel .inside,
 /* sex up reg form */
