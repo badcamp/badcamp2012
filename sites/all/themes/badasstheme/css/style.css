@@ -758,6 +758,20 @@ table.session-calendar tbody {
 
 body.page-register .panel-2col .panel-panel .inside {
   text-align: center;
+  height: 185px;
+}
+body.page-register .panel-2col .panel-panel .inside .pane-1 p {
+  margin-top: 75px;
+}
+body.page-register .panel-2col .panel-panel .inside .pane-1 p a {
+  background: -moz-linear-gradient(center top , #55B1EB 0%, #55B1EB) repeat scroll 0 0 transparent;
+  border: 0 solid #CBCBCB;
+  border-radius: 5px 5px 5px 5px;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 5px 10px;
+  text-shadow: 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0);
 }
 body.page-register .panel-2col .panel-panel .inside,
 /* sex up reg form */
