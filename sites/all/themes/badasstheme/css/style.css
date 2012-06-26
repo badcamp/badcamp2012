@@ -781,6 +781,11 @@ table.session-calendar tbody {
   float: none;
 }
 
+#user-register #edit-profile-volunteer-wrapper {
+  width: auto;
+  float: none;
+  clear: left;
+}
 #user-register  div.fieldset-content {
   border: 0;
 }
