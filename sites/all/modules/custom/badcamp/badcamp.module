@@ -64,12 +64,13 @@ function badcamp_display_block() {
  */
 function badcamp_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register') {
-    // Hide signup button and enable by default.
-    $form['signup'][3]['#default_value'] = 1;
     
-    // Put a wrapper around the account info
-    $form['account']['#prefix'] = '<div class="clear-block">';
-    $form['Personal information']['#suffix'] = '</div>';
+    // Add message above form.
+    $form['message'] = array(
+      '#type' => 'markup',
+      '#value' => '<div class="camp-message">' . t('Already have an account? <a href="@url">Log in</a> to sign up for 2012 events!', array('@url' => url('user/login'))) . '</div>',
+      '#weight' => -11,
+    );
 
     // Remove all the ugly help text.
     unset($form['account']['name']['#description']);
@@ -85,6 +86,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['signup']['#weight'] = -10;
     $dates = array();
     $dates_formated = array();
+
     // Nodes are already loaded in signup_user.
     foreach (element_children($form['signup']) as $nid) {
       if (is_numeric($nid) && !empty($form['signup'][$nid]['#title']) && ($node = node_load($nid)) && (!empty($node->field_dates[0]['value']))) {
@@ -99,7 +101,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
       $form['badcamp_signup'] = array(
         '#type' => 'fieldset',
         '#tree' => TRUE,
-        '#title' => t('Sign up for BADCamp daily events'),
+        //'#title' => t('Sign up for BADCamp daily events'),
         '#weight' => -10,
         '#attributes' => array(
           'id' => 'badcamp-registration-events'
@@ -116,6 +118,24 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
         $form['#validate'][] = 'badcamp_user_register_combine_signups';
       }
     }
+
+    // remove ugly description.
+    unset($form['Personal information']['profile_volunteer']['#description']);
+    
+    // Make a 3rd column
+    $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20);
+    $form['colthree']['profile_org'] = $form['Personal information']['profile_org'];
+    unset($form['Personal information']['profile_org']);
+    $form['colthree']['profile_volunteer'] = $form['Personal information']['profile_volunteer'];
+    unset($form['Personal information']['profile_volunteer']);
+    
+    // Put a box around submit.
+    $form['submit']['#prefix'] = '<div class="submit-box">';
+    $form['submit']['#suffix'] = '</div>';
+  }
+  else if ($form_id == 'user_login_block') {
+    // remove links on block.
+    unset($form['links']);
   }
 }
 

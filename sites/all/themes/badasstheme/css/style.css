@@ -755,6 +755,10 @@ table.session-calendar tbody {
   margin: 1em 0;
 }
 
+body.page-register .panel-2col .panel-panel .inside {
+  text-align: center;
+}
+body.page-register .panel-2col .panel-panel .inside,
 /* sex up reg form */
 #user-register,
 #user-login,
@@ -770,24 +774,30 @@ table.session-calendar tbody {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
-
-#user-register div.fieldset {
+#user-register {
+  padding: 5px;
+}
+#user-login-form {
+  margin-right: 20px;
+}
+#user-register .camp-message {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+}
+#user-register .fieldset {
   float: left;
-  margin-left: 10px;
-  margin-bottom: 0;
+  margin: 0 5px;
 }
-
-#user-register #badcamp-registration-events {
-  float: none;
-}
-
-#badcamp-registration-events .fieldset-content #edit-profile-volunteer-wrapper {
-  width: auto;
-  float: none;
-  clear: left;
-}
-#user-register  div.fieldset-content {
+#user-register .fieldset div.fieldset-content {
   border: 0;
+}
+#user-register #edit-profile-volunteer-wrapper {
+  margin-top: 31px;
+}
+#badcamp-registration-events div.fieldset-content {
+  padding: 0;
+  float: none;
 }
 
 #user-register .mollom-privacy {
@@ -800,15 +810,18 @@ table.session-calendar tbody {
   letter-spacing: 1px;
 }
 
+#badcamp-registration-events .form-item,
 #badcamp-signup-form .form-item {
   float: left;
   margin: 10px 5px;
   width: 160px;
 }
+#badcamp-registration-events .form-radios,
 #badcamp-signup-form .form-radios {
   margin-left: 10px;
   margin-top: 5px;
 }
+#badcamp-registration-events .form-item .form-item,
 #badcamp-signup-form .form-item .form-item {
   margin: 0 0 5px 0;
   float: none;
@@ -822,16 +835,13 @@ table.session-calendar tbody {
   float: none;
   text-align: center;
 }
-#badcamp-signup-form .submit-box {
-  text-align: center;
-  margin: 10px 0 30px 0;
-}
 #badcamp-signup-form #edit-submit {
   margin: 0 auto;
 }
 
-#user-register .mollom-privacy a {
-  font-weight: normal;
+.submit-box {
+  text-align: center;
+  margin: 10px 0 30px 0;
 }
 
 #user-register #edit-submit {
