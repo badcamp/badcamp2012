@@ -5,7 +5,7 @@
  */
 function badasstheme_preprocess_page(&$variables) {
   if (arg(0) == 'user' && arg(1) == 'register') {
-    $variables['title'] = 'Register for BADcamp!';
+    $variables['title'] = 'Register for BADCamp 2012!';
   }
 }
 
