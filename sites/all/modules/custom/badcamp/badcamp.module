@@ -45,7 +45,7 @@ function badcamp_get_signup_count($nid = NULL) {
   else {
     $query = db_query("SELECT count(DISTINCT u.uid) FROM signup_log s_l INNER JOIN users u ON u.uid = s_l.uid;");
   }
-  $count = count(db_result($query));
+  $count = db_result($query);
 
   return $count;
 }
