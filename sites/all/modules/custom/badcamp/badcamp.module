@@ -122,11 +122,13 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     // remove ugly description.
     unset($form['Personal information']['profile_volunteer']['#description']);
     unset($form['Personal information']['profile_want_job']['#description']);
-    
+
+    // Handle the organization field
+    $form['profile_org'] = $form['Personal information']['profile_org'];
+    unset($form['Personal information']['profile_org']);
+
     // Make a 3rd column
     $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20);
-    $form['colthree']['profile_org'] = $form['Personal information']['profile_org'];
-    unset($form['Personal information']['profile_org']);
     $form['colthree']['profile_volunteer'] = $form['Personal information']['profile_volunteer'];
     unset($form['Personal information']['profile_volunteer']);
     $form['colthree']['profile_want_job'] = $form['Personal information']['profile_want_job'];
