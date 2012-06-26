@@ -279,5 +279,9 @@ function badcamp_signup_form_submit($form, &$form_state) {
     db_query("DELETE FROM {profile_values} WHERE fid = %d AND uid = %d", $fid, $user->uid);
     db_query("INSERT INTO {profile_values} (fid, uid, value) VALUES (%d, %d, '%s')", $fid, $user->uid, $form_state['values']['profile_volunteer']);
   }
+  if ($fid = db_result(db_query('SELECT fid FROM {profile_fields} WHERE name = "profile_want_job"'))) {
+    db_query("DELETE FROM {profile_values} WHERE fid = %d AND uid = %d", $fid, $user->uid);
+    db_query("INSERT INTO {profile_values} (fid, uid, value) VALUES (%d, %d, '%s')", $fid, $user->uid, $form_state['values']['profile_want_job']);
+  }
 }
 
