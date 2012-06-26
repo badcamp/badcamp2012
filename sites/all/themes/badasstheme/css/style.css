@@ -833,6 +833,7 @@ body.page-register .panel-2col .panel-panel .inside,
 #user-register .fieldset div.fieldset-content {
   border: 0;
 }
+#user-register #edit-profile-want-job-wrapper,
 #user-register #edit-profile-volunteer-wrapper {
   margin-top: 15px;
 }
@@ -871,6 +872,7 @@ body.page-register .panel-2col .panel-panel .inside,
   clear: left;
   text-align: center;
 }
+#badcamp-signup-form #edit-profile-want-job-wrapper,
 #badcamp-signup-form #edit-profile-volunteer-wrapper {
   width: auto;
   float: none;
