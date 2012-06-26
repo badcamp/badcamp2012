@@ -764,7 +764,6 @@ body.page-register .panel-2col .panel-panel .inside .pane-1 p {
   margin-top: 75px;
 }
 body.page-register .panel-2col .panel-panel .inside .pane-1 p a {
-  display: block;
   background: -moz-linear-gradient(center top , #55B1EB 0%, #55B1EB) repeat scroll 0 0 transparent;
   border: 0 solid #CBCBCB;
   border-radius: 5px 5px 5px 5px;
@@ -773,6 +772,8 @@ body.page-register .panel-2col .panel-panel .inside .pane-1 p a {
   font-weight: normal;
   padding: 5px 10px;
   text-shadow: 0 0 0 transparent, 0 0 0 rgba(255, 255, 255, 0);
+  text-decoration: none;
+  font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
 }
 body.page-register .panel-2col .panel-panel .inside,
 /* sex up reg form */
