@@ -121,17 +121,22 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
 
     // remove ugly description.
     unset($form['Personal information']['profile_volunteer']['#description']);
-    
+    unset($form['Personal information']['profile_want_job']['#description']);
+
+    // Handle the organization field
+    $form['Personal information']['profile_org']['#weight'] = 10;
+
     // Make a 3rd column
     $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20);
-    $form['colthree']['profile_org'] = $form['Personal information']['profile_org'];
-    unset($form['Personal information']['profile_org']);
     $form['colthree']['profile_volunteer'] = $form['Personal information']['profile_volunteer'];
     unset($form['Personal information']['profile_volunteer']);
+    $form['colthree']['profile_want_job'] = $form['Personal information']['profile_want_job'];
+    unset($form['Personal information']['profile_want_job']);
     
-    // Put a box around submit.
+    // Put a box around submit and name it best
     $form['submit']['#prefix'] = '<div class="submit-box">';
     $form['submit']['#suffix'] = '</div>';
+    $form['submit']['#value'] = 'Register for BADCamp';
   }
   else if ($form_id == 'user_login_block') {
     // remove only create account link.
@@ -224,11 +229,12 @@ function badcamp_signup_form() {
   }
   
   // Add explanation for the asterisks
+  /*
   $form['asterisk'] = array(
     '#type' => 'markup',
     '#value' => '<div id="asterisk">' . t('* Summits may be canceled or rescheduled based on interest.') . '</div>',
     '#weight' => 10,
-  );
+  );*/
   
   profile_load_profile($user);
   $fields = profile_form_profile((array)$user, $user, 'Personal information', TRUE);
@@ -237,8 +243,13 @@ function badcamp_signup_form() {
     $form['profile_volunteer']['#weight'] = 11;
     unset($form['profile_volunteer']['#description']);
   }
+  if (!empty($fields['Personal information']['profile_want_job'])) {
+    $form['profile_want_job']  = $fields['Personal information']['profile_want_job'];
+    $form['profile_want_job']['#weight'] = 12;
+    unset($form['profile_want_job']['#description']);
+  }
   $form['submit'] = array(
-    '#value' => t('Signup'),
+    '#value' => t('Signup for BADCamp'),
     '#type' => 'submit',
     '#weight' => 12,
     '#prefix' => '<div class="submit-box">',
