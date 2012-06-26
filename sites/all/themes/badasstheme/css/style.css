@@ -781,7 +781,7 @@ table.session-calendar tbody {
   float: none;
 }
 
-#user-register #edit-profile-volunteer-wrapper {
+#badcamp-registration-events .fieldset-content #edit-profile-volunteer-wrapper {
   width: auto;
   float: none;
   clear: left;
