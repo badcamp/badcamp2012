@@ -40,12 +40,13 @@ function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
  */
 function badcamp_get_signup_count($nid = NULL) {
   if ($nid != NULL) {
-    $query = db_query("SELECT DISTINCT u.uid  FROM {signup_log} s_l INNER JOIN {users} u ON u.uid = s_l.uid WHERE s_l.nid = %d", $nid);
+    $query = db_query("SELECT count(DISTINCT u.uid)  FROM {signup_log} s_l INNER JOIN {users} u ON u.uid = s_l.uid WHERE s_l.nid = %d", $nid);
   }
   else {
-    $query = db_query("SELECT DISTINCT u.uid  FROM {signup_log} s_l INNER JOIN {users} u ON u.uid = s_l.uid");
+    $query = db_query("SELECT count(DISTINCT u.uid) FROM signup_log s_l INNER JOIN users u ON u.uid = s_l.uid;");
   }
   $count = count(db_result($query));
+
   return $count;
 }
 
@@ -198,12 +199,10 @@ function badcamp_signup_form() {
     }
   }
   
-  $form['clear']['#value'] = '<div class="clear-block"></div>';
-  
   // Add explanation for the asterisks
   $form['asterisk'] = array(
     '#type' => 'markup',
-    '#value' => t('* These summits could be canceled if there is not enough interest.'),
+    '#value' => '<div id="asterisk">' . t('* Summits may be canceled or rescheduled based on interest.') . '</div>',
     '#weight' => 10,
   );
   
@@ -212,12 +211,19 @@ function badcamp_signup_form() {
   if (!empty($fields['Personal information']['profile_volunteer'])) {
     $form['profile_volunteer'] = $fields['Personal information']['profile_volunteer'];
     $form['profile_volunteer']['#weight'] = 11;
+    unset($form['profile_volunteer']['#description']);
   }
   $form['submit'] = array(
     '#value' => t('Signup'),
     '#type' => 'submit',
     '#weight' => 12,
+    '#prefix' => '<div class="submit-box">',
+    '#suffix' => '</div>',
   );
+  
+  $form['clear']['#value'] = '<div class="clear-block"></div>';
+  $form['clear']['#weight'] = 13;
+  
   return $form;
 }
 

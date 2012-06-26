@@ -799,7 +799,37 @@ table.session-calendar tbody {
   line-height: 26px;
   letter-spacing: 1px;
 }
- 
+
+#badcamp-signup-form .form-item {
+  float: left;
+  margin: 10px 5px;
+  width: 160px;
+}
+#badcamp-signup-form .form-radios {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+#badcamp-signup-form .form-item .form-item {
+  margin: 0 0 5px 0;
+  float: none;
+}
+#badcamp-signup-form #asterisk {
+  clear: left;
+  text-align: center;
+}
+#badcamp-signup-form #edit-profile-volunteer-wrapper {
+  width: auto;
+  float: none;
+  text-align: center;
+}
+#badcamp-signup-form .submit-box {
+  text-align: center;
+  margin: 10px 0 30px 0;
+}
+#badcamp-signup-form #edit-submit {
+  margin: 0 auto;
+}
+
 #user-register .mollom-privacy a {
   font-weight: normal;
 }
@@ -946,9 +976,15 @@ span.individual40  {
 .view-buy-sponsorship td.col-1 {
   padding-left: 30px;
 }
+div.panel-pane .view-buy-sponsorship div.node-product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .view-buy-sponsorship .add-to-cart {
   text-align: right;
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 /* hide UC crap */
@@ -964,13 +1000,3 @@ span.individual40  {
   padding: 15px;
 }
 
-#badcamp-registration-events .fieldset-content > .form-item,
-#badcamp-signup-form > div > .form-item {
-  float: left;
-  padding-right: 5px;
-  width: 160px;
-}
-
-#edit-submit {
-  clear: both;
-}
