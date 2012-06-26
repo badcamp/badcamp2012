@@ -812,6 +812,11 @@ body.page-register .panel-2col .panel-panel .inside,
 #user-register {
   padding: 5px;
 }
+
+#user-register #tabs {
+  display: none;
+}
+
 #user-login-form {
   margin-right: 20px;
 }
