@@ -134,9 +134,10 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['colthree']['profile_want_job'] = $form['Personal information']['profile_want_job'];
     unset($form['Personal information']['profile_want_job']);
     
-    // Put a box around submit.
+    // Put a box around submit and name it best
     $form['submit']['#prefix'] = '<div class="submit-box">';
     $form['submit']['#suffix'] = '</div>';
+    $form['submit']['#value'] = 'Register for BADCamp';
   }
   else if ($form_id == 'user_login_block') {
     // remove links on block.
