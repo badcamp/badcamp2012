@@ -211,7 +211,7 @@ function badcamp_signup_form() {
   $fields = profile_form_profile((array)$user, $user, 'Personal information', TRUE);
   if (!empty($fields['Personal information']['profile_volunteer'])) {
     $form['profile_volunteer'] = $fields['Personal information']['profile_volunteer'];
-    $form['profile_volunteer']['#weight'] => 11;
+    $form['profile_volunteer']['#weight'] = 11;
   }
   $form['submit'] = array(
     '#value' => t('Signup'),
