@@ -196,7 +196,12 @@ function badcamp_signup_form() {
       }
       $form['#signedup_for'] = $already_signedup_for;
       // Why did putting the clear on submit not work? :(
-
+        
+      // Add explanation for the asterisks
+      $form['asterisk'] = array(
+        '#type' => 'markup',
+        '#value' => t('* These summits could be canceled if there is not enough interest.'),
+      );
     }
   }
   profile_load_profile($user);
