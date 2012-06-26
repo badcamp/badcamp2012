@@ -201,6 +201,7 @@ function badcamp_signup_form() {
       $form['asterisk'] = array(
         '#type' => 'markup',
         '#value' => t('* These summits could be canceled if there is not enough interest.'),
+        '#weight' => 10,
       );
     }
   }
