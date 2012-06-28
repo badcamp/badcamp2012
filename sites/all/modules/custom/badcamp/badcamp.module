@@ -127,12 +127,21 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['Personal information']['profile_org']['#weight'] = 10;
 
     // Make a 3rd column
-    $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20);
+    $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20, '#title' => ' ');
+
+    // Add sponsor information
+    // $form['colthree']['profile_individually_sponsor'] = array('#type' => 'checkbox', '#title' => 'I want to individually sponsor BADCamp ($25-$50)');
+
+
+    // Update volunteer and job information
     $form['colthree']['profile_volunteer'] = $form['Personal information']['profile_volunteer'];
     unset($form['Personal information']['profile_volunteer']);
     $form['colthree']['profile_want_job'] = $form['Personal information']['profile_want_job'];
     unset($form['Personal information']['profile_want_job']);
-    
+
+    // Close it out
+    $form['colthree']['closing'] = array('#type' => 'markup',  '#value' => '<h2 class="fieldset-title"></h2>');
+
     // Put a box around submit
     $form['submit']['#prefix'] = '<div class="submit-box">';
     $form['submit']['#suffix'] = '</div>';

@@ -1054,3 +1054,16 @@ div.panel-pane .view-buy-sponsorship div.node-product {
   padding: 15px;
 }
 
+#edit-pass-wrapper .description,
+#edit-pass-wrapper .password-description,
+#edit-pass-wrapper span.password-confirm,
+#edit-pass-wrapper .password-strength {
+  display: none;
+  float: left;
+  width: 1px;
+  overflow: hidden;
+  height: 1px;
+  color: white; 
+  background-color: white;
+}
+
