@@ -133,10 +133,18 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['colthree']['profile_want_job'] = $form['Personal information']['profile_want_job'];
     unset($form['Personal information']['profile_want_job']);
     
-    // Put a box around submit and name it best
+    // Put a box around submit
     $form['submit']['#prefix'] = '<div class="submit-box">';
     $form['submit']['#suffix'] = '</div>';
     $form['submit']['#value'] = 'Register for BADCamp';
+    $form['submit']['#weight'] = 29;
+    
+    // Add opt-in
+    $form['optin'] = array(
+      '#type' => 'markup',
+      '#weight' => 30,
+      '#value' => '<div class="small">' .t('When you register for the camp you will be added to our mailing list so we can keep you informed with the latest news.') . '</div>',
+    );
   }
   else if ($form_id == 'user_login_block') {
     // remove only create account link.
