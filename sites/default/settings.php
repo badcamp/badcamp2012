@@ -275,3 +275,12 @@ ini_set('error_reporting', 'E_ALL & ~E_NOTICE');
 if (file_exists('../pantheon6.settings.php')) {
     include_once '../pantheon6.settings.php';
 }
+
+$conf['cache_inc'] = 'sites/all/modules/contrib/cache_backport/cache.inc';
+
+# Use Redis for caching. 
+$conf['redis_client_interface'] = 'PhpRedis'; 
+$conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc'; 
+$conf['cache_default_class'] = 'Redis_Cache'; 
+$conf['cache_prefix'] = array('default' => 'pantheon-redis');
+
