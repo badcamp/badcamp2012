@@ -43,7 +43,7 @@
       <div id="callout">
         <h1 class="dates">November 1 - 4, 2012</h1>
         <h1 class="location">UC Berkeley, California</h1>
-        <h2 class="blurb">A culmination of the brightest Drupal minds - in the technology hub of the world</h2>
+        <h2 class="blurb">A culmination of the brightest Drupal minds in the technology hub of the world</h2>
       </div>
       
       <?php if ($blimp): ?>
