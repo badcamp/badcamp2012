@@ -199,18 +199,16 @@ function badcamp_signup_sign_up($node, $account) {
 
 function badcamp_signup_form() {
   global $user;
-  $query = db_query(db_rewrite_sql("SELECT n.nid FROM {node} n INNER JOIN signup s on n.nid=s.nid WHERE s.status = 1 AND n.status = 1"));
-  while ($nid = db_result($query)) {
-    $nids[] = $nid;
+  $query = db_query(db_rewrite_sql("SELECT n.nid, s.status FROM {node} n INNER JOIN signup s on n.nid=s.nid WHERE n.status = 1"));
+  while ($row = db_fetch_object($query)) {
+    $nids[$row->nid] = $row->status;
   }
-  // Allow other modules to alter the list of nids.
-  drupal_alter('signup_user_reg_nids', $nids);
   // If there is at least one node, add the Signup fieldset.
   if (!empty($nids)) {
     // Each node gets a checkbox.
     $dates_formated = array();
     $dates = array();
-    foreach ($nids as $nid) {
+    foreach ($nids as $nid => $status) {
       if (($node = node_load($nid)) && (!empty($node->field_dates[0]['value']))) {
         $date = date_format_date($node->field_dates[0]['value'], 'custom', 'm/d/y');
         $dates_formated[$date] = date_format_date($node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT);
@@ -239,17 +237,14 @@ function badcamp_signup_form() {
         );
       }
       $form['#signedup_for'] = $already_signedup_for;
+      // If any disabled nids, need to disable them.
+      if (in_array(0, $nids)) {
+        $form['badcamp_signup']['#nids'] = $nids;
+        $form['badcamp_signup']['#after_build'][] = 'badcamp_disable_signups';
+      }
     }
   }
-  
-  // Add explanation for the asterisks
-  /*
-  $form['asterisk'] = array(
-    '#type' => 'markup',
-    '#value' => '<div id="asterisk">' . t('* Summits may be canceled or rescheduled based on interest.') . '</div>',
-    '#weight' => 10,
-  );*/
-  
+
   profile_load_profile($user);
   $fields = profile_form_profile((array)$user, $user, 'Personal information', TRUE);
   if (!empty($fields['Personal information']['profile_volunteer'])) {
@@ -274,6 +269,23 @@ function badcamp_signup_form() {
   $form['clear']['#weight'] = 13;
   
   return $form;
+}
+
+function badcamp_disable_signups($element) {
+  // Get the NIDs that are disabled.
+  $disabled_nids = array_diff_key($element['#nids'], array_filter($element['#nids']));
+  foreach (element_children($element) as $date) {
+    if ($nids = array_intersect_key($disabled_nids, $element[$date])) {
+      foreach (array_keys($nids) as $nid) {
+        // If the user isn't currently signed up for this event, disable it.
+        if ($element[$date]['#default_value'] != $nid) {
+          $element[$date][$nid]['#disabled'] = TRUE;
+          $element[$date][$nid]['#attributes']['disabled'] = 'disabled';
+        }
+      }
+    }
+  }
+  return $element;
 }
 
 /**
