@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Enable smtp.
+ */
+function badcamp_update_6101() {
+  module_enable(array('smtp'));
+  variable_set('smtp_debugging', 0);
+  variable_set('smtp_from', "badcamp2012@gmail.com");
+  variable_set('smtp_fromname', "");
+  variable_set('smtp_host', "smtp.gmail.com");
+  variable_set('smtp_hostbackup', "");
+  variable_set('smtp_library', "sites/all/modules/contrib/smtp/smtp.module");
+  variable_set('smtp_on', "1");
+  variable_set('smtp_password', "sheheardb4d");
+  variable_set('smtp_port', "465");
+  variable_set('smtp_protocol', "ssl");
+  variable_set('smtp_test_address', "");
+  variable_set('smtp_username', "badcamp2012@gmail.com");
+}
