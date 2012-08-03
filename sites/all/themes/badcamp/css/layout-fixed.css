@@ -20,7 +20,7 @@ body {
    */
   margin-left: auto;
   margin-right: auto;
-  width: 719px;
+  max-width: 719px;
 }
 
 #page {
@@ -58,14 +58,14 @@ body {
 #content,
 .no-sidebars #content {
   float: none; /* only one column. */
-  width: 719px;
+  max-width: 719px;
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
 .sidebar-first #content {
-  width: 719px;
+  max-width: 719px;
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
 }
@@ -80,7 +80,7 @@ body {
  */
 #navigation {
   float: none; /* LTR */
-  width: 719px;
+  max-width: 719px;
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
@@ -111,7 +111,7 @@ body {
  */
 .region-sidebar-first {
   float: none; /* only one column. */
-  width: 719px;
+  max-width: 719px;
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */

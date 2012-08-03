@@ -23,13 +23,16 @@ base theme = zen
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
+
+  ; responsoveness!
 stylesheets[all][]   = css/wireframes.css
-; this layout is for phone
+  ; this layout is for phone
 stylesheets[all][]   = css/layout-fixed.css
-; this layout is for tablet
+  ; this layout is for tablet
 stylesheets[all][]   = css/layout-fixed-min720.css
-; this layout is for desktop
-;stylesheets[all][]   = css/layout-fixed-min876.css
+  ; this layout is for desktop
+stylesheets[all][]   = css/layout-fixed-min876.css
+
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
