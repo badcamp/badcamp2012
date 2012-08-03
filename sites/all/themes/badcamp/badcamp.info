@@ -24,9 +24,12 @@ base theme = zen
   ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
 stylesheets[all][]   = css/wireframes.css
+; this layout is for phone
 stylesheets[all][]   = css/layout-fixed.css
+; this layout is for tablet
 stylesheets[all][]   = css/layout-fixed-min720.css
-stylesheets[all][]   = css/layout-fixed-min876.css
+; this layout is for desktop
+;stylesheets[all][]   = css/layout-fixed-min876.css
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
@@ -60,7 +63,7 @@ conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[sidebar]  = Sidebar
+regions[sidebar_first]  = Sidebar
 regions[navigation]     = Navigation bar
 regions[content_top]    = Content top
 regions[content_bottom] = Content bottom
