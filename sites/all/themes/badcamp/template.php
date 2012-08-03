@@ -164,4 +164,4 @@ function badcamp_preprocess_block(&$vars, $hook) {
 drupal_set_html_head('<script type="text/javascript" src="//use.typekit.net/xes0fnw.js"></script>');
 
 // site JS call goes in the footer
-drupal_add_js(drupal_get_path('theme', 'badcamp') .'/js/scripts.js', 'theme', 'footer');
+drupal_add_js(drupal_get_path('theme', 'badcamp') .'/js/scripts.js', 'theme', 'header');

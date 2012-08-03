@@ -289,3 +289,38 @@ fieldset {
   margin: 1em 0;
   padding: 0.5em;
 }
+
+
+
+/**
+ * Typography
+ * 
+ * We have three basic typefaces used on the site:
+ * Nimbus Sans Extended (font-family: nimbus-sans-extended)
+ * Superclarendon (font-family: superclarendon)
+ * Georgia (font-family: georgia)
+ * 
+ **/
+
+/* to control the flash of unstyled text (FOUT) that comes with typekit */
+.wf-loading { 
+  visibility: hidden;
+}
+
+body {
+font-family: Georgia, serif;
+}
+
+#main-menu {
+  font-family: superclarendon;
+  font-weight: normal;
+}
+
+.title {
+  font-family: nimbus-sans-extended;
+  font-weight: normal;
+}
+
+#site-name {
+  visibility: none;
+}
