@@ -9,6 +9,7 @@
  * Body
  */
 body {
+  background: transparent url(../images/background.jpg) top center no-repeat;
 }
 
 #page-wrapper,
@@ -25,12 +26,14 @@ body {
 }
 
 #page {
+  
 }
 
 /*
  * Header
  */
 #header {
+  margin-bottom: 25px;
 }
 
 #header .section {
@@ -63,18 +66,19 @@ body {
   margin-left: 10px; /* LTR */
   margin-right: -1100px; /* LTR */ /* Negative value of #content's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
-  border: 1px solid red;
 }
 
 .sidebar-first #content {
   width: 800px;
+  max-width: 800px;
   margin-left: 10px; /* LTR */ /* The width of .region-sidebar-first. */
   margin-right: -810px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
 #content .section {
-  margin: 0;
-  padding: 0;
+  margin: 0 50px;
+  padding: 20px;
+  background-color: #ffffff;
 }
 
 /*
