@@ -9,7 +9,7 @@
  * Body
  */
 body {
-  background: transparent url(../images/background.jpg) top center no-repeat;
+
 }
 
 #page-wrapper,
@@ -85,7 +85,7 @@ body {
  * Make room for nav
  */
 #content .section h1.title {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 /*
@@ -93,8 +93,7 @@ body {
  */
 #navigation {
   float: left; /* LTR */
-  width: 730px;
-  margin-top: 110px;
+  width: 800px;
   margin-left: 45px; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
@@ -112,11 +111,6 @@ body {
 #navigation .section {
   background-color: #813609;
   padding: 15px;
-}
-
-#navigation .block,
-#navigation ul {
-  margin: 0;
 }
 
 #navigation ul /* Primary and secondary links */ {
