@@ -66,11 +66,6 @@
  */
 function badcamp_theme(&$existing, $type, $theme, $path) {
   $hooks = zen_theme($existing, $type, $theme, $path);
-  // Add your theme hooks like this:
-  /*
-  $hooks['hook_name_here'] = array( // Details go here );
-  */
-  // @TODO: Needs detailed comments. Patches welcome!
   return $hooks;
 }
 
@@ -96,14 +91,49 @@ function badcamp_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function badcamp_preprocess_page(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
 
-  // To remove a class from $classes_array, use array_diff().
-  //$vars['classes_array'] = array_diff($vars['classes_array'], array('class-to-remove'));
+  // The magic that makes the login header do its thing
+  global $user;
+  if (!$user->uid) {
+    $vars['account_links'] = l(t('Log in'), 'user/login', array('attributes' => array('id' => 'magical-login-box-link', 'class' => 'closed-box')));
+    $vars['account_information'] = '<h2>' . t('Login to your account') . '</h2>' . '<p>' . t('Please enter your username and password to login to the site') . '</p>' . '<p>' . t('Not registered? !registration', array('!registration' => l(t('Click here to begin registration.'), 'user/register'))) . '</p>';
+    $vars['account_box'] = '<h2>' . t('User Login') . '</h2>' . drupal_get_form('badcamp_user_login');
+  }
+  else {
+    $vars['account_links'] = l(t('My Profile'), 'user') . ' &middot; ' . l(t('Logout'), 'user/logout');
+    $vars['account_information'] = '';
+    $vars['account_box'] = '';
+  }
 }
-// */
+
+/**
+ * Super special user login form for BADCamp super login header
+ */
+function badcamp_user_login() {
+  $badcamp_user_login = user_login_block();
+
+  // Remove the descriptions
+  $badcamp_user_login['name']['#description'] = '';
+  $badcamp_user_login['pass']['#description']= '';
+
+  // Switch the titles to placeholders
+  $badcamp_user_login['name']['#attributes']['placeholder'] = $badcamp_user_login['name']['#title'] . ' *';
+  unset($badcamp_user_login['name']['#title']);
+  $badcamp_user_login['pass']['#attributes']['placeholder'] = $badcamp_user_login['pass']['#title'] . ' *';
+  unset($badcamp_user_login['pass']['#title']);
+
+  // Change around the submit valiue
+  $badcamp_user_login['submit']['#value'] = t('Login');
+
+  // Add the forgot password link and remove old links
+  unset($badcamp_user_login['links']);
+  $badcamp_user_login['lost_password'] = array(
+    '#value' => '<p class="lost-password">' . '( ' . l(t('Lost your password?'), 'user/password') . ' )' . '</p>',
+  );
+
+  return $badcamp_user_login;
+}
 
 /**
  * Override or insert variables into the node templates.

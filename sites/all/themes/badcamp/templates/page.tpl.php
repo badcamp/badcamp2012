@@ -92,7 +92,7 @@
  * - $content_top: Items to appear above the main content of the current page.
  * - $content_bottom: Items to appear below the main content of the current page.
  * - $navigation: Items for the navigation bar.
- * - $sidebar_first: Items for the sidebar.
+ * - $sidebar: Items for the first sidebar.
  * - $header: Items for the header region.
  * - $footer: Items for the footer region.
  * - $page_closure: Items to appear below the footer.
@@ -122,6 +122,19 @@
   <?php endif; ?>
 
   <div id="page-wrapper"><div id="page">
+    <div id="login-dropdown-wrapper"> 
+      <div id="login-dropdown-header"></div>
+      <div id="login-dropdown-triangle"></div>
+      <div id="login-dropdown-main">
+        <div id="login-dropdown-pirate"></div>
+        <div id="login-dropdown-information"><?php print $account_information; ?></div>
+        <div id="login-dropdown-box"><?php print $account_box; ?></div>
+      </div>
+      <div id="account-links-triangle"></div>
+    </div>
+    <div id="account-links-header"></div>
+    <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
+    <div id="account-links-closer" class="clearfix"></div>
 
     <div id="header"><div class="section clearfix">
 
@@ -191,16 +204,43 @@
 
       <?php if ($primary_links || $navigation): ?>
         <div id="navigation"><div class="section clearfix">
+
+          <?php print theme(array('links__system_main_menu', 'links'), $primary_links,
+            array(
+              'id' => 'main-menu',
+              'class' => 'links clearfix',
+            ),
+            array(
+              'text' => t('Main menu'),
+              'level' => 'h2',
+              'class' => 'element-invisible',
+            ));
+          ?>
+
           <?php print $navigation; ?>
+
         </div></div><!-- /.section, /#navigation -->
       <?php endif; ?>
 
-      <?php print $sidebar_first; ?>
+      <?php print $sidebar; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
 
     <?php if ($footer || $footer_message || $secondary_links): ?>
       <div id="footer"><div class="section">
+
+        <?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
+          array(
+            'id' => 'secondary-menu',
+            'class' => 'links clearfix',
+          ),
+          array(
+            'text' => t('Secondary menu'),
+            'level' => 'h2',
+            'class' => 'element-invisible',
+          ));
+        ?>
+
         <?php if ($footer_message): ?>
           <div id="footer-message"><?php print $footer_message; ?></div>
         <?php endif; ?>
