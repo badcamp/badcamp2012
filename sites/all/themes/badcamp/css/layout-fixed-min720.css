@@ -24,12 +24,16 @@ body {
 }
 
 #page {
+background:yellow;
 }
 
 /*
  * Header
  */
 #header {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 #header .section {
