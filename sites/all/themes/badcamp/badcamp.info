@@ -27,12 +27,14 @@ stylesheets[all][]   = css/wireframes.css
 
 ; Media Queries ================================================================
 
-stylesheets[all][]  = css/layout-fixed.css
 ; Small-this layout is for phone
-stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
+stylesheets[all][]  = css/layout-fixed.css
+
 ; Medium- this layout is for tablets
-stylesheets[screen and (min-width: 876px)][] = css/layout-fixed-min876.css
+stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
+
 ; Large- this layout is for desktops
+stylesheets[screen and (min-width: 876px)][] = css/layout-fixed-min876.css
 
 ; Stylesheets ==================================================================
 
@@ -70,7 +72,7 @@ conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[sidebar_first]  = First sidebar
+regions[sidebar_first]  = Sidebar
 regions[navigation]     = Navigation bar
 regions[content_top]    = Content top
 regions[content_bottom] = Content bottom
