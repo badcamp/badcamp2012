@@ -1,0 +1,169 @@
+/**
+ * @file
+ *
+ * This layout is for phones.
+ */
+
+
+/*
+ * Body
+ */
+body {
+}
+
+#page-wrapper,
+.region-page-closure {
+  /*
+   * If you want to make the page a fixed width and centered in the viewport,
+   * this is the standards-compliant way to do that. See also the ie6.css file
+   * for the necessary IE5/IE6quirks hack to center a div.
+   */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 719px;
+}
+
+#page {
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+#search-box {
+}
+
+.region-header {
+  clear: both; /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  position: relative;
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content,
+.no-sidebars #content {
+  float: none; /* only one column. */
+  max-width: 719px;
+  margin-left: 0; /* only one column. */
+  margin-right: 0; /* only one column. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
+}
+
+.sidebar-first #content {
+  max-width: 719px;
+  margin-left: 0; /* only one column. */
+  margin-right: 0; /* only one column. */
+}
+
+#content .section {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Navigation
+ */
+#navigation {
+  float: none; /* LTR */
+  max-width: 719px;
+  margin-left: 0; /* only one column. */
+  margin-right: 0; /* only one column. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  height: auto; 
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first {
+  margin-top: 2.3em; /* Set this to the same value as the navigation height above. */
+}
+
+#navigation .section {
+}
+
+#navigation ul /* Primary and secondary links */ {
+  margin: 0;
+  padding: 0;
+  text-align: left; /* LTR */
+}
+
+#navigation li /* A simple method to get navigation links to appear in one line. */ {
+  float: left; /* LTR */
+  padding: 0 10px 0 0; /* LTR */
+}
+
+/*
+ * First sidebar
+ */
+.region-sidebar-first {
+  float: none; /* only one column. */
+  max-width: 719px;
+  margin-left: 0; /* only one column. */
+  margin-right: 0; /* only one column. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
+}
+
+.region-sidebar-first .section {
+  margin: 0; /* only one column. */
+  padding: 0;
+}
+
+/*
+ * Footer
+ */
+#footer {
+}
+
+#footer .section {
+}
+
+/*
+ * Closure
+ */
+.region-page-closure /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+#footer,
+.region-page-closure {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+#navigation {
+  overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
+}
+
+/*
+ * If a div.clearfix doesn't have any content after it and its bottom edge
+ * touches the bottom of the viewport, Firefox and Safari will mistakenly
+ * place several pixels worth of space between the bottom of the div and the
+ * bottom of the viewport. Uncomment this CSS property to fix this.
+ * Note: with some over-large content, this property might cause scrollbars
+ * to appear on the #page-wrapper div.
+ */
+/*
+#page-wrapper {
+  overflow-y: hidden;
+}
+*/
