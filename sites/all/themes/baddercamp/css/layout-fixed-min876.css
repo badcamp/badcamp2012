@@ -82,12 +82,19 @@ body {
 }
 
 /*
+ * Make room for nav
+ */
+#content .section h1.title {
+  margin-bottom: 60px;
+}
+
+/*
  * Navigation
  */
 #navigation {
   float: left; /* LTR */
-  width: 100%;
-  margin-left: 0; /* LTR */
+  width: 800px;
+  margin-left: 45px; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
   height: 2.3em; /* The navigation can have any arbritrary height. We picked one
@@ -102,6 +109,8 @@ body {
 }
 
 #navigation .section {
+  background-color: #813609;
+  padding: 15px;
 }
 
 #navigation ul /* Primary and secondary links */ {
