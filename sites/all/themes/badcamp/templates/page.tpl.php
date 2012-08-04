@@ -92,7 +92,7 @@
  * - $content_top: Items to appear above the main content of the current page.
  * - $content_bottom: Items to appear below the main content of the current page.
  * - $navigation: Items for the navigation bar.
- * - $sidebar: Items for the first sidebar.
+ * - $sidebar_first: Items for the first sidebar.
  * - $header: Items for the header region.
  * - $footer: Items for the footer region.
  * - $page_closure: Items to appear below the footer.
@@ -147,10 +147,6 @@
             <div id="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
         </div><!-- /#name-and-slogan -->
-      <?php endif; ?>
-
-      <?php if ($search_box): ?>
-        <div id="search-box"><?php print $search_box; ?></div>
       <?php endif; ?>
 
       <?php print $header; ?>
@@ -209,7 +205,7 @@
         </div></div><!-- /.section, /#navigation -->
       <?php endif; ?>
 
-      <?php print $sidebar; ?>
+      <?php print $sidebar_first; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
 
