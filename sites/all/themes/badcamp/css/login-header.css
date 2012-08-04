@@ -1,0 +1,96 @@
+/**
+ * These are CSS styles for the login header section of the website. This section will
+ * include a pirate graphic and a box for users to login if they haven't already logged in!
+ */
+
+#login-dropdown-header {
+  background-color: #4293b8;
+  height: 15px;
+}
+
+#account-links-wrapper {
+  background-color: #4293b8;
+  height: 30px;
+}
+
+#login-dropdown-main {
+  height: 258px;
+  background-color: #4e555e;
+}
+
+#login-dropdown-pirate {
+  width: 28%;
+  float: left;
+  height: 258px;
+  background-image: url("../images/logo-watermark.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#login-dropdown-box {
+  width: 28%;
+  float: left;
+  height: 258px;
+}
+
+#login-dropdown-box h2 {
+  color: #dcd0c1;
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding-top: 0px;
+}
+
+#login-dropdown-box .lost-password,
+#login-dropdown-box .lost-password a {
+  color: #e8e8e8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+#login-dropdown-box .form-text {
+  background-color: #383e45;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 14px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#login-dropdown-box .form-submit {
+  text-transform: uppercase;
+  background-color: #525a65;
+  border: 1px solid black;
+  color: #e8e8e8;
+  font-size: 16.79px;
+  border-radius: 5px;
+}
+
+#login-dropdown-information {
+  width: 41%;
+  padding-right: 3%;
+  float: left;
+  height: 258px;
+}
+
+#login-dropdown-information h2 {
+  color: #dcd0c1;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  padding-top: 0px;
+}
+
+#login-dropdown-information p {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #e8e8e8;
+  font-size: 16px;
+}
+
+#login-dropdown-information a {
+  color: #96c8de;
+}

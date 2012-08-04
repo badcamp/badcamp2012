@@ -122,6 +122,15 @@
   <?php endif; ?>
 
   <div id="page-wrapper"><div id="page">
+    <div id="login-dropdown-wrapper"> 
+      <div id="login-dropdown-header"></div>
+      <div id="login-dropdown-main">
+        <div id="login-dropdown-pirate"></div>
+        <div id="login-dropdown-information"><?php print $account_information; ?></div>
+        <div id="login-dropdown-box"><?php print $account_box; ?></div>
+      </div>
+    </div>
+    <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
 
     <div id="header"><div class="section clearfix">
 
