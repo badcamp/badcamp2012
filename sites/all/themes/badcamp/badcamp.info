@@ -1,6 +1,6 @@
   ; The name and description of the theme used on the admin/build/themes page.
 name        = BADCamp 2012
-description = Custom Zen sub-theme for BADCamp 2012, created by David Huang, Meghan Sweet, Jen Lampton ,Darius Garza, and Jason Chinn
+description = Custom Zen sub-theme for BADCamp 2012, created by David Huang, Meghan Sweet, Jen Lampton, and Jason Chinn - designed by Darius Garza.
 
   ; The screenshot used on the admin/build/themes page.
 screenshot = screenshot.png
@@ -23,10 +23,9 @@ base theme = zen
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
+stylesheets[all][]   = css/wireframes.css
 
-
-; Media Queries================================================================
-; responsoveness!
+; Media Queries ================================================================
 
 stylesheets[all][]  = css/layout-fixed.css
 ; Small-this layout is for phone
@@ -35,9 +34,8 @@ stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
 stylesheets[screen and (min-width: 876px)][] = css/layout-fixed-min876.css
 ; Large- this layout is for desktops
 
-; Stylesheets =================================================================
+; Stylesheets ==================================================================
 
-stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
@@ -53,14 +51,14 @@ stylesheets[all][]   = css/forms.css
 stylesheets[all][]   = css/fields.css
 stylesheets[print][] = css/print.css
 ; stylesheets[handheld][] = css/mobile.css
-stylesheets[only screen and (max-device-width: 480px)][] = css/small.css
+; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
 
   ; Set the conditional stylesheets that are processed by IE.
 conditional-stylesheets[if IE][all][]       = css/ie.css
 conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
 
   ; Optionally add some JavaScripts to your theme.
-scripts[] = js/scripts.js
+; scripts[] = js/script.js
 
   ; The regions defined in Zen's default page.tpl.php file.  The name in
   ; brackets is the name of the variable in the page.tpl.php file, (e.g.
@@ -71,7 +69,7 @@ scripts[] = js/scripts.js
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[sidebar_first]  = Sidebar
+regions[sidebar_first]  = First sidebar
 regions[navigation]     = Navigation bar
 regions[content_top]    = Content top
 regions[content_bottom] = Content bottom
