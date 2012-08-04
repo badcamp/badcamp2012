@@ -289,3 +289,50 @@ fieldset {
   margin: 1em 0;
   padding: 0.5em;
 }
+
+
+
+/**
+ * Typography
+ * 
+ * We have three basic typefaces used on the site:
+ * Nimbus Sans Extended (font-family: nimbus-sans-extended)
+ * Superclarendon (font-family: superclarendon)
+ * Georgia (font-family: georgia)
+ * 
+ **/
+
+/* to control the flash of unstyled text (FOUT) that comes with typekit */
+.wf-loading { 
+  visibility: hidden;
+}
+
+body {
+font-family: Georgia, serif;
+}
+
+#main-menu {
+  font-family: superclarendon;
+  font-weight: normal;
+}
+
+#main-menu a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.title a:link{
+  font-family: nimbus-sans-extended;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#main-menu ul li ul {
+  font-family: Georgia, serif;
+}
+
+/* let's hide the stupid site title */
+#site-name {
+  display: none;
+}
+

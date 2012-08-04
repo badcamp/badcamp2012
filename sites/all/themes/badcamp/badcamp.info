@@ -1,6 +1,6 @@
   ; The name and description of the theme used on the admin/build/themes page.
 name        = BADCamp 2012
-description = Custom Zen sub-theme for BADCamp 2012, created by David Huang, Meghan Sweet, Jen Lampton ,Darius Garza, and Jason Chinn
+description = Custom Zen sub-theme for BADCamp 2012, created by David Huang, Meghan Sweet, Jen Lampton, and Jason Chinn - designed by Darius Garza.
 
   ; The screenshot used on the admin/build/themes page.
 screenshot = screenshot.png
@@ -23,15 +23,18 @@ base theme = zen
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
-
-  ; responsoveness!
 stylesheets[all][]   = css/wireframes.css
-  ; this layout is for phone
-stylesheets[all][]   = css/layout-fixed.css
-  ; this layout is for tablet
-stylesheets[all][]   = css/layout-fixed-min720.css
-  ; this layout is for desktop
-stylesheets[all][]   = css/layout-fixed-min876.css
+
+; Media Queries ================================================================
+
+stylesheets[all][]  = css/layout-fixed.css
+; Small-this layout is for phone
+stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
+; Medium- this layout is for tablets
+stylesheets[screen and (min-width: 876px)][] = css/layout-fixed-min876.css
+; Large- this layout is for desktops
+
+; Stylesheets ==================================================================
 
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
@@ -49,7 +52,7 @@ stylesheets[all][]   = css/fields.css
 stylesheets[all][]   = css/login-header.css
 stylesheets[print][] = css/print.css
 ; stylesheets[handheld][] = css/mobile.css
-stylesheets[only screen and (max-device-width: 480px)][] = css/small.css
+; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
 
   ; Set the conditional stylesheets that are processed by IE.
 conditional-stylesheets[if IE][all][]       = css/ie.css
@@ -67,7 +70,7 @@ conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
   ; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
   ; add a line line to this file, and then add the new variable to your
   ; page.tpl.php template.
-regions[sidebar_first]  = Sidebar
+regions[sidebar_first]  = First sidebar
 regions[navigation]     = Navigation bar
 regions[content_top]    = Content top
 regions[content_bottom] = Content bottom
