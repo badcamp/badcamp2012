@@ -33,7 +33,7 @@ body {
  * Header
  */
 #header {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 #header .section {
@@ -139,12 +139,39 @@ body {
   margin-left: 815px; /* LTR */
   margin-right: -1075px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
-  border: 1px solid green !important;
 }
-
 .region-sidebar-first .section {
   margin: 0 10px 0 10px; /* LTR */
   padding: 0;
+}
+.region-sidebar-first .section .block {
+  background: transparent url(../images/ropes.png) top center repeat-y;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.region-sidebar-first .section .block .content {
+  background: transparent url(../images/bg-block.png) top center repeat-y;
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.region-sidebar-first .section .block h2.title {
+  color: #dcb685;
+}
+
+#block-badcamp-blimp {
+  background: transparent url(../images/ropes.png) bottom center no-repeat;
+}
+#block-badcamp-blimp .content {
+  background: transparent url(../images/attending.png) top center no-repeat;
+  text-align: center;
+}
+#block-badcamp-blimp .content .badcamp-attendee-count {
+  margin: 20px;
+  font-size: 35px;
+}
+#block-badcamp-blimp .content .badcamp-attending {
+  text-transform: uppercase;
 }
 
 /*
