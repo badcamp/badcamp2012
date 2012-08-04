@@ -173,6 +173,13 @@ body {
 #block-badcamp-blimp .content .badcamp-attending {
   text-transform: uppercase;
 }
+#block-on_the_web-web {
+  background-image: none;
+}
+#block-on_the_web-web .content {
+  background: transparent url(../images/anchor.png) bottom center no-repeat;
+  height: 120px;
+}
 
 /*
  * Second sidebar
