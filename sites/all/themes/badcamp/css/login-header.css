@@ -4,18 +4,59 @@
  */
 
 #login-dropdown-header {
-  background-color: #4293b8;
+  background-color: #2a85b0;
   height: 15px;
 }
 
-#account-links-wrapper {
-  background-color: #4293b8;
+#login-dropdown-triangle {
+  float: left;
+  height: 10px;
+  width: 25px;
+  margin-left: 250px;
+  background-image: url("../images/blue-triangle.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+}
+
+#account-links-header {
+  background-color: #2a85b0;
   height: 30px;
+}
+
+#account-links-triangle {
+  float: left;
+  height: 7px;
+  width: 17px;
+  margin-left: 258px;
+  background-image: url("../images/gray-triangle.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+}
+
+#account-links-wrapper {
+  float: right;
+  width: 223px;
+  height: 13px;
+  background-image: url("../images/login-divot.png");
+  text-align: center;
+}
+
+#account-links-wrapper,
+#account-links-wrapper a {
+  color: #e8e8e8;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#account-links {
+  margin-top: -10px;
 }
 
 #login-dropdown-main {
   height: 258px;
-  background-color: #4e555e;
+  background-color: #414851;
 }
 
 #login-dropdown-pirate {
