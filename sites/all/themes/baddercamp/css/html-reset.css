@@ -365,7 +365,7 @@ h2 {
   list-style: none;
   position: absolute;
   margin-top: 0px;
-  min-width: 170px;
+  min-width: 200px;
   background-color: #461d05;
 }
 
@@ -382,10 +382,16 @@ h2 {
 
 #block-menu-primary-links ul li ul {
   visibility:hidden;
+  -webkit-transition:visibility 0s linear 0.3s,opacity 0.1s linear;
+  -moz-transition:visibility 0s linear 0.3s,opacity 0.1s linear;
+  -o-transition:visibility 0s linear 0.3s,opacity 0.1s linear;
 }
 
 #block-menu-primary-links ul li:hover ul{
   visibility:visible;
+  -webkit-transition-delay:0s;
+  -moz-transition-delay:0s;
+  -o-transition-delay:0s;
 } 
 
 #block-menu-primary-links ul li ul li {
@@ -396,6 +402,12 @@ h2 {
   border: none;
 } 
 
-#block-menu-primary-links ul li ul a {
-  padding: 10px 50px 20px 30px;
+#block-menu-primary-links ul a {
+  display: block;
+  text-align: center;
+}
+
+#block-menu-primary-links ul ul a {
+  padding: 10px;
+  display: block;
 }
