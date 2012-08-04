@@ -297,6 +297,7 @@ fieldset {
  * 
  * We have three basic typefaces used on the site:
  * Nimbus Sans Extended (font-family: nimbus-sans-extended)
+ * Nimbus Sans Condensed (font-family: nimbus-sans-condensed)
  * Superclarendon (font-family: superclarendon)
  * Georgia (font-family: georgia)
  * 
@@ -316,19 +317,22 @@ body {
   font-weight: normal;
 }
 
-.region-nagivation .nice-menu {
-  overflow:visible;
-}
-
 .region-navigation a:link {
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.title a:link{
+h1.title, .title a:link, h3 {
   font-family: nimbus-sans-extended;
   font-weight: normal;
+  letter-spacing: .25em;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: nimbus-sans-condensed;
+  text-transform: uppercase;
 }
 
 #main-menu ul li ul {
