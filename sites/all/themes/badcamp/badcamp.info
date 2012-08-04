@@ -24,15 +24,20 @@ base theme = zen
   ; http://drupal.org/node/263967 for more details.
 stylesheets[all][]   = css/html-reset.css
 
-  ; responsoveness!
-stylesheets[all][]   = css/wireframes.css
-  ; this layout is for phone
-stylesheets[all][]   = css/layout-fixed.css
-  ; this layout is for tablet
-stylesheets[all][]   = css/layout-fixed-min720.css
-  ; this layout is for desktop
-stylesheets[all][]   = css/layout-fixed-min876.css
 
+; Media Queries================================================================
+; responsoveness!
+
+stylesheets[all][]  = css/layout-fixed.css
+; Small-this layout is for phone
+stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
+; Medium- this layout is for tablets
+stylesheets[screen and (min-width: 876px)][] = css/layout-fixed-min876.css
+; Large- this layout is for desktops
+
+; Stylesheets =================================================================
+
+stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/page-backgrounds.css
 stylesheets[all][]   = css/tabs.css
 stylesheets[all][]   = css/messages.css
