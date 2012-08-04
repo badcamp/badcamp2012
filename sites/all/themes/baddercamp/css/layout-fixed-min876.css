@@ -9,7 +9,7 @@
  * Body
  */
 body {
-  background: transparent url(../images/background.jpg) top center no-repeat;
+
 }
 
 #page-wrapper,
@@ -114,8 +114,7 @@ body {
   padding: 15px;
 }
 
-#navigation .block,
-#navigation ul {
+#navigation .section .block {
   margin: 0;
 }
 
