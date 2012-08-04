@@ -30,6 +30,13 @@ body {
  * Header
  */
 #header {
+  width:100%;
+  text-align:center;
+  margin:0 auto;
+}
+
+#header #logo{
+	float:none;
 }
 
 #header .section {
@@ -50,6 +57,12 @@ body {
 }
 
 #main {
+}
+
+#main h1{
+  background:#49525c;
+  color:white;
+  text-align:center;
 }
 
 /*

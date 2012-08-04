@@ -28,12 +28,16 @@ body {
 }
 
 #page {
+  background:#f0ebe8;
 }
 
 /*
  * Header
  */
 #header {
+  width:100%;
+  text-align:center;
+  margin:0 auto;
 }
 
 #header .section {
@@ -54,6 +58,12 @@ body {
 }
 
 #main {
+}
+
+#main h1{
+  background:#49525c;
+  color:white;
+  text-align:center;
 }
 
 /*

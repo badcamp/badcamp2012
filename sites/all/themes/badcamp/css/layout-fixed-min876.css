@@ -20,11 +20,17 @@ body {
    */
   margin-left: auto;
   margin-right: auto;
+<<<<<<< HEAD
+  max-width: 1100px;
+  min-width:876px;
+=======
   min-width: 1100px;
   width: 1100px;
+>>>>>>> 0486f0ba69fcf5ab9ed41bedc6ef4b21efceca9b
 }
 
 #page {
+	background:green;
 }
 
 /*
