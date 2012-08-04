@@ -166,9 +166,21 @@ body {
  * Footer
  */
 #footer {
+  background: transparent url('../images/wood.jpg') top left repeat-x;
 }
 
 #footer .section {
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 30px 30px 60px 30px;
+}
+#footer .section #footer-message {
+  
+}
+
+#footer .section a {
+  color: #fff;
 }
 
 /*
