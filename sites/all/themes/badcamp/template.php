@@ -96,12 +96,12 @@ function badcamp_preprocess_page(&$vars, $hook) {
   // The magic that makes the login header do its thing
   global $user;
   if (!$user->uid) {
-    $vars['account_links'] = l(t('My Profile'), 'user') . ' &middot; ' . l(t('Logout'), 'user/logout');
+    $vars['account_links'] = l(t('Log in'), 'user/login', array('attributes' => array('id' => 'magical-login-box-link', 'class' => 'closed-box')));
     $vars['account_information'] = '<h2>' . t('Login to your account') . '</h2>' . '<p>' . t('Please enter your username and password to login to the site') . '</p>' . '<p>' . t('Not registered? !registration', array('!registration' => l(t('Click here to begin registration.'), 'user/register'))) . '</p>';
     $vars['account_box'] = '<h2>' . t('User Login') . '</h2>' . drupal_get_form('badcamp_user_login');
   }
   else {
-    $vars['account_links'] = l(t('Log in'), 'user/login');
+    $vars['account_links'] = l(t('My Profile'), 'user') . ' &middot; ' . l(t('Logout'), 'user/logout');
     $vars['account_information'] = '';
     $vars['account_box'] = '';
   }

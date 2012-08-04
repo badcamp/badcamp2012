@@ -130,8 +130,8 @@
         <div id="login-dropdown-information"><?php print $account_information; ?></div>
         <div id="login-dropdown-box"><?php print $account_box; ?></div>
       </div>
+      <div id="account-links-triangle"></div>
     </div>
-    <div id="account-links-triangle"></div>
     <div id="account-links-header"></div>
     <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
     <div id="account-links-closer" class="clearfix"></div>

@@ -3,6 +3,10 @@
  * include a pirate graphic and a box for users to login if they haven't already logged in!
  */
 
+#login-dropdown-wrapper {
+  display: none;
+}
+
 #login-dropdown-header {
   background-color: #2a85b0;
   height: 15px;
