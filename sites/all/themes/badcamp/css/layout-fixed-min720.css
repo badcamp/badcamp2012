@@ -20,7 +20,6 @@ body {
    */
   margin-left: auto;
   margin-right: auto;
-  min-width: 720px;
   max-width: 875px;
 }
 
@@ -59,14 +58,14 @@ body {
 #content,
 .no-sidebars #content {
   float: none; /* LTR */
-  width: auto;
+  max-width: 875px;
   margin-left: 0;
   margin-right: 0;
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
 .sidebar-first #content {
-  width: auto;
+  max-width: 875px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -81,7 +80,7 @@ body {
  */
 #navigation {
   float: none;
-  width: auto;
+  max-width: 875px;
   margin-left: 0; 
   margin-right: 0;
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
@@ -112,7 +111,7 @@ body {
  */
 .region-sidebar-first {
   float: none;
-  width: auto;
+  max-width: 875px;
   margin-left: 0;
   margin-right: 0;
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
