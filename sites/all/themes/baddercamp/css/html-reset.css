@@ -315,11 +315,11 @@ body {
 .region-navigation {
   font-family: superclarendon;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 .region-navigation a:link {
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 h1.title, .title a:link, h3 {
@@ -335,12 +335,42 @@ h2 {
   text-transform: uppercase;
 }
 
-#main-menu ul li ul {
-  font-family: Georgia, serif;
-}
-
 /* let's hide the stupid site title */
 #site-name {
   display: none;
 }
 
+
+
+/**
+ * Main Menu
+ **/
+
+#block-menu-primary-links a:link, #block-menu-primary-links a:visited {
+  color: #fff;
+}
+
+#block-menu-primary-links li.active-trail > a:link {
+  color: #000;
+}
+
+#block-menu-primary-links ul li ul {
+  font-family: Georgia, serif;
+}
+
+#block-menu-primary-links .menu .menu .leaf {
+  text-transform: none;
+}
+
+#block-menu-primary-links ul li {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+#block-menu-primary-links ul li ul {
+  display:none;
+}
+
+#block-menu-primary-links ul li ul li a:hover {
+  display:block;
+} 
