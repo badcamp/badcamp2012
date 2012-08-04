@@ -310,6 +310,7 @@ fieldset {
 
 body {
   font-family: Georgia, serif;
+  color: #333;
 }
 
 .region-navigation {
@@ -346,6 +347,10 @@ h2 {
  * Main Menu
  **/
 
+#block-menu-primary-links ul li ul li {
+  display:block;
+}
+
 #block-menu-primary-links a:link, #block-menu-primary-links a:visited {
   color: #fff;
 }
@@ -356,21 +361,41 @@ h2 {
 
 #block-menu-primary-links ul li ul {
   font-family: Georgia, serif;
+  width: 150px;
+  list-style: none;
+  position: absolute;
+  margin-top: 0px;
+  min-width: 170px;
+  background-color: #461d05;
 }
+
 
 #block-menu-primary-links .menu .menu .leaf {
   text-transform: none;
 }
 
-#block-menu-primary-links ul li {
+#block-menu-primary-links ul > li {
   list-style-type: none;
   list-style-image: none;
+  /* float:left; */
 }
 
 #block-menu-primary-links ul li ul {
-  display:none;
+  visibility:hidden;
 }
 
-#block-menu-primary-links ul li ul li a:hover {
-  display:block;
+#block-menu-primary-links ul li:hover ul{
+  visibility:visible;
 } 
+
+#block-menu-primary-links ul li ul li {
+  border-top: 1px solid #ddd;
+}
+
+#block-menu-primary-links ul li ul li.first {
+  border: none;
+} 
+
+#block-menu-primary-links ul li ul a {
+  padding: 10px 50px 20px 30px;
+}

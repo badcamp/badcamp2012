@@ -110,7 +110,7 @@ body {
 }
 
 #navigation .section {
-  background-color: #813609;
+  background-color: #8f3c0a;
   padding: 15px;
 }
 
@@ -118,16 +118,17 @@ body {
   margin: 0;
 }
 
-#navigation ul /* Primary and secondary links */ {
+/*
+#navigation ul {
   margin: 0;
   padding: 0;
-  text-align: left; /* LTR */
+  text-align: left; 
 }
 
-#navigation li /* A simple method to get navigation links to appear in one line. */ {
-  float: left; /* LTR */
-  padding: 0 10px 0 0; /* LTR */
-}
+#navigation li  {
+  float: left; 
+  padding: 0 10px 0 0; 
+} */
 
 /*
  * First sidebar
