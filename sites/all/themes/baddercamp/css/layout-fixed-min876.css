@@ -93,7 +93,7 @@ body {
  */
 #navigation {
   float: left; /* LTR */
-  width: 800px;
+  width: 740px; /* 800 - 30 - 30 */
   margin-left: 45px; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
