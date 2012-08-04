@@ -166,17 +166,20 @@ body {
  * Footer
  */
 #footer {
-  background: transparent url('../images/wood.jpg') top left repeat-x;
+  background: transparent url('../images/wood.jpg') 0 100px repeat-x;
+  height: 200px;
 }
 
 #footer .section {
+  background: transparent url('../images/parrot.png') 920px 20px no-repeat;
+  padding: 30px;
+  height: 140px;
+}
+#footer .section #footer-message {
   color: #fff;
   letter-spacing: 2px;
   text-align: center;
-  padding: 30px 30px 60px 30px;
-}
-#footer .section #footer-message {
-  
+  margin-top: 105px;
 }
 
 #footer .section a {
