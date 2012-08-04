@@ -9,7 +9,6 @@
  * Body
  */
 body {
-
 }
 
 #page-wrapper,
@@ -25,16 +24,15 @@ body {
 }
 
 #page {
-	background:#f0ebe8;
 }
 
 /*
  * Header
  */
 #header {
-	width:100%;
-	text-align:center;
-	margin:0 auto;
+  width:100%;
+  text-align:center;
+  margin:0 auto;
 }
 
 #header #logo{
@@ -62,17 +60,14 @@ body {
 }
 
 #main h1{
-	background:#49525c;
-	color:white;
-	text-align:center;
+  background:#49525c;
+  color:white;
+  text-align:center;
 }
+
 /*
  * Content
  */
-
-#content-area{
-	padding:0 20px;
-}
 #content,
 .no-sidebars #content {
   float: none; /* only one column. */

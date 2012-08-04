@@ -1,7 +1,18 @@
 /**
  * @file
+ * Layout Styling (DIV Positioning)
  *
- * This layout is for Desktops.
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
  */
 
 
@@ -13,30 +24,20 @@ body {
 
 #page-wrapper,
 .region-page-closure {
-  /*
-   * If you want to make the page a fixed width and centered in the viewport,
-   * this is the standards-compliant way to do that. See also the ie6.css file
-   * for the necessary IE5/IE6quirks hack to center a div.
-   */
-  margin-left: auto;
-  margin-right: auto;
-<<<<<<< HEAD
-  max-width: 1100px;
-  min-width:876px;
-=======
-  min-width: 1100px;
-  width: 1100px;
->>>>>>> 0486f0ba69fcf5ab9ed41bedc6ef4b21efceca9b
+  min-width: 960px; /* Don't allow the browser to make the site unreadable. */
 }
 
 #page {
-	background:green;
+  background:#f0ebe8;
 }
 
 /*
  * Header
  */
 #header {
+  width:100%;
+  text-align:center;
+  margin:0 auto;
 }
 
 #header .section {
@@ -59,28 +60,42 @@ body {
 #main {
 }
 
+#main h1{
+  background:#49525c;
+  color:white;
+  text-align:center;
+}
+
 /*
  * Content
  */
-#content,
-.no-sidebars #content {
+#content {
   float: left; /* LTR */
-  width: 1090px !important;
-  margin-left: 10px; /* LTR */
-  margin-right: -1100px; /* LTR */ /* Negative value of #content's width + left margin. */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
-  border: 1px solid red;
 }
 
-.sidebar-first #content {
-  width: 800px;
-  margin-left: 10px; /* LTR */ /* The width of .region-sidebar-first. */
-  margin-right: -810px; /* LTR */ /* Negative value of #content's width + left margin. */
-}
-
-#content .section {
+#content .section,
+.no-sidebars #content .section {
   margin: 0;
   padding: 0;
+}
+
+.sidebar-first #content .section {
+  padding-left: 200px; /* LTR */ /* The width + left margin of .region-sidebar-first. */
+  padding-right: 0; /* LTR */
+}
+
+.sidebar-second #content .section {
+  padding-left: 0; /* LTR */
+  padding-right: 200px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
+.two-sidebars #content .section {
+  padding-left: 200px; /* The width + left margin of .region-sidebar-first. */
+  padding-right: 200px; /* The width + right margin of .region-sidebar-second. */
 }
 
 /*
@@ -122,15 +137,14 @@ body {
  */
 .region-sidebar-first {
   float: left; /* LTR */
-  width: 260px;
-  margin-left: 815px; /* LTR */
-  margin-right: -1075px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  width: 200px;
+  margin-left: 0; /* LTR */
+  margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
-  border: 1px solid green !important;
 }
 
 .region-sidebar-first .section {
-  margin: 0 10px 0 10px; /* LTR */
+  margin: 0 20px 0 0; /* LTR */
   padding: 0;
 }
 
@@ -138,10 +152,10 @@ body {
  * Second sidebar
  */
 .region-sidebar-second {
-  float: left; /* LTR */
+  float: right; /* LTR */
   width: 200px;
-  margin-left: 760px; /* LTR */ /* Width of content + sidebar-first. */
-  margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
+  margin-left: -200px; /* LTR */ /* Negative value of .region-sidebar-second's width + right margin. */
+  margin-right: 0; /* LTR */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
 }
 
