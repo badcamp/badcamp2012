@@ -316,11 +316,23 @@ font-family: Georgia, serif;
   font-weight: normal;
 }
 
-.title {
-  font-family: nimbus-sans-extended;
-  font-weight: normal;
+#main-menu a:link {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-#site-name {
-  visibility: none;
+.title a:link{
+  font-family: nimbus-sans-extended;
+  font-weight: normal;
+  text-decoration: none;
 }
+
+#main-menu ul li ul {
+  font-family: Georgia, serif;
+}
+
+/* let's hide the stupid site title */
+#site-name {
+  display: none;
+}
+
