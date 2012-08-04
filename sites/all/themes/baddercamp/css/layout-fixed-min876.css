@@ -174,7 +174,7 @@ body {
 }
 
 #navigation {
-  overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
+  /* overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
 }
 
 /*
