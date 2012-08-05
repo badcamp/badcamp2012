@@ -63,9 +63,9 @@ body {
 }
 
 #main h1{
-  background:#49525c;
-  color:white;
-  text-align:center;
+  background: #49525c;
+  color: white;
+  text-align: center;
 }
 
 /*
@@ -74,14 +74,12 @@ body {
 #content,
 .no-sidebars #content {
   float: none; /* only one column. */
-  max-width: 719px;
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
 .sidebar-first #content {
-  max-width: 719px;
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
 }

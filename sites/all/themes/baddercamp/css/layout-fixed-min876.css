@@ -119,7 +119,7 @@ body {
  */
 #content {
   float: left; /* LTR */
-  width: 100%;
+  width: 100% !important;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */

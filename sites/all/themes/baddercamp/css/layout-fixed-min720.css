@@ -65,14 +65,12 @@ body {
 #content,
 .no-sidebars #content {
   float: none; /* LTR */
-  max-width: 875px;
   margin-left: 0;
   margin-right: 0;
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
 .sidebar-first #content {
-  max-width: 875px;
   margin-left: 0;
   margin-right: 0;
 }
