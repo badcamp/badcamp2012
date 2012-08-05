@@ -109,6 +109,9 @@ function baddercamp_preprocess_page(&$vars, $hook) {
     $vars['account_information'] = '';
     $vars['account_box'] = '';
   }
+
+  // The magic that adds anchors around the page titles.
+  $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . trim($vars['title']) . '<span class="anchor anchor-right">&nbsp;</span>';
 }
 
 /**
@@ -189,6 +192,20 @@ function baddercamp_preprocess_block(&$vars, $hook) {
 // */
 
 /**
+ * Copy old preprocess magic from 2011 theme.
+ *
+ **/
+
+/**
+ * Change the page title on the user registration form.
+ */
+function baddercamp_preprocess_page(&$variables) {
+  if (arg(0) == 'user' && arg(1) == 'register') {
+    $variables['title'] = 'Register for BADCamp 2012!';
+  }
+}
+
+/**
  * Call site-external TypeKit js
  * 
  * see invocation in scripts.js
@@ -197,4 +214,4 @@ function baddercamp_preprocess_block(&$vars, $hook) {
 drupal_set_html_head('<script type="text/javascript" src="//use.typekit.net/xes0fnw.js"></script>');
 
 // site JS call goes in the footer
-drupal_add_js(drupal_get_path('theme', 'baddercamp') .'/js/scripts.js', 'theme', 'header');
+drupal_add_js(drupal_get_path('theme', 'baddercamp') .'/js/scripts.js', 'theme', 'footer');

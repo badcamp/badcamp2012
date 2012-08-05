@@ -411,3 +411,16 @@ h2 {
   padding: 10px;
   display: block;
 }
+
+/* added anchor span - Jen */
+span.anchor {
+  background: transparent url('../images/anchor-bullet.png') center no-repeat;
+  width: 12px;
+  height: 14px;
+}
+span.anchor-left {
+  margin-right: 30px;
+}
+span.anchor-right {
+  margin-left: 25px;
+}
