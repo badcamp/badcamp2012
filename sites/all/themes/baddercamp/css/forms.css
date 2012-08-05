@@ -8,6 +8,7 @@ textarea {
   background-color: #f2f2f2;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  padding: 5px;
   border: 0;
   -moz-box-shadow:    inset 0 0 10px -5px #000000;
   -webkit-box-shadow: inset 0 0 10px -5px #000000;
@@ -152,4 +153,15 @@ form thead th {
 
 form tbody th {
   border-bottom: 1px solid #ccc;
+}
+
+/*
+ * Comment form
+ */
+#comment-form .form-item label {
+  float: left;
+  width: 100px;
+}
+#comment-form #edit-comment-wrapper label {
+  display: none;
 }

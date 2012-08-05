@@ -6,18 +6,26 @@
 
 #comments /* Wrapper for the list of comments and its title */ {
   margin: 1em 0;
+  background: transparent url('../images/divide.png') top center no-repeat;
+  padding-top: 15px;
 }
 
 #comments h2.title /* Heading for the list of comments */ {
+  color: #447b97;
+  border-bottom: 1px solid #bababa;
 }
 
 .comment /* Wrapper for a single comment */ {
+  border-bottom: 1px solid #bababa;
 }
 
 .comment-preview /* Preview of the comment before submitting new or updated comment */ {
 }
 
 .comment.new /* A new comment since the user last viewed the page. */ {
+  position: relative;
+  top: -5px;
+  right: -5px;
 }
 
 .comment.first /* The first comment in the list of comments */ {
@@ -56,12 +64,23 @@
 }
 
 .comment .picture /* The picture of the comment author */ {
+  float: left;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  margin: 10px 0;
 }
 
 .comment .submitted /* The "posted by" information */ {
+  float: left;
+  margin: 20px 15px;
+  padding: 15px 0;
 }
 
 .comment .content /* Comment's content wrapper */ {
+  clear: left;
+  border-top: 1px solid #bababa;
+  padding-top: 10px;
 }
 
 .comment .user-signature /* The user's signature */ {
@@ -71,9 +90,18 @@
 }
 
 .indented /* Nested comments are indented */ {
-  /* margin-left: 25px; */ /* Drupal core uses a 25px left margin */
+  background: transparent url('../images/reply.png') top left no-repeat;
+  margin-left: 0;
+  padding-left: 50px;
 }
 
 .preview .comment /* Preview of the comment before submitting new or updated comment */ {
   /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+}
+
+#comments .box h2 {
+  color: #447b97;
+  border-bottom: 1px solid #bababa;
+  padding: 15px 0;
+  margin: 10px 0;
 }
