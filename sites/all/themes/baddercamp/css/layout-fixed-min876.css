@@ -115,7 +115,7 @@ body {
 
 #content .section {
   margin: 0 50px;
-  padding: 20px;
+  padding: 25px;
   background-color: #ffffff;
 }
 
@@ -123,7 +123,51 @@ body {
  * Make room for nav
  */
 #content .section h1.title {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+}
+
+.node .meta {
+  border-bottom: 1px solid #bababa;
+  padding: 10px 0;
+}
+
+#comments {
+  background: transparent url('../images/divide.png') top center no-repeat;
+  padding-top: 15px;
+}
+#comments h2.title {
+ color: #447b97;
+ border-bottom: 1px solid #bababa;
+}
+#comments .comment {
+  border-bottom: 1px solid #bababa;
+}
+#comments .comment .picture {
+  float: left;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+#comments .comment .submitted {
+  float: left;
+  margin: 20px 15px;
+  padding: 15px 0;
+}
+#comments .comment .submitted .new {
+  position: relative;
+  top: -5px;
+  right: -5px;
+}
+#comments .comment .content {
+  clear: left;
+  border-top: 1px solid #bababa;
+  padding-top: 10px;
+}
+#comments .indented {
+  background: transparent url('../images/reply.png') top left no-repeat;
+  margin-left: 0;
+  padding-left: 50px;
 }
 
 /*
@@ -246,22 +290,6 @@ body {
   box-shadow:         0 -8px 6px -8px black;
   margin: 0 -8px;
   height: 150px;
-}
-
-/*
- * Second sidebar
- */
-.region-sidebar-second {
-  float: left; /* LTR */
-  width: 200px;
-  margin-left: 760px; /* LTR */ /* Width of content + sidebar-first. */
-  margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
-}
-
-.region-sidebar-second .section {
-  margin: 0 0 0 20px; /* LTR */
-  padding: 0;
 }
 
 /*

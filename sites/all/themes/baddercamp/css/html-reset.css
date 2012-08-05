@@ -424,3 +424,8 @@ span.anchor-left {
 span.anchor-right {
   margin-left: 25px;
 }
+
+/* hide $0.00 - Jen */
+.node .product-info {
+  display: none;
+}

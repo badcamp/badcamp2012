@@ -94,7 +94,6 @@
  * - $navigation: Items for the navigation bar.
  * - $sidebar_first: Items for the first sidebar.
  * - $sidebar_second: Items for the second sidebar.
- * - $header: Items for the header region.
  * - $footer: Items for the footer region.
  * - $page_closure: Items to appear below the footer.
  *
@@ -157,8 +156,6 @@
 
       <div id="pirateship"></div>
 
-      <?php print $header; ?>
-
     </div></div><!-- /.section, /#header -->
 
     <div id="main-wrapper"><div id="main" class="clearfix<?php if ($primary_links || $navigation) { print ' with-navigation'; } ?>">
@@ -210,8 +207,6 @@
       <?php if ($footer_message): ?>
         <div id="footer-message"><?php print $footer_message; ?></div>
       <?php endif; ?>
-
-      <?php print $footer; ?>
 
     </div></div><!-- /.section, /#footer -->
   <?php endif; ?>

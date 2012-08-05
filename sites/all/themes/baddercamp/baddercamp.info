@@ -77,8 +77,6 @@ regions[navigation]     = Navigation bar
 regions[highlight]      = Highlighted content
 regions[content_top]    = Content top
 regions[content_bottom] = Content bottom
-regions[header]         = Header
-regions[footer]         = Footer
 regions[page_closure]   = Page closure
 
   ; Various page elements output by the theme can be toggled on and off. The

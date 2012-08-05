@@ -111,7 +111,17 @@ function baddercamp_preprocess_page(&$vars, $hook) {
   }
 
   // The magic that adds anchors around the page titles.
-  $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . trim($vars['title']) . '<span class="anchor anchor-right">&nbsp;</span>';
+  if ($vars['title'] != '') {
+    $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . trim($vars['title']) . '<span class="anchor anchor-right">&nbsp;</span>';
+  }
+  else {
+    $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . t('BADCamp 2012') . '<span class="anchor anchor-right">&nbsp;</span>';
+  }
+
+  // Set the regiser page title to something sane.
+  if (arg(0) == 'user' && arg(1) == 'register') {
+    $variables['title'] = 'Register for BADCamp 2012!';
+  }
 }
 
 /**
@@ -150,16 +160,19 @@ function baddercamp_user_login() {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function baddercamp_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+  $node = $vars['node']; // Nice shorthand.
+  $vars['comment_count'] = format_plural($node->comment_count, '1 comment', '@count comments');
 
-  // Optionally, run node-type-specific preprocess functions, like
+  /* Optionally, run node-type-specific preprocess functions, like
   // baddercamp_preprocess_node_page() or baddercamp_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $vars['node']->type;
   if (function_exists($function)) {
     $function($vars, $hook);
   }
+  */
+  
+  dpm($vars);
 }
 // */
 
@@ -190,20 +203,6 @@ function baddercamp_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
-
-/**
- * Copy old preprocess magic from 2011 theme.
- *
- **/
-
-/**
- * Change the page title on the user registration form.
- */
-function baddercamp_preprocess_page(&$variables) {
-  if (arg(0) == 'user' && arg(1) == 'register') {
-    $variables['title'] = 'Register for BADCamp 2012!';
-  }
-}
 
 /**
  * Call site-external TypeKit js
