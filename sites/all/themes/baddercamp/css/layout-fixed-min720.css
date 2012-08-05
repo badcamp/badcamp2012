@@ -96,7 +96,7 @@ body {
 
 .with-navigation #content,
 .with-navigation .region-sidebar-first {
-  margin-top: 2.3em; /* Set this to the same value as the navigation height above. */
+  margin-top: 0; /* Not needed since nav is below content. */
 }
 
 #navigation .section {
