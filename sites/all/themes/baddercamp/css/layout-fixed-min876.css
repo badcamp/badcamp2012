@@ -169,6 +169,19 @@ body {
   margin-left: 0;
   padding-left: 50px;
 }
+#comments .box h2 {
+  color: #447b97;
+  border-bottom: 1px solid #bababa;
+  padding: 15px 0;
+  margin: 10px 0;
+}
+#comment-form .form-item label {
+  float: left;
+  width: 100px;
+}
+#comment-form #edit-comment-wrapper label {
+  display: none;
+}
 
 /*
  * Navigation
