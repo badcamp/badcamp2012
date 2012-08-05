@@ -160,7 +160,7 @@
 
     <div id="main-wrapper"><div id="main" class="clearfix<?php if ($primary_links || $navigation) { print ' with-navigation'; } ?>">
 
-      <div id="content" class="column"><div class="section">
+      <div id="content" class="column"><div class="section"><div class="section-inner">
 
         <?php if ($mission): ?>
           <div id="mission"><?php print $mission; ?></div>
@@ -192,7 +192,7 @@
       <?php if ($primary_links || $navigation): ?>
         <div id="navigation"><div class="section clearfix">
           <?php print $navigation; ?>
-        </div></div><!-- /.section, /#navigation -->
+        </div></div></div><!-- /.section-inner, /.section, /#navigation -->
       <?php endif; ?>
 
       <?php print $sidebar_first; ?>

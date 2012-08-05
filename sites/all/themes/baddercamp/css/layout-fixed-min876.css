@@ -4,6 +4,23 @@
  * This layout is for Desktops.
  */
 
+/**
+ * @file
+ * Layout Styling (DIV Positioning)
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout is based on the Zen Columns layout method.
+ *   http://drupal.org/node/201428
+ *
+ * Only CSS that affects the layout (positioning) of major elements should be
+ * listed here.  Such as:
+ *   display, position, float, clear, width, height, min-width, min-height
+ *   margin, border, padding, overflow
+ */
+
 
 /*
  * Body
@@ -12,19 +29,18 @@ body {
   
 }
 
+#page-wrapper {
+  background: #f6f1ef url('../images/background.jpg') center 15px no-repeat;
+}
 #page-wrapper,
 .region-page-closure {
-  /*
-   * If you want to make the page a fixed width and centered in the viewport,
-   * this is the standards-compliant way to do that. See also the ie6.css file
-   * for the necessary IE5/IE6quirks hack to center a div.
-   */
+  min-width: 876px; /* Don't allow the browser to make the site unreadable. */
+  
   margin-left: auto;
   margin-right: auto;
-  min-width: 1100px;
-  width: 1100px;
-  
-  background: #f6f1ef url(../images/background.jpg) top center no-repeat;
+  min-width: 876px;
+  max-width: 1100px;
+  width: auto;
 }
 
 #page {
@@ -35,10 +51,13 @@ body {
  * Header
  */
 #header {
+  width:100%;
+  text-align:center;
+  margin:0 auto;
 }
 
 #header .section {
-  height: 235px;
+  height: 250px;
   position: relative;
   padding: 10px 60px 0 60px;
 }
@@ -79,7 +98,7 @@ body {
   clear: both; /* Clear the logo */
 }
 
-/*
+ /*
  * Main (container for everything else)
  */
 #main-wrapper {
@@ -92,32 +111,36 @@ body {
 #main h1 {
   background-color: transparent;
   color: #447b97;
+  text-align: center;
 }
 
 /*
  * Content
  */
-#content,
-.no-sidebars #content {
+#content {
   float: left; /* LTR */
-  width: 1090px !important;
-  margin-left: 10px; /* LTR */
-  margin-right: -1100px; /* LTR */ /* Negative value of #content's width + left margin. */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #content's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
-.sidebar-first #content {
-  width: 800px;
-  max-width: 800px;
-  margin-left: 10px; /* LTR */ /* The width of .region-sidebar-first. */
-  margin-right: -810px; /* LTR */ /* Negative value of #content's width + left margin. */
+#content .section,
+.no-sidebars #content .section {
+  margin: 0;
 }
 
-#content .section {
-  margin: 0 50px;
-  padding: 25px;
+#content .section .section-inner {
+  margin: 0 60px;
   background-color: #ffffff;
+  padding: 10px 20px;
 }
+
+.sidebar-first #content .section {
+  padding-left: 0; /* LTR */
+  padding-right: 280px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
 
 /*
  * Make room for nav
@@ -126,81 +149,33 @@ body {
   margin-bottom: 50px;
 }
 
-.node .meta {
-  border-bottom: 1px solid #bababa;
-  padding: 10px 0;
-}
-
-#comments {
-  background: transparent url('../images/divide.png') top center no-repeat;
-  padding-top: 15px;
-}
-#comments h2.title {
- color: #447b97;
- border-bottom: 1px solid #bababa;
-}
-#comments .comment {
-  border-bottom: 1px solid #bababa;
-}
-#comments .comment .picture {
-  float: left;
-  width: 85px;
-  height: 85px;
-  overflow: hidden;
-  margin: 10px 0;
-}
-#comments .comment .submitted {
-  float: left;
-  margin: 20px 15px;
-  padding: 15px 0;
-}
-#comments .comment .submitted .new {
-  position: relative;
-  top: -5px;
-  right: -5px;
-}
-#comments .comment .content {
-  clear: left;
-  border-top: 1px solid #bababa;
-  padding-top: 10px;
-}
-#comments .indented {
-  background: transparent url('../images/reply.png') top left no-repeat;
-  margin-left: 0;
-  padding-left: 50px;
-}
-#comments .box h2 {
-  color: #447b97;
-  border-bottom: 1px solid #bababa;
-  padding: 15px 0;
-  margin: 10px 0;
-}
-#comment-form .form-item label {
-  float: left;
-  width: 100px;
-}
-#comment-form #edit-comment-wrapper label {
-  display: none;
-}
 
 /*
  * Navigation
  */
 #navigation {
+  background: transparent url('../images/nav-left.png') top left no-repeat;
+  display: none;
+
   float: left; /* LTR */
-  width: 780px;
-  margin-top: 70px;
-  margin-left: 20px; /* LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
-  height: 62px;
-  background: transparent url('../images/nav-left.png') top left no-repeat;
+  
+  position: absolute;
+  top: 70px;
+  left: 20px; /* LTR */
+  width: 780px;
+  
+  height: 62px; /* The navigation can have any arbritrary height. We picked one
+                    that is the line-height plus 1em: 1.3 + 1 = 2.3
+                    Set this to the same value as the margin-top below. */
 }
 
 .with-navigation #content,
-.with-navigation .region-sidebar-first,
-.with-navigation .region-sidebar-second {
-  margin-top: 0; /* Since nav is not above content, not needed. */
+.with-navigation .region-sidebar-first {
+  margin-top: 0; /* Set this to the same value as the navigation height above. */
 }
 
 #navigation .section {
@@ -219,32 +194,89 @@ body {
   margin: 0;
 }
 
-/*
-#navigation ul {
+#navigation ul /* Primary and secondary links */ {
   margin: 0;
   padding: 0;
-  text-align: left; 
+  text-align: left; /* LTR */
 }
 
-#navigation li  {
-  float: left; 
-  padding: 0 10px 0 0; 
-} */
+#navigation li /* A simple method to get navigation links to appear in one line. */ {
+  float: left; /* LTR */
+  padding: 0 10px 0 0; /* LTR */
+}
 
 /*
  * First sidebar
  */
 .region-sidebar-first {
-  float: left; /* LTR */
-  width: 270px;
-  margin-left: 815px; /* LTR */
-  margin-right: -1085px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
+  float: right; /* LTR */
+  width: 280px;
+  margin-left: -280px; /* LTR */ /* Negative value of .region-sidebar-first's width + right margin. */
+  margin-right: 0; /* LTR */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
 }
+
 .region-sidebar-first .section {
   margin: 0 10px 0 10px; /* LTR */
-  padding: 0;
+  padding: 0 10px 0 0;
 }
+
+/*
+ * Footer
+ */
+#footer {
+  background: transparent url('../images/wood.jpg') 0 100px repeat-x;
+  height: 200px;
+}
+
+#footer .section {
+  background: transparent url('../images/parrot.png') 920px 20px no-repeat;
+  padding: 30px;
+  height: 140px;
+}
+
+#footer .section #footer-message {
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 105px;
+}
+
+#footer .section a {
+  color: #fff;
+}
+
+
+/*
+ * Closure
+ */
+.region-page-closure /* See also the #page-wrapper declaration above that this div shares. */ {
+}
+
+/*
+ * Prevent overflowing content
+ */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+#footer,
+.region-page-closure {
+  overflow: visible;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+#navigation {
+  overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
+}
+
+
+
+
+
+/*
+ * Blocks in the sidebar.
+ */
 .region-sidebar-first .section .block {
   background: transparent url('../images/ropes.png') top center repeat-y;
   padding-bottom: 10px;
@@ -304,65 +336,3 @@ body {
   margin: 0 -8px;
   height: 150px;
 }
-
-/*
- * Footer
- */
-#footer {
-  background: transparent url('../images/wood.jpg') 0 100px repeat-x;
-  height: 200px;
-}
-
-#footer .section {
-  background: transparent url('../images/parrot.png') 920px 20px no-repeat;
-  padding: 30px;
-  height: 140px;
-}
-#footer .section #footer-message {
-  color: #fff;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-top: 105px;
-}
-
-#footer .section a {
-  color: #fff;
-}
-
-/*
- * Closure
- */
-.region-page-closure /* See also the #page-wrapper declaration above that this div shares. */ {
-}
-
-/*
- * Prevent overflowing content
- */
-#header,
-#content,
-#navigation,
-.region-sidebar-first,
-.region-sidebar-second,
-#footer,
-.region-page-closure {
-  overflow: visible;
-  word-wrap: break-word; /* A very nice CSS3 property */
-}
-
-#navigation {
-  /* overflow: hidden; /* May need to be removed if using a dynamic drop-down menu */
-}
-
-/*
- * If a div.clearfix doesn't have any content after it and its bottom edge
- * touches the bottom of the viewport, Firefox and Safari will mistakenly
- * place several pixels worth of space between the bottom of the div and the
- * bottom of the viewport. Uncomment this CSS property to fix this.
- * Note: with some over-large content, this property might cause scrollbars
- * to appear on the #page-wrapper div.
- */
-/*
-#page-wrapper {
-  overflow-y: hidden;
-}
-*/
