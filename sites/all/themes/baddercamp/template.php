@@ -172,7 +172,7 @@ function baddercamp_preprocess_node(&$vars, $hook) {
   }
   */
   
-  dpm($vars);
+  //dpm($vars);
 }
 // */
 
