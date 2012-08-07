@@ -455,16 +455,11 @@ span.anchor-right {
 	position:absolute;
   right: 60px;
   bottom: 10px;
-	/* top:10px;
-	left:10px; */
   display:inline-block;
 	width:200px;
 	height:215px;
-	background-color:#000;
-	/* border-radius:3px; */
 	background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
 	-webkit-animation:rotate infinite linear;
 	-webkit-animation-duration:10s;
 	-webkit-animation-delay:1s; 
-	z-index: 100;
 }
