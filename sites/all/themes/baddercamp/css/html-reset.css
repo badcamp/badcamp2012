@@ -341,7 +341,12 @@ h2 {
   display: none;
 }
 
+.sidebar {
+  font-family: nimbus-sans-extended;
+}
 
+.sidebar h2 {
+}
 
 /**
  * Main Menu
@@ -428,4 +433,38 @@ span.anchor-right {
 /* hide $0.00 - Jen */
 .node .product-info {
   display: none;
+}
+
+
+
+/**
+ * CSS pirate ship movements!
+ *
+ * TODO: add additional prefixes for other, less useful browsers.
+ **/
+@-webkit-keyframes rotate{
+	from{
+		-webkit-transform:rotate(0deg) translate(-7px) rotate(0deg);
+	}
+	to{
+		-webkit-transform:rotate(360deg) translate(-7px) rotate(-360deg);
+	}
+}
+
+#pirateship {
+	position:absolute;
+  right: 60px;
+  bottom: 10px;
+	/* top:10px;
+	left:10px; */
+  display:inline-block;
+	width:200px;
+	height:215px;
+	background-color:#000;
+	/* border-radius:3px; */
+	background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
+	-webkit-animation:rotate infinite linear;
+	-webkit-animation-duration:10s;
+	-webkit-animation-delay:1s; 
+	z-index: 100;
 }
