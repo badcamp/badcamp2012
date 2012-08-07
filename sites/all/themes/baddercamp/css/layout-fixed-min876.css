@@ -157,7 +157,6 @@ body {
  */
 #navigation {
   background: transparent url('../images/nav-left.png') top left no-repeat;
-  display: none;
 
   float: left; /* LTR */
   width: 100%;
