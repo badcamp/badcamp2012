@@ -50,6 +50,10 @@ body {
   background: #f6f1ef url('../images/background.jpg') center 0 no-repeat;
 }
 
+#pirateship{
+	display:inline-block;
+}
+
 /*
  * Header
  */
