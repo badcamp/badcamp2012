@@ -22,11 +22,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 875px;
-  
-  background: #f6f1ef url(../images/background.jpg) top center no-repeat;
 }
 
 #page {
+}
+
+#page-inner {
+  background: transparent url(../images/mobile-background.jpg) no-repeat;
 }
 
 /*
