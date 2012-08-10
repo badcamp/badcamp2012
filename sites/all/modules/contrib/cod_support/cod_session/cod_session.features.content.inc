@@ -198,17 +198,17 @@ function cod_session_content_default_fields() {
     'field_name' => 'field_accepted',
     'type_name' => 'schedule_item',
     'display_settings' => array(
-      'weight' => '-2',
+      'weight' => '7',
       'parent' => 'group_schedule',
       'label' => array(
-        'format' => 'inline',
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -248,21 +248,86 @@ function cod_session_content_default_fields() {
     ),
   );
 
+  // Exported field: field_session_details
+  $fields['schedule_item-field_session_details'] = array(
+    'field_name' => 'field_session_details',
+    'type_name' => 'schedule_item',
+    'display_settings' => array(
+      'weight' => '32',
+      'parent' => '',
+      'label' => array(
+        'format' => 'hidden',
+      ),
+      'teaser' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'hidden',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '1',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'rows' => '5',
+      'size' => 60,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          'format' => '1',
+          '_error_element' => 'default_value_widget][field_session_details][0][value',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Extra Details for Schedule',
+      'weight' => '32',
+      'description' => '',
+      'type' => 'text_textarea',
+      'module' => 'text',
+    ),
+  );
+
   // Exported field: field_session_room
   $fields['schedule_item-field_session_room'] = array(
     'field_name' => 'field_session_room',
     'type_name' => 'schedule_item',
     'display_settings' => array(
+      'weight' => '9',
+      'parent' => 'group_schedule',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -292,13 +357,16 @@ function cod_session_content_default_fields() {
       'room' => 'room',
       'bof_session' => 0,
       'event' => 0,
+      'lightning_talk' => 0,
       'news' => 0,
       'page' => 0,
       'product' => 0,
       'schedule_item' => 0,
       'session' => 0,
       'sponsor' => 0,
+      'sponsorship' => 0,
       'time_slot' => 0,
+      'training_session' => 0,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
@@ -307,7 +375,43 @@ function cod_session_content_default_fields() {
       'size' => 60,
       'default_value' => array(
         '0' => array(
-          'nid' => NULL,
+          'nid' => '13',
+        ),
+        '1' => array(
+          'nid' => '14',
+        ),
+        '2' => array(
+          'nid' => '16',
+        ),
+        '3' => array(
+          'nid' => '15',
+        ),
+        '4' => array(
+          'nid' => '17',
+        ),
+        '5' => array(
+          'nid' => '18',
+        ),
+        '6' => array(
+          'nid' => '19',
+        ),
+        '7' => array(
+          'nid' => '7',
+        ),
+        '8' => array(
+          'nid' => '8',
+        ),
+        '9' => array(
+          'nid' => '9',
+        ),
+        '10' => array(
+          'nid' => '10',
+        ),
+        '11' => array(
+          'nid' => '11',
+        ),
+        '12' => array(
+          'nid' => '12',
         ),
       ),
       'default_value_php' => NULL,
@@ -324,17 +428,17 @@ function cod_session_content_default_fields() {
     'field_name' => 'field_session_slot',
     'type_name' => 'schedule_item',
     'display_settings' => array(
-      'weight' => '1',
+      'weight' => '8',
       'parent' => 'group_schedule',
       'label' => array(
-        'format' => 'inline',
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'default',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
@@ -357,20 +461,27 @@ function cod_session_content_default_fields() {
     'widget_active' => '1',
     'type' => 'nodereference',
     'required' => '0',
-    'multiple' => '0',
+    'multiple' => '2',
     'module' => 'nodereference',
     'active' => '1',
     'referenceable_types' => array(
       'time_slot' => 'time_slot',
       'bof_session' => 0,
+      'case_study' => 0,
       'event' => 0,
+      'forum' => 0,
+      'lightning_talk' => 0,
       'news' => 0,
       'page' => 0,
       'product' => 0,
       'room' => 0,
       'schedule_item' => 0,
       'session' => 0,
+      'slide' => 0,
       'sponsor' => 0,
+      'sponsorship' => 0,
+      'training_session' => 0,
+      'webform' => 0,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
@@ -386,7 +497,7 @@ function cod_session_content_default_fields() {
       'label' => 'Time slot',
       'weight' => '8',
       'description' => '',
-      'type' => 'nodereference_select',
+      'type' => 'nodereference_buttons',
       'module' => 'nodereference',
     ),
   );
@@ -508,25 +619,33 @@ advanced|Advanced',
     ),
   );
 
-  // Exported field: field_speakers
-  $fields['session-field_speakers'] = array(
-    'field_name' => 'field_speakers',
+  // Exported field: field_session_details
+  $fields['session-field_session_details'] = array(
+    'field_name' => 'field_session_details',
     'type_name' => 'session',
     'display_settings' => array(
-      'weight' => '-3',
+      'weight' => '9',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'user_full_name',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       'full' => array(
-        'format' => 'user_full_name',
+        'format' => 'hidden',
         'exclude' => 0,
       ),
       '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -536,36 +655,25 @@ advanced|Advanced',
       ),
     ),
     'widget_active' => '1',
-    'type' => 'userreference',
+    'type' => 'text',
     'required' => '0',
-    'multiple' => '1',
-    'module' => 'userreference',
+    'multiple' => '0',
+    'module' => 'text',
     'active' => '1',
-    'referenceable_roles' => array(
-      '2' => 0,
-      '4' => 0,
-      '3' => 0,
-      '5' => 0,
-    ),
-    'referenceable_status' => '1',
-    'advanced_view' => '',
-    'advanced_view_args' => '',
+    'text_processing' => '1',
+    'max_length' => '',
+    'allowed_values' => '',
+    'allowed_values_php' => '',
     'widget' => array(
-      'autocomplete_match' => 'contains',
-      'size' => '40',
-      'reverse_link' => 1,
-      'default_value' => array(
-        '0' => array(
-          'uid' => NULL,
-          '_error_element' => 'default_value_widget][field_speakers][0][uid][uid',
-        ),
-      ),
+      'rows' => '5',
+      'size' => 60,
+      'default_value' => NULL,
       'default_value_php' => NULL,
-      'label' => 'Speaker(s)',
-      'weight' => '-3',
-      'description' => 'Add your username and optionally 1-5 additional speaker usernames.',
-      'type' => 'userreference_autocomplete',
-      'module' => 'userreference',
+      'label' => 'Extra Details for Schedule',
+      'weight' => '11',
+      'description' => '',
+      'type' => 'text_textarea',
+      'module' => 'text',
     ),
   );
 
@@ -614,13 +722,16 @@ advanced|Advanced',
       'room' => 'room',
       'bof_session' => 0,
       'event' => 0,
+      'lightning_talk' => 0,
       'news' => 0,
       'page' => 0,
       'product' => 0,
       'schedule_item' => 0,
       'session' => 0,
       'sponsor' => 0,
+      'sponsorship' => 0,
       'time_slot' => 0,
+      'training_session' => 0,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
@@ -679,20 +790,27 @@ advanced|Advanced',
     'widget_active' => '1',
     'type' => 'nodereference',
     'required' => '0',
-    'multiple' => '0',
+    'multiple' => '2',
     'module' => 'nodereference',
     'active' => '1',
     'referenceable_types' => array(
       'time_slot' => 'time_slot',
       'bof_session' => 0,
+      'case_study' => 0,
       'event' => 0,
+      'forum' => 0,
+      'lightning_talk' => 0,
       'news' => 0,
       'page' => 0,
       'product' => 0,
       'room' => 0,
       'schedule_item' => 0,
       'session' => 0,
+      'slide' => 0,
       'sponsor' => 0,
+      'sponsorship' => 0,
+      'training_session' => 0,
+      'webform' => 0,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
@@ -701,14 +819,14 @@ advanced|Advanced',
       'size' => 60,
       'default_value' => array(
         '0' => array(
-          'nid' => '',
+          'nid' => NULL,
         ),
       ),
       'default_value_php' => NULL,
       'label' => 'Time slot',
       'weight' => '-1',
       'description' => '',
-      'type' => 'nodereference_select',
+      'type' => 'nodereference_buttons',
       'module' => 'nodereference',
     ),
   );
@@ -718,7 +836,7 @@ advanced|Advanced',
     'field_name' => 'field_slides',
     'type_name' => 'session',
     'display_settings' => array(
-      'weight' => '-1',
+      'weight' => '-2',
       'parent' => '',
       'label' => array(
         'format' => 'above',
@@ -764,10 +882,73 @@ advanced|Advanced',
       'max_filesize_per_file' => '',
       'max_filesize_per_node' => '',
       'label' => 'Slides',
-      'weight' => '-1',
+      'weight' => '-2',
       'description' => 'Upload your slides here as a PDF, or link to them from the description. (This is typically done after your session.)',
       'type' => 'filefield_widget',
       'module' => 'filefield',
+    ),
+  );
+
+  // Exported field: field_speakers
+  $fields['session-field_speakers'] = array(
+    'field_name' => 'field_speakers',
+    'type_name' => 'session',
+    'display_settings' => array(
+      'weight' => 0,
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'user_full_name',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'user_full_name',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'userreference',
+    'required' => '0',
+    'multiple' => '1',
+    'module' => 'userreference',
+    'active' => '1',
+    'referenceable_roles' => array(
+      '2' => 0,
+      '7' => 0,
+      '4' => 0,
+      '5' => 0,
+      '6' => 0,
+      '8' => 0,
+    ),
+    'referenceable_status' => '1',
+    'advanced_view' => '--',
+    'advanced_view_args' => '',
+    'widget' => array(
+      'autocomplete_match' => 'contains',
+      'size' => '40',
+      'reverse_link' => 1,
+      'default_value' => array(
+        '0' => array(
+          'uid' => NULL,
+          '_error_element' => 'default_value_widget][field_speakers][0][uid][uid',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Speaker(s)',
+      'weight' => 0,
+      'description' => 'Add your username and optionally 1-5 additional speaker usernames.',
+      'type' => 'userreference_autocomplete',
+      'module' => 'userreference',
     ),
   );
 
@@ -800,15 +981,18 @@ advanced|Advanced',
     ),
     'widget_active' => '1',
     'type' => 'text',
-    'required' => '0',
+    'required' => '1',
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
     'text_processing' => '0',
     'max_length' => '',
-    'allowed_values' => 'Track 1
-Track 2
-Track 3',
+    'allowed_values' => 'front|Design & Theme
+back|Code & Develop
+build|Site building
+fast|Performance
+community|Community
+study|Case Study',
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => array(
@@ -902,11 +1086,12 @@ Track 3',
   t('Capacity');
   t('Date and time');
   t('Experience level');
+  t('Extra Details for Schedule');
   t('Photo');
-  t('Speaker(s)');
   t('Room');
   t('Session capacity');
   t('Slides');
+  t('Speaker(s)');
   t('Status');
   t('Time slot');
   t('Track');

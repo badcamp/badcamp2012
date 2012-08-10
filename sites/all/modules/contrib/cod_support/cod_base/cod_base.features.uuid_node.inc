@@ -10,9 +10,9 @@ function cod_base_uuid_features_default_content() {
   'type' => 'page',
   'language' => '',
   'uid' => '0',
-  'status' => '1',
+  'status' => '0',
   'created' => '1295470463',
-  'changed' => '1310438266',
+  'changed' => '1311214082',
   'comment' => '0',
   'promote' => '1',
   'moderate' => '0',
@@ -157,7 +157,7 @@ COD includes default empty text in the Views. You may want to review and change 
 COD is the Conference Organizing Distribution, used for building conference and event sites in Drupal.  You may first be interested in an <a href="http://usecod.com/features">overview of COD\'s capabilities</a>. The primary project page is at http://drupal.org/project/cod_support.
 ',
   'log' => '',
-  'revision_timestamp' => '1310438266',
+  'revision_timestamp' => '1311214082',
   'format' => '2',
   'name' => '',
   'picture' => '',
@@ -171,6 +171,7 @@ COD is the Conference Organizing Distribution, used for building conference and 
   'uuid' => '79f090a8-755e-102e-a8fe-4040db1cdced',
   'revision_uuid' => '79f12ce8-755e-102e-a8fe-4040db1cdced',
   'pathauto_perform_alias' => FALSE,
+  'date' => '2011-01-19 13:54:23 -0700',
 );
   return $nodes;
 }

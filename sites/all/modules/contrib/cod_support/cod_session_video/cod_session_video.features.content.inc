@@ -57,6 +57,7 @@ function cod_session_video_content_default_fields() {
       'thumbnail_height' => '90',
       'thumbnail_default_path' => '',
       'thumbnail_link_title' => 'See video',
+      'meta_fields' => NULL,
       'providers' => array(),
       'default_value' => array(
         '0' => array(
@@ -66,7 +67,7 @@ function cod_session_video_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Video',
-      'weight' => '8',
+      'weight' => '9',
       'description' => '',
       'type' => 'emvideo_textfields',
       'module' => 'emvideo',
