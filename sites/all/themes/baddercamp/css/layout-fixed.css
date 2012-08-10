@@ -134,6 +134,10 @@ body {
   padding: 0 10px 0 0; /* LTR */
 }
 
+/* Hiding Large Menu on mobile */
+#block-nice_menus-1{
+	display:none;
+}
 /*
  * First sidebar
  */

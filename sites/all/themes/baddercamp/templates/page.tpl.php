@@ -168,9 +168,22 @@
           <div id="mission"><?php print $mission; ?></div>
         <?php endif; ?>
 
+      <?php if ($top_navigation): ?>
+        <div id="top_navigation"><div class="section clearfix">
+          <?php print $top_navigation; ?>
+        </div></div>
+      <?php endif; ?>
+
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>
         <?php endif; ?>
+
+      <?php if ($primary_links || $navigation): ?>
+        <div id="navigation"><div class="section clearfix">
+          <?php print $navigation; ?>
+        </div></div>
+      <?php endif; ?>
+
         <?php print $messages; ?>
         <?php if ($tabs): ?>
           <div class="tabs"><?php print $tabs; ?></div>
@@ -191,12 +204,7 @@
 
       </div></div><!-- /.section, /#content -->
 
-      <?php if ($primary_links || $navigation): ?>
-        <div id="navigation"><div class="section clearfix">
-          <?php print $navigation; ?>
-        </div></div></div><!-- /.section-inner, /.section, /#navigation -->
-      <?php endif; ?>
-
+				</div><!-- /.section-inner -->
       <?php print $sidebar_first; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
