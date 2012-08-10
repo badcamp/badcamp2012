@@ -11,10 +11,9 @@ function cod_events_views_default_views() {
   $view->name = 'cod_signup_user_vbo_admin_list';
   $view->description = 'Per-node signup administration interface with checkboxes for bulk operations.';
   $view->tag = 'signup';
-  $view->view_php = '';
   $view->base_table = 'signup_log';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -219,7 +218,7 @@ function cod_events_views_default_views() {
     'uid' => array(
       'operator' => 'not in',
       'value' => array(
-        '0' => 0,
+        0 => 0,
       ),
       'group' => '0',
       'exposed' => FALSE,

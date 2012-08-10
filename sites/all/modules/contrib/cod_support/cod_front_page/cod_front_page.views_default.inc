@@ -11,10 +11,9 @@ function cod_front_page_views_default_views() {
   $view->name = 'front';
   $view->description = 'Front Page Content';
   $view->tag = 'front';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('sorts', array(
@@ -27,37 +26,6 @@ function cod_front_page_views_default_views() {
     ),
   ));
   $handler->override_option('filters', array(
-    'promote' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'promote',
-      'table' => 'node',
-      'field' => 'promote',
-      'relationship' => 'none',
-    ),
-    'type' => array(
-      'operator' => 'not in',
-      'value' => array(
-        'news' => 'news',
-        'session' => 'session',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'relationship' => 'none',
-    ),
     'status' => array(
       'operator' => '=',
       'value' => '1',
@@ -70,6 +38,27 @@ function cod_front_page_views_default_views() {
       'id' => 'status',
       'table' => 'node',
       'field' => 'status',
+      'relationship' => 'none',
+    ),
+    'nid' => array(
+      'operator' => '=',
+      'value' => array(
+        'value' => '3',
+        'min' => '',
+        'max' => '',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'nid',
+      'table' => 'node',
+      'field' => 'nid',
+      'override' => array(
+        'button' => 'Override',
+      ),
       'relationship' => 'none',
     ),
   ));
@@ -85,7 +74,7 @@ function cod_front_page_views_default_views() {
   $handler->override_option('row_options', array(
     'relationship' => 'none',
     'build_mode' => 'teaser',
-    'links' => 1,
+    'links' => 0,
     'comments' => 0,
   ));
   $handler = $view->new_display('page', 'Page', 'page_1');
