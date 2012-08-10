@@ -9,7 +9,6 @@
  * Body
  */
 body {
-  background: transparent url(../images/mobile-background.jpg) no-repeat;
   background-color:#f0ebe8; 
 }
 
@@ -26,7 +25,10 @@ body {
 }
 
 #page {
-  
+}
+
+#page-inner {
+  background: transparent url(../images/mobile-background.jpg) no-repeat;
 }
 
 /*

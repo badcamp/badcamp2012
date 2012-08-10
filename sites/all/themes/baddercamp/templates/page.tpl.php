@@ -133,7 +133,9 @@
       </div>
       <div id="account-links-triangle"></div>
     </div>
-    <div id="account-links-header"></div>
+    
+		<div id="page-inner">
+		<div id="account-links-header"></div>
     <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
     <div id="account-links-closer" class="clearfix"></div>
 
@@ -198,7 +200,7 @@
       <?php print $sidebar_first; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
-
+		</div><!-- /#page-inner -->
   </div><!-- /#page -->
   
   <?php if ($footer || $footer_message || $secondary_links): ?>

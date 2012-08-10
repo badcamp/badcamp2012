@@ -30,8 +30,8 @@ body {
 }
 
 #page-wrapper {
-  background: #f6f1ef url('../images/background.jpg') center 15px no-repeat;
 }
+
 #page-wrapper,
 .region-page-closure {
   min-width: 876px; /* Don't allow the browser to make the site unreadable. */
@@ -44,7 +44,10 @@ body {
 }
 
 #page {
-  
+}
+
+#page-inner {
+  background: #f6f1ef url('../images/background.jpg') center 0 no-repeat;
 }
 
 /*
