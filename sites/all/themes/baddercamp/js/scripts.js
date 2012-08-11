@@ -22,3 +22,12 @@ Drupal.behaviors.badcampLogin = function(context) {
     return false;
   });
 }
+
+
+Drupal.behaviors.bells = function(context) {
+  $('#pirateship').append('<audio id="bells" src="/sites/all/themes/baddercamp/sounds/bellring.mp3" style="display: none;"></audio>');
+  $('#pirateship').bind('click', function() {
+    var audio = document.getElementById('bells');
+    audio.play();
+  });
+}
