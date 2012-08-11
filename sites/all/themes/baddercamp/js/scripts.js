@@ -1,5 +1,5 @@
 // TypeKit goodness
-Drupal.behaviors.badcamp = function(context) {
+Drupal.behaviors.typekit = function(context) {
   try {
     Typekit.load();
   }
