@@ -337,6 +337,12 @@ h2 {
   text-transform: uppercase;
 }
 
+h3{
+ font-family: nimbus-sans-condensed;
+ text-transform: uppercase;
+ color: #447b97;
+}
+
 /* let's hide the stupid site title */
 #site-name {
   display: none;
@@ -351,7 +357,7 @@ h2 {
 
 /**
  * Main Menu
- **/
+
 
 #block-menu-primary-links ul li ul li {
   display:block;
@@ -383,7 +389,7 @@ h2 {
 #block-menu-primary-links ul > li {
   list-style-type: none;
   list-style-image: none;
-  /* float:left; */
+  /* float:left; 
 }
 
 #block-menu-primary-links ul li ul {
@@ -417,6 +423,7 @@ h2 {
   padding: 10px;
   display: block;
 }
+*/
 
 /* added anchor span - Jen */
 span.anchor {

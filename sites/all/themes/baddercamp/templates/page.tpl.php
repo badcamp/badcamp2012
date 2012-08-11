@@ -114,6 +114,7 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body class="<?php print $classes; ?>">
 
@@ -169,8 +170,8 @@
         <?php endif; ?>
 
       <?php if ($top_navigation): ?>
-        <div id="top_navigation"><div class="section clearfix">
-          <?php print $top_navigation; ?>
+        <div id="top-navigation"><div class="section clearfix">
+         <?php print $top_navigation; ?>
         </div></div>
       <?php endif; ?>
 
