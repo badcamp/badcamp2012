@@ -23,11 +23,12 @@ Drupal.behaviors.badcampLogin = function(context) {
   });
 }
 
-
+// ask not for whom the bell tolls
 Drupal.behaviors.bells = function(context) {
+  // nb: this only works for non-IE browsers, but i'm not sorry about 
   $('#pirateship').append('<audio id="bells" src="/sites/all/themes/baddercamp/sounds/bellring.mp3" style="display: none;"></audio>');
   $('#pirateship').bind('click', function() {
-    var audio = document.getElementById('bells');
-    audio.play();
+    //.play method only words on naked DOM object
+    $('#bells')[0].play();
   });
 }
