@@ -326,13 +326,14 @@ body {
 h1.title, .title a:link, h3 {
   font-family: nimbus-sans-extended;
   font-weight: normal;
-  letter-spacing: .25em;
+  letter-spacing: .1em;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: nimbus-sans-condensed;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -461,7 +462,21 @@ span.anchor-right {
   100% {          
     -webkit-transform: rotate(-7deg) translate3d(0px, 0px, 0px);      
   }  
-}  
+}
+
+@-moz-keyframes ship {
+  0% {
+    -moz-transform: rotate(-7deg) translate3d(0px, 0px, 0px);           
+  }
+  
+  40% {
+    -moz-transform: rotate(-2deg) translate3d(15px, -4px, 0px);      
+  }        
+
+  100% {          
+    -moz-transform: rotate(-7deg) translate3d(0px, 0px, 0px);      
+  }  
+}
 	
 
 #pirateship {
@@ -473,6 +488,8 @@ span.anchor-right {
 	height:215px;
 	background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
 	-webkit-animation:ship 8000ms infinite both ease-in-out;
+	-moz-animation:ship 8000ms infinite both ease-in-out;
+
 	/* -webkit-animation-duration:10s;
 	-webkit-animation-delay:1s; */
 }

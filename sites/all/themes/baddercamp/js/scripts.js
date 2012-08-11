@@ -1,5 +1,5 @@
 // TypeKit goodness
-Drupal.behaviors.badcamp = function(context) {
+Drupal.behaviors.typekit = function(context) {
   try {
     Typekit.load();
   }
@@ -20,5 +20,15 @@ Drupal.behaviors.badcampLogin = function(context) {
 
     // Return False for Good Measure
     return false;
+  });
+}
+
+// ask not for whom the bell tolls
+Drupal.behaviors.bells = function(context) {
+  // nb: this only works for non-IE browsers, but i'm not sorry about 
+  $('#pirateship').append('<audio id="bells" src="/sites/all/themes/baddercamp/sounds/bellring.mp3" style="display: none;"></audio>');
+  $('#pirateship').bind('click', function() {
+    //.play method only words on naked DOM object
+    $('#bells')[0].play();
   });
 }
