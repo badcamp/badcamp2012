@@ -117,6 +117,8 @@ body {
  */
 #main-wrapper {
   position: relative;
+  margin-top: 0px;
+
 }
 
 #main {
@@ -216,11 +218,6 @@ body {
 #navigation li /* A simple method to get navigation links to appear in one line. */ {
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
-}
-
-
-#top-navigation { /* hide the mobile menu on big desktops */
-  display: none;
 }
 
 
