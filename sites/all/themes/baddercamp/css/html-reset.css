@@ -323,7 +323,7 @@ body {
   text-decoration: none;
 }
 
-h1.title, .title a:link, h3 {
+h1.title, .title a:link, h3, #account-links a  {
   font-family: nimbus-sans-extended;
   font-weight: normal;
   letter-spacing: .1em;
@@ -337,7 +337,7 @@ h2 {
   text-transform: uppercase;
 }
 
-h3{
+h3 {
  font-family: nimbus-sans-condensed;
  text-transform: uppercase;
  color: #447b97;

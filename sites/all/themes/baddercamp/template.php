@@ -105,7 +105,7 @@ function baddercamp_preprocess_page(&$vars, $hook) {
     $vars['account_box'] = '<h2>' . t('User Login') . '</h2>' . drupal_get_form('baddercamp_user_login');
   }
   else {
-    $vars['account_links'] = l(t('My Profile'), 'user') . ' &middot; ' . l(t('Logout'), 'user/logout');
+    $vars['account_links'] = l(t('My Profile'), 'user') . ' &middot; ' . l(t('Logout'), 'logout');
     $vars['account_information'] = '';
     $vars['account_box'] = '';
   }
