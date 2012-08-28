@@ -24,7 +24,7 @@ function cod_session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cod_unique_schedule_item';
-  $strongarm->value = 'multiple';
+  $strongarm->value = 'single';
   $export['cod_unique_schedule_item'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -248,7 +248,7 @@ function cod_session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_page'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -369,19 +369,64 @@ function cod_session_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_extra_weights_schedule_item';
+  $strongarm->value = array(
+    'title' => '-5',
+    'body_field' => '0',
+    'revision_information' => '20',
+    'author' => '20',
+    'options' => '25',
+    'comment_settings' => '30',
+    'menu' => '-2',
+    'path' => '30',
+    'path_redirect' => '30',
+  );
+  $export['content_extra_weights_schedule_item'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_session';
   $strongarm->value = array(
     'title' => '-5',
-    'body_field' => '-2',
-    'revision_information' => '4',
-    'author' => '3',
-    'options' => '5',
-    'comment_settings' => '7',
+    'body_field' => '-3',
+    'revision_information' => '3',
+    'author' => '2',
+    'options' => '4',
+    'comment_settings' => '6',
     'menu' => '-4',
-    'path' => '8',
-    'path_redirect' => '6',
+    'path' => '7',
+    'mollom' => '10',
+    'path_redirect' => '5',
   );
   $export['content_extra_weights_session'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeaccess_userreference';
+  $strongarm->value = array(
+    'session' => array(
+      'field_speakers' => array(
+        'referenced' => array(
+          'view' => 'view',
+          'update' => 'update',
+          'delete' => 0,
+        ),
+        'author' => array(
+          'view' => 'view',
+          'update' => 'update',
+          'delete' => 0,
+        ),
+        'all' => array(
+          'view' => 'view',
+        ),
+        'unused' => '0',
+        'priority' => '0',
+      ),
+    ),
+  );
+  $export['nodeaccess_userreference'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -398,7 +443,6 @@ function cod_session_strongarm() {
   $strongarm->name = 'node_options_room';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_room'] = $strongarm;
 
@@ -408,7 +452,6 @@ function cod_session_strongarm() {
   $strongarm->name = 'node_options_schedule_item';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_schedule_item'] = $strongarm;
 
@@ -428,48 +471,21 @@ function cod_session_strongarm() {
   $strongarm->name = 'node_options_time_slot';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_time_slot'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'nodeaccess_userreference';
-  $strongarm->value = array(
-    'session' => array(
-      'field_speakers' => array(
-        'referenced' => array(
-          'view' => 'view',
-          'update' => 'update',
-          'delete' => 0,
-        ),
-        'author' => array(
-          'view' => 'view',
-          'update' => 'update',
-          'delete' => 'delete',
-        ),
-        'all' => array(
-          'view' => 'view',
-        ),
-        'priority' => '0',
-      ),
-    ),
-  );
-  $export['nodeaccess_userreference'] = $strongarm;
-
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_room_pattern';
-  $strongarm->value = 'rooms/[title-raw]';
+  $strongarm->value = '';
   $export['pathauto_node_room_pattern'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_session_pattern';
-  $strongarm->value = 'sessions/[title-raw]';
+  $strongarm->value = 'program/sessions/[title-raw]';
   $export['pathauto_node_session_pattern'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -478,15 +494,14 @@ function cod_session_strongarm() {
   $strongarm->name = 'views_send_message_sessions_admin_contact:page_1';
   $strongarm->value = 'Hello [views-send-users_node_data_field_speakers_profile_values_profile_first_value],
 
-Thank you for proposing the session session, "[views-send-node_title]".
+Thank you again for agreeing to present the session session, "[views-send-node_title]".
 
-We are happy to inform you that your session has been accepted for the conference.
+We are about one week away from BADcamp, and very much looking forward to the event. Please check the schedule for your assigned time, and arrive 10 - 15 minutes early for your session.  Make sure you bring (or borrow) an appropriate dongle.  All sessions will be recorded (screen capture, plus audio), if you object to having your session recorded, please let us know.
 
-Please confirm that you are able to present this session at the scheduled date and time by visiting [site-url]/user .
+If you should get sick, lost, or be unable to present your session for any reason, please contact Jen lampton (jen@chapterthree.com), or reply to this email as early as possible.
 
-Thanks!
-
-Conference organizing team';
+See you all next week!
+- BADcamp team';
   $export['views_send_message_sessions_admin_contact:page_1'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -510,13 +525,14 @@ Conference organizing team';
   $strongarm->name = 'views_send_message_sessions_admin_contact:page_3';
   $strongarm->value = 'Hello [views-send-users_node_data_field_speakers_profile_values_profile_first_value],
 
-Thank you for proposing the session session, "[views-send-node_title]".
+Thank you for proposing the BADcamp session session, "[views-send-node_title]".
 
-Unfortunately, we are unable to offer you a spot to present at the conference. We thank you for your submission and hope that you\'ll submit a proposal in the future.
+Unfortunately, we are unable to offer you a spot to present at the conference. We thank you for your submission and hope that you\'ll continue to submit session proposals in the future.  
+
+If you are dying to tell people about your topic, we\'d like to encourage you to schedule a Birds of a Feather conversation, in one of our four BoF rooms: http://2011.badcamp.net/program/bofs.  We\'ll make the announcement tomorrow that BoFs are open, but wanted to give you first dibs.
 
 Thanks,
-
-Conference organizing team';
+BADcamp organizing team';
   $export['views_send_message_sessions_admin_contact:page_3'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -524,14 +540,14 @@ Conference organizing team';
   $strongarm->api_version = 1;
   $strongarm->name = 'views_send_message_sessions_admin_contact:page_4';
   $strongarm->value = 'Hello [views-send-users_node_data_field_speakers_profile_values_profile_first_value],
+Thank you for proposing the BADcamp session session, "[views-send-node_title]".
 
-Thank you for submitting the session proposal titled, "[views-send-node_title]".
+Unfortunately, we are unable to offer you a spot to present at the conference. We thank you for your submission and hope that you\'ll continue to submit session proposals in the future.  
 
-We are reviewing session proposals and will let you know whether your session has been accepted by (date).
+If you are dying to tell people about your topic, we\'d like to encourage you to schedule a Birds of a Feather conversation, in one of our four BoF rooms: http://2011.badcamp.net/program/bofs.  We\'ll make the announcement tomorrow that BoFs are open, but wanted to give you first dibs.
 
 Thanks,
-
-Conference organizing team';
+BADcamp organizing team';
   $export['views_send_message_sessions_admin_contact:page_4'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -540,13 +556,13 @@ Conference organizing team';
   $strongarm->name = 'views_send_message_sessions_admin_contact:page_5';
   $strongarm->value = 'Thank you for proposing the session session, "[views-send-node_title]".
 
-We are happy to inform you that your session has been accepted for the conference.
+We are happy to inform you that your session has been accepted for the conference.  We will be printing badges this week, and would like to indicate that you are a speaker on your badge. 
 
-Please confirm that you are able to present this session at the scheduled date and time by visiting [site-url]user . If you do not confirm by [date], your session may be cancelled.
+Please confirm that you are able to present this session at the scheduled date and time by visiting [site-url]user . If you do not confirm by 10/5, your session may be cancelled.
 
 Thanks!
 
-Conference organizing team';
+BADcamp organizing team';
   $export['views_send_message_sessions_admin_contact:page_5'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -595,7 +611,7 @@ Conference organizing team';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_send_subject_sessions_admin_contact:page_1';
-  $strongarm->value = 'Your Session Submission';
+  $strongarm->value = 'Your BADcamp Session';
   $export['views_send_subject_sessions_admin_contact:page_1'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -623,7 +639,7 @@ Conference organizing team';
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'views_send_subject_sessions_admin_contact:page_5';
-  $strongarm->value = 'Please confirm your session';
+  $strongarm->value = 'Please confirm your BADcamp session slot';
   $export['views_send_subject_sessions_admin_contact:page_5'] = $strongarm;
 
   $strongarm = new stdClass;

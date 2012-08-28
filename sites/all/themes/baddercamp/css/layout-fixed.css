@@ -9,7 +9,6 @@
  * Body
  */
 body {
-  background: transparent url(../images/mobile-background.jpg) no-repeat;
   background-color:#f0ebe8; 
 }
 
@@ -26,7 +25,10 @@ body {
 }
 
 #page {
-  
+}
+
+#page-inner {
+  background: transparent url(../images/mobile-background.jpg) no-repeat;
 }
 
 /*
@@ -42,6 +44,10 @@ body {
   float:none;
 }
 
+#logo img {
+  max-width: 80%;
+}
+
 #header .section {
 }
 
@@ -52,6 +58,9 @@ body {
   clear: both; /* Clear the logo */
 }
 
+#pirateship{
+	display:none;
+}
 /*
  * Main (container for everything else)
  */
@@ -89,6 +98,15 @@ body {
   padding: 0;
 }
 
+/* hide anchor for mobile */
+.anchor{
+	display:none;
+}
+
+.node .content {
+  margin: 0 20px;
+}
+
 /*
  * Navigation
  */
@@ -119,6 +137,92 @@ body {
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
 }
+
+/* Hiding Large Menu on mobile */
+#block-nice_menus-1{
+	display:none;
+}
+
+
+/*
+ * Primary Menu
+ */
+#top-navigation{
+		background: url("../images/mobile-nav-left.png") no-repeat scroll;
+}
+
+#top-navigation .section{
+		background: url("../images/mobile-nav-right.png") no-repeat scroll top right;
+}
+
+#block-menu-primary-links .content{
+	margin: 0 30px;
+}
+
+.region-top-navigation{
+	margin: 30px;
+	background: url("../images/menu-bg-red.png") repeat-x scroll center top;
+  padding-top: 33px;
+}
+
+#block-menu-primary-links{
+	background:#ffffff;
+	border:solid 1px #b2b2b2;
+	  -webkit-border-bottom-right-radius: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  -moz-border-radius-bottomright: 12px;
+	-moz-border-radius-bottomleft: 12px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+#block-menu-primary-links ul{
+	margin:0;
+	padding:0;
+
+}
+#block-menu-primary-links ul a {
+  display: block;
+  text-align: center;
+}
+
+#block-menu-primary-links ul > li {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+#block-menu-primary-links ul li{
+	border-bottom: solid 1px #c8c8c8;
+}
+
+#block-menu-primary-links ul li.leaf.last{
+	border:none;
+}
+#block-menu-primary-links ul a {
+  font-family: superclarendon;
+  font-weight: normal;
+  text-transform: uppercase;
+	text-decoration:none;
+  color:#853809;
+	letter-spacing: 2px;
+	line-height:36px;
+}
+
+#block-menu-primary-links ul li ul a{
+  text-transform: none;
+  color:#565656;
+	letter-spacing: 0;
+	font-family: georgia;
+	font-size:15px;
+	line-height:29px;
+}
+
+#block-menu-primary-links ul li ul{
+	background: url("../images/mobile-menu-bg-grey.png") #e8e8e8;
+	border: solid 1 px #d6d6d6;
+}
+
+
 
 /*
  * First sidebar

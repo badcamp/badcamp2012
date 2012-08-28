@@ -1,0 +1,3 @@
+<?php
+
+include_once('badcamp_blocks_feature.features.inc');

@@ -11,10 +11,9 @@ function cod_sponsors_views_default_views() {
   $view->name = 'Sponsors';
   $view->description = 'Sponsors';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -123,14 +122,17 @@ function cod_sponsors_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('empty', 'No sponsors have been announced.');
+  $handler->override_option('empty', 'Help keep BADcamp FREE! <a href="/users/badcamp/contact">Contact us to become a sponsor</a>. You\'ll get warm-fuzzies for helping the community, and your logo will appear here!');
   $handler->override_option('empty_format', '1');
   $handler->override_option('items_per_page', 0);
-  $handler->override_option('style_plugin', 'list');
+  $handler->override_option('style_plugin', 'grid');
   $handler->override_option('style_options', array(
-    'type' => 'ul',
+    'grouping' => '',
+    'columns' => '3',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
   ));
-  $handler = $view->new_display('page', 'Platinum Sponsor Page', 'page_1');
+  $handler = $view->new_display('page', 'Core Sponsor Page', 'page_1');
   $handler->override_option('fields', array(
     'field_logo_fid' => array(
       'label' => '',
@@ -260,7 +262,8 @@ function cod_sponsors_views_default_views() {
     ),
   ));
   $handler->override_option('title', 'Sponsors');
-  $handler->override_option('header', '<h3>Platinum</h3>');
+  $handler->override_option('header', '<p style="background-color: white; border-top: 3px solid black; padding: 8px;"><strong>Sponsor BADCamp!</strong><br> If you want to help BADCamp, check out our <a href="/sponsors/packages">Sponsorship Options</a> and let Matt and Anne know if you want to get involved!</p>
+<h3>Core Sponsors</h3>');
   $handler->override_option('header_format', '2');
   $handler->override_option('header_empty', 0);
   $handler->override_option('path', 'sponsors');
@@ -278,7 +281,7 @@ function cod_sponsors_views_default_views() {
     'weight' => 0,
     'name' => 'navigation',
   ));
-  $handler = $view->new_display('block', 'Gold Sponsor Block', 'block_1');
+  $handler = $view->new_display('block', 'Contrib Sponsor Block', 'block_1');
   $handler->override_option('fields', array(
     'field_logo_fid' => array(
       'label' => '',
@@ -407,12 +410,18 @@ function cod_sponsors_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('header', '<h3>Gold</h3>');
+  $handler->override_option('header', '<h3>Contributing Sponsors</h3>');
   $handler->override_option('header_format', '2');
   $handler->override_option('header_empty', 0);
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'columns' => '4',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
+  ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('block', 'Silver Sponsor Block', 'block_2');
+  $handler = $view->new_display('block', 'Sandbox Sponsor Block', 'block_2');
   $handler->override_option('fields', array(
     'field_logo_fid' => array(
       'label' => '',
@@ -541,12 +550,19 @@ function cod_sponsors_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('header', '<h3>Silver</h3>');
+  $handler->override_option('header', '<h3>Supporting Sponsors</h3>');
   $handler->override_option('header_format', '2');
   $handler->override_option('header_empty', 0);
+  $handler->override_option('empty', '');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'columns' => '6',
+    'alignment' => 'horizontal',
+    'fill_single_line' => 1,
+  ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('block', 'Bronze Sponsor Block', 'block_3');
+  $handler = $view->new_display('block', 'Supporting Sponsor Block', 'block_3');
   $handler->override_option('fields', array(
     'field_logo_fid' => array(
       'label' => '',
@@ -705,7 +721,7 @@ function cod_sponsors_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
-      'link_to_node' => 1,
+      'link_to_node' => 0,
       'label_type' => 'none',
       'format' => 'sponsor_logo_callout_linked',
       'multiple' => array(
@@ -722,36 +738,6 @@ function cod_sponsors_views_default_views() {
       'override' => array(
         'button' => 'Use default',
       ),
-    ),
-    'title' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'relationship' => 'none',
     ),
   ));
   $handler->override_option('filters', array(
@@ -809,7 +795,8 @@ function cod_sponsors_views_default_views() {
       'relationship' => 'none',
     ),
   ));
-  $handler->override_option('items_per_page', 1);
+  $handler->override_option('title', 'Core Sponsors');
+  $handler->override_option('items_per_page', 3);
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
   $handler = $view->new_display('block', 'Home Page Gold Featured', 'block_5');
@@ -997,10 +984,9 @@ function cod_sponsors_views_default_views() {
   $view->name = 'sponsors_admin';
   $view->description = 'Administrative view of sponsors';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('filters', array(

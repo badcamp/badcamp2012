@@ -106,7 +106,7 @@
  * @see zen_process()
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
 
 <head>
@@ -114,6 +114,7 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body class="<?php print $classes; ?>">
 
@@ -133,7 +134,9 @@
       </div>
       <div id="account-links-triangle"></div>
     </div>
-    <div id="account-links-header"></div>
+    
+		<div id="page-inner">
+		<div id="account-links-header"></div>
     <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
     <div id="account-links-closer" class="clearfix"></div>
 
@@ -166,9 +169,22 @@
           <div id="mission"><?php print $mission; ?></div>
         <?php endif; ?>
 
+      <?php if ($top_navigation): ?>
+        <div id="top-navigation"><div class="section clearfix">
+         <?php print $top_navigation; ?>
+        </div></div>
+      <?php endif; ?>
+
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>
         <?php endif; ?>
+
+      <?php if ($primary_links || $navigation): ?>
+        <div id="navigation"><div class="section clearfix">
+          <?php print $navigation; ?>
+        </div></div>
+      <?php endif; ?>
+
         <?php print $messages; ?>
         <?php if ($tabs): ?>
           <div class="tabs"><?php print $tabs; ?></div>
@@ -189,16 +205,11 @@
 
       </div></div><!-- /.section, /#content -->
 
-      <?php if ($primary_links || $navigation): ?>
-        <div id="navigation"><div class="section clearfix">
-          <?php print $navigation; ?>
-        </div></div></div><!-- /.section-inner, /.section, /#navigation -->
-      <?php endif; ?>
-
+				</div><!-- /.section-inner -->
       <?php print $sidebar_first; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
-
+		</div><!-- /#page-inner -->
   </div><!-- /#page -->
   
   <?php if ($footer || $footer_message || $secondary_links): ?>

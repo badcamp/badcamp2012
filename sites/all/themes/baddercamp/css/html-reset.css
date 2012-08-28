@@ -90,7 +90,7 @@ code {
  * Headings
  */
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
   line-height: 1.3em;
   margin-top: 0;
   margin-bottom: 0.5em; /* 0.5em is equavalent to 1em in the page's base font.
@@ -323,17 +323,24 @@ body {
   text-decoration: none;
 }
 
-h1.title, .title a:link, h3 {
+h1.title, .title a:link, h3, #account-links a  {
   font-family: nimbus-sans-extended;
   font-weight: normal;
-  letter-spacing: .25em;
+  letter-spacing: .1em;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: nimbus-sans-condensed;
+  font-size: 15px;
   text-transform: uppercase;
+}
+
+h3 {
+ font-family: nimbus-sans-condensed;
+ text-transform: uppercase;
+ color: #447b97;
 }
 
 /* let's hide the stupid site title */
@@ -346,11 +353,17 @@ h2 {
 }
 
 .sidebar h2 {
+  font-family: nimbus-sans-condensed;
+  font-size: 2em;
+}
+
+.sidebar .badcamp-attendee-count {
+  font-family: superclarendon;
 }
 
 /**
  * Main Menu
- **/
+
 
 #block-menu-primary-links ul li ul li {
   display:block;
@@ -382,7 +395,7 @@ h2 {
 #block-menu-primary-links ul > li {
   list-style-type: none;
   list-style-image: none;
-  /* float:left; */
+  /* float:left; 
 }
 
 #block-menu-primary-links ul li ul {
@@ -416,6 +429,7 @@ h2 {
   padding: 10px;
   display: block;
 }
+*/
 
 /* added anchor span - Jen */
 span.anchor {
@@ -454,18 +468,34 @@ span.anchor-right {
   100% {          
     -webkit-transform: rotate(-7deg) translate3d(0px, 0px, 0px);      
   }  
-}  
+}
+
+@-moz-keyframes ship {
+  0% {
+    -moz-transform: rotate(-7deg) translate3d(0px, 0px, 0px);           
+  }
+  
+  40% {
+    -moz-transform: rotate(-2deg) translate3d(15px, -4px, 0px);      
+  }        
+
+  100% {          
+    -moz-transform: rotate(-7deg) translate3d(0px, 0px, 0px);      
+  }  
+}
 	
 
 #pirateship {
 	position:absolute;
   right: 60px;
-  bottom: 10px;
+  bottom: 27px;
   display:inline-block;
 	width:200px;
 	height:215px;
 	background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
 	-webkit-animation:ship 8000ms infinite both ease-in-out;
+	-moz-animation:ship 8000ms infinite both ease-in-out;
+
 	/* -webkit-animation-duration:10s;
 	-webkit-animation-delay:1s; */
 }

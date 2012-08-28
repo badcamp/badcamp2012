@@ -11,17 +11,18 @@ function cod_events_content_default_fields() {
     'field_name' => 'field_dates',
     'type_name' => 'event',
     'display_settings' => array(
+      'weight' => '-3',
+      'parent' => '',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'default',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       '4' => array(
         'format' => 'default',
@@ -75,14 +76,18 @@ function cod_events_content_default_fields() {
     'field_name' => 'field_image_cache',
     'type_name' => 'event',
     'display_settings' => array(
+      'weight' => '-2',
+      'parent' => '',
       'label' => array(
         'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'hidden',
+        'exclude' => 0,
       ),
       'full' => array(
         'format' => 'hidden',
+        'exclude' => 0,
       ),
       '4' => array(
         'format' => 'hidden',

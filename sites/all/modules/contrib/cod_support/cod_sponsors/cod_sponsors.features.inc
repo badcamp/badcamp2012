@@ -24,10 +24,11 @@ function cod_sponsors_imagecache_default_presets() {
         '0' => array(
           'weight' => '0',
           'module' => 'imagecache',
-          'action' => 'imagecache_scale_and_crop',
+          'action' => 'imagecache_scale',
           'data' => array(
             'width' => '100',
             'height' => '',
+            'upscale' => 0,
           ),
         ),
       ),
@@ -38,10 +39,34 @@ function cod_sponsors_imagecache_default_presets() {
         '0' => array(
           'weight' => '0',
           'module' => 'imagecache',
-          'action' => 'imagecache_scale_and_crop',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '195',
+            'height' => '118',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_canvas2file',
+          'data' => array(
+            'xpos' => 'center',
+            'ypos' => 'center',
+            'alpha' => '100',
+            'path' => 'sites/all/themes/badasstheme/img/bg-white.png',
+            'dimensions' => 'background',
+          ),
+        ),
+        '2' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
           'data' => array(
             'width' => '200',
-            'height' => '',
+            'height' => '120',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
           ),
         ),
       ),
@@ -50,12 +75,36 @@ function cod_sponsors_imagecache_default_presets() {
       'presetname' => 'sponsor_logo_gold',
       'actions' => array(
         '0' => array(
-          'weight' => '0',
+          'weight' => '-10',
           'module' => 'imagecache',
-          'action' => 'imagecache_scale_and_crop',
+          'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '150',
-            'height' => '',
+            'width' => '215',
+            'height' => '134',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '-9',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_canvas2file',
+          'data' => array(
+            'xpos' => 'center',
+            'ypos' => 'center',
+            'alpha' => '100',
+            'path' => 'sites/all/themes/badasstheme/img/bg-white.png',
+            'dimensions' => 'background',
+          ),
+        ),
+        '2' => array(
+          'weight' => '-8',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '220',
+            'height' => '137',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
           ),
         ),
       ),
@@ -64,12 +113,36 @@ function cod_sponsors_imagecache_default_presets() {
       'presetname' => 'sponsor_logo_platinum',
       'actions' => array(
         '0' => array(
-          'weight' => '0',
+          'weight' => '-10',
           'module' => 'imagecache',
-          'action' => 'imagecache_scale_and_crop',
+          'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '200',
-            'height' => '',
+            'width' => '295',
+            'height' => '174',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '-9',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_canvas2file',
+          'data' => array(
+            'xpos' => 'center',
+            'ypos' => 'center',
+            'alpha' => '100',
+            'path' => 'sites/all/themes/badasstheme/img/bg-white.png',
+            'dimensions' => 'background',
+          ),
+        ),
+        '2' => array(
+          'weight' => '-8',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '300',
+            'height' => '180',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
           ),
         ),
       ),
@@ -78,12 +151,36 @@ function cod_sponsors_imagecache_default_presets() {
       'presetname' => 'sponsor_logo_silver',
       'actions' => array(
         '0' => array(
-          'weight' => '0',
+          'weight' => '-10',
           'module' => 'imagecache',
-          'action' => 'imagecache_scale_and_crop',
+          'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '125',
-            'height' => '',
+            'width' => '135',
+            'height' => '85',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '-9',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_canvas2file',
+          'data' => array(
+            'xpos' => 'center',
+            'ypos' => 'center',
+            'alpha' => '100',
+            'path' => 'sites/all/themes/badasstheme/img/bg-white.png',
+            'dimensions' => 'background',
+          ),
+        ),
+        '2' => array(
+          'weight' => '-8',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '140',
+            'height' => '87',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
           ),
         ),
       ),

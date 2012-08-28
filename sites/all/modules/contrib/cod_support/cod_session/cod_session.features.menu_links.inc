@@ -18,29 +18,11 @@ function cod_session_menu_default_menu_links() {
       ),
     ),
     'module' => 'menu',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
-  );
-  // Exported menu link: primary-links:82568654-06d2-11e0-a3ab-29212d7dea21
-  $menu_links['primary-links:82568654-06d2-11e0-a3ab-29212d7dea21'] = array(
-    'menu_name' => 'primary-links',
-    'router_path' => 'node/%',
-    'link_title' => 'Program',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Program',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '1',
-    'expanded' => '1',
     'weight' => '-48',
-    'uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
   );
   // Exported menu link: primary-links:program/session-schedule
   $menu_links['primary-links:program/session-schedule'] = array(
@@ -56,7 +38,6 @@ function cod_session_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-50',
     'parent_path' => 'node/2',
-    'parent_uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
   );
   // Exported menu link: primary-links:program/sessions
   $menu_links['primary-links:program/sessions'] = array(
@@ -66,17 +47,15 @@ function cod_session_menu_default_menu_links() {
     'link_title' => 'Sessions',
     'options' => array(),
     'module' => 'system',
-    'hidden' => '0',
+    'hidden' => '1',
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-49',
     'parent_path' => 'node/2',
-    'parent_uuid' => '82568654-06d2-11e0-a3ab-29212d7dea21',
   );
   // Translatables
   // Included for use with string extractors like potx.
-  t('Program');
   t('Session schedule');
   t('Sessions');
   t('Your schedule');

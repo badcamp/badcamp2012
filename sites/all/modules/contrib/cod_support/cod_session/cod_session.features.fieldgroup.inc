@@ -18,8 +18,8 @@ function cod_session_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
-        'label' => 'above',
+        'weight' => '-2',
+        'label' => 'hidden',
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -28,6 +28,7 @@ function cod_session_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -66,7 +67,7 @@ function cod_session_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'weight' => '1',
+        'weight' => '-1',
         'label' => 'hidden',
         'teaser' => array(
           'format' => 'hidden',
@@ -87,7 +88,7 @@ function cod_session_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '1',
+    'weight' => '-1',
     'fields' => array(
       '0' => 'field_track',
       '1' => 'field_experience',
@@ -102,11 +103,11 @@ function cod_session_fieldgroup_default_groups() {
     'label' => 'Schedule info',
     'settings' => array(
       'form' => array(
-        'style' => 'fieldset',
+        'style' => 'fieldset_collapsed',
         'description' => '',
       ),
       'display' => array(
-        'weight' => '0',
+        'weight' => '1',
         'label' => 'above',
         'teaser' => array(
           'format' => 'simple',
@@ -135,7 +136,7 @@ function cod_session_fieldgroup_default_groups() {
         ),
       ),
     ),
-    'weight' => '0',
+    'weight' => '1',
     'fields' => array(
       '0' => 'field_session_slot',
       '1' => 'field_session_room',

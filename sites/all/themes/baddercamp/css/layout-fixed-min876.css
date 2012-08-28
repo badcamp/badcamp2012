@@ -30,8 +30,8 @@ body {
 }
 
 #page-wrapper {
-  background: #f6f1ef url('../images/background.jpg') center 15px no-repeat;
 }
+
 #page-wrapper,
 .region-page-closure {
   min-width: 876px; /* Don't allow the browser to make the site unreadable. */
@@ -44,7 +44,14 @@ body {
 }
 
 #page {
-  
+}
+
+#page-inner {
+  background: #f6f1ef url('../images/background.jpg') center 0 no-repeat;
+}
+
+#pirateship{
+	display:inline-block;
 }
 
 /*
@@ -69,6 +76,11 @@ body {
   margin-left: 0;
   margin-right: -457px;
 }
+
+#logo img {
+  max-width: 100%;
+}
+
 #name-and-slogan {
   float: left;
   width: 360px;
@@ -205,6 +217,12 @@ body {
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
 }
+
+
+#top-navigation { /* hide the mobile menu on big desktops */
+  display: none;
+}
+
 
 /*
  * First sidebar
