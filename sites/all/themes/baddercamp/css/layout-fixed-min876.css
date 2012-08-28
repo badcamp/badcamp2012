@@ -76,6 +76,11 @@ body {
   margin-left: 0;
   margin-right: -457px;
 }
+
+#logo img {
+  max-width: 100%;
+}
+
 #name-and-slogan {
   float: left;
   width: 360px;
@@ -212,6 +217,12 @@ body {
   float: left; /* LTR */
   padding: 0 10px 0 0; /* LTR */
 }
+
+
+#top-navigation { /* hide the mobile menu on big desktops */
+  display: none;
+}
+
 
 /*
  * First sidebar

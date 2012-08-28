@@ -44,6 +44,10 @@ body {
   float:none;
 }
 
+#logo img {
+  max-width: 80%;
+}
+
 #header .section {
 }
 

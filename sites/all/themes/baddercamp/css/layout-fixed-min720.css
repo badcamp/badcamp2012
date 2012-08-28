@@ -132,6 +132,10 @@ body {
   padding: 0 10px 0 0; /* LTR */
 }
 
+#top-navigation { /* hide the mobile menu on big desktops */
+  display: none;
+}
+
 
 /*
  * First sidebar
