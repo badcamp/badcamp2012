@@ -99,9 +99,9 @@ body {
 	display:none;
 }
 
-/* Show Large Menu */
-#block-nice_menus-1{
-	display:inline;
+#navigation #block-nice_menus-1,
+#navigation #block-menu-primary-links h2.title {
+  display: none;
 }
 
 #navigation {
@@ -198,3 +198,13 @@ body {
   overflow-y: hidden;
 }
 */
+
+/* Special Pages */
+/* Hide the slideshow on the min720*/
+body.front .view-id-slideshow {
+  display: none;
+}
+/* Line up the events on the homepage */
+#block-views-events-block_1 .views-row {
+  width: 100%;
+}
