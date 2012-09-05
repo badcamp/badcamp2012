@@ -9,78 +9,12 @@ function badcamp_blocks_feature_default_fe_block_settings() {
   // baddercamp
   $theme = array();
 
-  $theme['block-schedule_of_events'] = array(
-    'module' => 'block',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-31',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'sponsors
-program/schedule',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'schedule_of_events',
-  );
-
-  $theme['block-contact'] = array(
-    'module' => 'block',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-29',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'sponsors
-program/schedule
-logistics/ride-share*',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'contact',
-  );
-
-  $theme['block-hashtags'] = array(
-    'module' => 'block',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'sponsors
-program/schedule
-logistics/ride-share*',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'hashtags',
-  );
-
-  $theme['block-scholarship'] = array(
-    'module' => 'block',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-27',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'sponsors
-program/schedule',
-    'title' => '',
-    'cache' => '-1',
-    'machine_name' => 'scholarship',
-  );
-
   $theme['menu-primary-links'] = array(
     'module' => 'menu',
     'delta' => 'primary-links',
     'theme' => 'baddercamp',
     'status' => '1',
-    'weight' => '-33',
+    'weight' => '-27',
     'region' => 'navigation',
     'custom' => '0',
     'throttle' => '0',
@@ -95,7 +29,7 @@ program/schedule',
     'delta' => '1',
     'theme' => 'baddercamp',
     'status' => '1',
-    'weight' => '-34',
+    'weight' => '-27',
     'region' => 'navigation',
     'custom' => '0',
     'throttle' => '0',
@@ -110,7 +44,7 @@ program/schedule',
     'delta' => 'web',
     'theme' => 'baddercamp',
     'status' => '1',
-    'weight' => '-24',
+    'weight' => '-22',
     'region' => 'sidebar_first',
     'custom' => '0',
     'throttle' => '0',
@@ -126,8 +60,8 @@ program/schedule',
     'delta' => 'Sponsors-block_1',
     'theme' => 'baddercamp',
     'status' => '1',
-    'weight' => '-28',
-    'region' => 'sidebar_first',
+    'weight' => '-27',
+    'region' => 'content_bottom',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '1',
@@ -136,33 +70,17 @@ program/schedule',
     'cache' => '-1',
   );
 
-  $theme['views-attendees-block_1'] = array(
+  $theme['views-Sponsors-block_3'] = array(
     'module' => 'views',
-    'delta' => 'attendees-block_1',
-    'theme' => 'baddercamp',
-    'status' => 0,
-    'weight' => '-28',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'sponsors
-program/schedule',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-orders-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'orders-block_1',
+    'delta' => 'Sponsors-block_3',
     'theme' => 'baddercamp',
     'status' => '1',
-    'weight' => '-28',
-    'region' => 'content_top',
+    'weight' => '-26',
+    'region' => 'content_bottom',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '1',
-    'pages' => 'sponsors/individual',
+    'pages' => 'sponsors',
     'title' => '',
     'cache' => '-1',
   );
