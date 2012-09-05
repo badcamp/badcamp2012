@@ -192,6 +192,13 @@
    ),
  ));
  $handler->override_option('sorts', array(
+   'picture' => array(
+     'order' => 'DESC',
+     'id' => 'picture',
+     'table' => 'users',
+     'field' => 'picture',
+     'relationship' => 'none',
+   ),
    'uid' => array(
      'order' => 'DESC',
      'id' => 'uid',
@@ -201,11 +208,6 @@
        'button' => 'Override',
      ),
      'relationship' => 'none',
-   ),
-   'picture' => array(
-     'id' => 'picture',
-     'table' => 'users',
-     'field' => 'picture',
    ),
  ));
  $handler->override_option('filters', array(
@@ -425,7 +427,7 @@
    'type' => 'default tab',
    'title' => 'All Attendees',
    'description' => 'Connect with attendees',
-   'weight' => '0',
+   'weight' => '1',
    'name' => 'primary-links',
  ));
  $handler->override_option('tab_options', array(
@@ -683,7 +685,7 @@
      'relationship' => 'uid',
    ),
  ));
- $handler->override_option('title', 'Featured Attendees');
+ $handler->override_option('title', 'Featured BADCamp Attendees');
  $handler->override_option('path', 'attendees/featured');
  $handler->override_option('menu', array(
    'type' => 'tab',
