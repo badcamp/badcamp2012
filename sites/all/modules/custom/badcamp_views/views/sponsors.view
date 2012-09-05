@@ -749,7 +749,7 @@
    ),
  ));
  $handler->override_option('items_per_page', 3);
- $handler->override_option('pane_title', 'Core sponsors');
+ $handler->override_option('pane_title', 'Home page - Core sponsors');
  $handler->override_option('pane_description', '');
  $handler->override_option('pane_category', array(
    'name' => 'BADCamp',
