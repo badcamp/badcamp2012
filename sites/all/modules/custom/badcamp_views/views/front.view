@@ -74,20 +74,25 @@
    'links' => 0,
    'comments' => 0,
  ));
- $handler = $view->new_display('page', 'Page', 'page_1');
- $handler->override_option('path', 'front');
- $handler->override_option('menu', array(
-   'type' => 'none',
-   'title' => '',
-   'description' => '',
-   'weight' => 0,
-   'name' => 'navigation',
+ $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+ $handler->override_option('pane_title', 'Front page');
+ $handler->override_option('pane_description', '');
+ $handler->override_option('pane_category', array(
+   'name' => 'BADCamp',
+   'weight' => '0',
  ));
- $handler->override_option('tab_options', array(
-   'type' => 'none',
-   'title' => '',
-   'description' => '',
-   'weight' => 0,
-   'name' => 'navigation',
+ $handler->override_option('allow', array(
+   'use_pager' => 0,
+   'items_per_page' => 'items_per_page',
+   'offset' => 0,
+   'link_to_view' => 0,
+   'more_link' => 0,
+   'path_override' => 0,
+   'title_override' => 'title_override',
+   'exposed_form' => 0,
+   'fields_override' => 0,
  ));
+ $handler->override_option('argument_input', array());
+ $handler->override_option('link_to_view', 0);
+ $handler->override_option('inherit_panels_path', 0);
 
