@@ -1,0 +1,228 @@
+<?php
+
+/*
+ * Signup - user list.
+ */
+
+ $view = new view;
+ $view->name = 'signup_user_list';
+ $view->description = 'List of all users signed up for a given node';
+ $view->tag = 'Signup';
+ $view->base_table = 'signup_log';
+ $view->core = 0;
+ $view->api_version = '2';
+ $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+ $handler = $view->new_display('default', 'Defaults', 'default');
+ $handler->override_option('relationships', array(
+   'uid' => array(
+     'label' => 'Signup user',
+     'required' => 1,
+     'id' => 'uid',
+     'table' => 'signup_log',
+     'field' => 'uid',
+     'relationship' => 'none',
+   ),
+   'nid' => array(
+     'label' => 'Signup node',
+     'required' => 1,
+     'id' => 'nid',
+     'table' => 'signup_log',
+     'field' => 'nid',
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('fields', array(
+   'counter' => array(
+     'label' => 'Count',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'counter_start' => '1',
+     'exclude' => 0,
+     'id' => 'counter',
+     'table' => 'views',
+     'field' => 'counter',
+     'relationship' => 'none',
+   ),
+   'value' => array(
+     'label' => 'Personal information: First name',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_user' => 0,
+     'exclude' => 0,
+     'id' => 'value',
+     'table' => 'profile_values_profile_first',
+     'field' => 'value',
+     'relationship' => 'uid',
+   ),
+   'value_1' => array(
+     'label' => 'Personal information: Last name',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_user' => 0,
+     'exclude' => 0,
+     'id' => 'value_1',
+     'table' => 'profile_values_profile_last',
+     'field' => 'value',
+     'relationship' => 'uid',
+   ),
+   'name' => array(
+     'label' => 'Username',
+     'link_to_user' => 1,
+     'exclude' => 0,
+     'id' => 'name',
+     'table' => 'users',
+     'field' => 'name',
+     'relationship' => 'uid',
+   ),
+   'value_2' => array(
+     'label' => 'Personal information: Organization',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_user' => 0,
+     'exclude' => 0,
+     'id' => 'value_2',
+     'table' => 'profile_values_profile_org',
+     'field' => 'value',
+     'relationship' => 'uid',
+   ),
+ ));
+ $handler->override_option('arguments', array(
+   'nid' => array(
+     'default_action' => 'not found',
+     'style_plugin' => 'default_summary',
+     'style_options' => array(),
+     'wildcard' => 'all',
+     'wildcard_substitution' => 'All',
+     'title' => '',
+     'default_argument_type' => 'fixed',
+     'default_argument' => '',
+     'validate_type' => 'signup_status',
+     'validate_fail' => 'not found',
+     'break_phrase' => 0,
+     'not' => 0,
+     'id' => 'nid',
+     'table' => 'node',
+     'field' => 'nid',
+     'relationship' => 'nid',
+     'default_options_div_prefix' => '',
+     'default_argument_user' => 0,
+     'default_argument_fixed' => '',
+     'default_argument_php' => '',
+     'validate_argument_node_type' => array(),
+     'validate_argument_node_access' => 0,
+     'validate_argument_nid_type' => 'nid',
+     'validate_argument_vocabulary' => array(),
+     'validate_argument_type' => 'tid',
+     'validate_argument_signup_status' => 'any',
+     'validate_argument_signup_node_access' => 1,
+     'validate_argument_php' => '',
+   ),
+ ));
+ $handler->override_option('access', array(
+   'type' => 'perm',
+   'perm' => 'view all signups',
+ ));
+ $handler->override_option('cache', array(
+   'type' => 'none',
+ ));
+ $handler->override_option('items_per_page', 200);
+ $handler->override_option('use_pager', 1);
+ $handler->override_option('style_plugin', 'table');
+ $handler->override_option('style_options', array(
+   'grouping' => '',
+   'override' => 1,
+   'sticky' => 0,
+   'order' => 'asc',
+   'columns' => array(
+     'name' => 'name',
+     'signup_time' => 'signup_time',
+   ),
+   'info' => array(
+     'name' => array(
+       'sortable' => 1,
+       'separator' => '',
+     ),
+     'signup_time' => array(
+       'sortable' => 1,
+       'separator' => '',
+     ),
+   ),
+   'default' => 'signup_time',
+ ));
+
