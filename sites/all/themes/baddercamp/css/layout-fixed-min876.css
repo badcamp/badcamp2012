@@ -26,14 +26,19 @@
  * Body
  */
 body {
-  background: #f6f1ef url('../images/background.png') center -280px no-repeat;
+  background: #f6f1ef url('../images/bg-repeat.png') center 0 repeat-y;
 }
 
 #page-wrapper {
+  background: #f6f1ef url('../images/background.png') center -300px no-repeat;
 }
 
 #page-wrapper,
 .region-page-closure {
+
+}
+
+#page {
   min-width: 876px; /* Don't allow the browser to make the site unreadable. */
   
   margin-left: auto;
@@ -41,9 +46,6 @@ body {
   min-width: 876px;
   max-width: 1100px;
   width: auto;
-}
-
-#page {
 }
 
 #page-inner {

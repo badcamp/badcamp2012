@@ -114,7 +114,7 @@
   <?php print $head; ?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body class="<?php print $classes; ?>">
 
@@ -135,8 +135,8 @@
       <div id="account-links-triangle"></div>
     </div>
     
-		<div id="page-inner">
-		<div id="account-links-header"></div>
+    <div id="page-inner">
+    <div id="account-links-header"></div>
     <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
     <div id="account-links-closer" class="clearfix"></div>
 
@@ -205,22 +205,23 @@
 
       </div></div><!-- /.section, /#content -->
 
-				</div><!-- /.section-inner -->
+        </div><!-- /.section-inner -->
       <?php print $sidebar_first; ?>
 
     </div></div><!-- /#main, /#main-wrapper -->
-		</div><!-- /#page-inner -->
+    </div><!-- /#page-inner -->
+    
+    <?php if ($footer || $footer_message || $secondary_links): ?>
+      <div id="footer"><div class="section">
+
+        <?php if ($footer_message): ?>
+          <div id="footer-message"><?php print $footer_message; ?></div>
+        <?php endif; ?>
+
+      </div></div><!-- /.section, /#footer -->
+    <?php endif; ?>
+    
   </div><!-- /#page -->
-  
-  <?php if ($footer || $footer_message || $secondary_links): ?>
-    <div id="footer"><div class="section">
-
-      <?php if ($footer_message): ?>
-        <div id="footer-message"><?php print $footer_message; ?></div>
-      <?php endif; ?>
-
-    </div></div><!-- /.section, /#footer -->
-  <?php endif; ?>
   
   </div><!-- /#page-wrapper -->
 
