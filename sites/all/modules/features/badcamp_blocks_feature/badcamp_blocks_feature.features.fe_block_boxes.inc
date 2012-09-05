@@ -10,7 +10,7 @@ function badcamp_blocks_feature_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Contact';
   $fe_block_boxes->format = '1';
   $fe_block_boxes->machine_name = 'contact';
-  $fe_block_boxes->body = 'If you have questions regarding BADcamp or would like to become a sponsor please <a href="/contact">contact us</a>.
+  $fe_block_boxes->body = 'If you have questions regarding BADCamp or would like to become a sponsor please <a href="/contact">contact us</a>.
 
 ';
 

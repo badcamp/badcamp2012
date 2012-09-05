@@ -136,21 +136,6 @@ program/schedule',
     'cache' => '-1',
   );
 
-  $theme['views-Sponsors-block_4'] = array(
-    'module' => 'views',
-    'delta' => 'Sponsors-block_4',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-30',
-    'region' => 'content_top',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '1',
-    'pages' => '<front>',
-    'title' => '',
-    'cache' => '-1',
-  );
-
   $theme['views-attendees-block_1'] = array(
     'module' => 'views',
     'delta' => 'attendees-block_1',
@@ -167,36 +152,6 @@ program/schedule',
     'cache' => '-1',
   );
 
-  $theme['views-events-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'events-block_1',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-32',
-    'region' => 'content_top',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '1',
-    'pages' => '<front>',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-news-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'news-block_1',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-31',
-    'region' => 'content_top',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '1',
-    'pages' => '<front>',
-    'title' => '',
-    'cache' => '-1',
-  );
-
   $theme['views-orders-block_1'] = array(
     'module' => 'views',
     'delta' => 'orders-block_1',
@@ -208,36 +163,6 @@ program/schedule',
     'throttle' => '0',
     'visibility' => '1',
     'pages' => 'sponsors/individual',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-slideshow-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'slideshow-block_1',
-    'theme' => 'baddercamp',
-    'status' => 0,
-    'weight' => '8',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-slideshow-block_2'] = array(
-    'module' => 'views',
-    'delta' => 'slideshow-block_2',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-33',
-    'region' => 'content_top',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '1',
-    'pages' => '<front>',
     'title' => '',
     'cache' => '-1',
   );
