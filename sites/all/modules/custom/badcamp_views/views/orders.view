@@ -1,0 +1,469 @@
+<?php
+
+/*
+ * Orders.
+ */
+
+ $view = new view;
+ $view->name = 'orders';
+ $view->description = 'Order listing';
+ $view->tag = '';
+ $view->base_table = 'uc_orders';
+ $view->core = 0;
+ $view->api_version = '2';
+ $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+ $handler = $view->new_display('default', 'Defaults', 'default');
+ $handler->override_option('fields', array(
+   'counter' => array(
+     'label' => '#',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'counter_start' => '1',
+     'exclude' => 0,
+     'id' => 'counter',
+     'table' => 'views',
+     'field' => 'counter',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'order_id' => array(
+     'label' => 'Order id',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_order' => 1,
+     'exclude' => 0,
+     'id' => 'order_id',
+     'table' => 'uc_orders',
+     'field' => 'order_id',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Override',
+     ),
+   ),
+   'name' => array(
+     'label' => 'Name',
+     'link_to_user' => 1,
+     'exclude' => 0,
+     'id' => 'name',
+     'table' => 'users',
+     'field' => 'name',
+     'relationship' => 'none',
+   ),
+   'primary_email' => array(
+     'label' => 'Email',
+     'exclude' => 0,
+     'id' => 'primary_email',
+     'table' => 'uc_orders',
+     'field' => 'primary_email',
+     'relationship' => 'none',
+   ),
+   'order_total' => array(
+     'label' => 'Total',
+     'exclude' => 0,
+     'id' => 'order_total',
+     'table' => 'uc_orders',
+     'field' => 'order_total',
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('sorts', array(
+   'order_id' => array(
+     'id' => 'order_id',
+     'table' => 'uc_orders',
+     'field' => 'order_id',
+   ),
+ ));
+ $handler->override_option('filters', array(
+   'uid' => array(
+     'operator' => 'in',
+     'value' => '',
+     'group' => '0',
+     'exposed' => TRUE,
+     'expose' => array(
+       'use_operator' => 0,
+       'operator' => 'uid_op',
+       'identifier' => 'uid',
+       'label' => 'Username',
+       'optional' => 1,
+       'remember' => 1,
+       'reduce' => 0,
+     ),
+     'id' => 'uid',
+     'table' => 'users',
+     'field' => 'uid',
+     'relationship' => 'none',
+   ),
+   'order_status' => array(
+     'id' => 'order_status',
+     'table' => 'uc_orders',
+     'field' => 'order_status',
+   ),
+   'order_total' => array(
+     'operator' => '>',
+     'value' => array(
+       'value' => '0.00',
+       'min' => '',
+       'max' => '',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'order_total',
+     'table' => 'uc_orders',
+     'field' => 'order_total',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'created' => array(
+     'operator' => '>=',
+     'value' => array(
+       'type' => 'date',
+       'value' => '2012-01-01 00:00:00',
+       'min' => '',
+       'max' => '',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'created',
+     'table' => 'uc_orders',
+     'field' => 'created',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('access', array(
+   'type' => 'role',
+   'role' => array(
+     7 => 7,
+   ),
+ ));
+ $handler->override_option('cache', array(
+   'type' => 'none',
+ ));
+ $handler->override_option('title', 'Orders');
+ $handler->override_option('empty', 'There are no individual sponsors yet for 2012.  Be the first!');
+ $handler->override_option('empty_format', '1');
+ $handler->override_option('items_per_page', 200);
+ $handler->override_option('use_pager', '1');
+ $handler->override_option('style_plugin', 'table');
+ $handler->override_option('style_options', array(
+   'grouping' => '',
+   'override' => 1,
+   'sticky' => 0,
+   'order' => 'desc',
+   'columns' => array(
+     'counter' => 'counter',
+     'name' => 'name',
+     'primary_email' => 'primary_email',
+     'order_total' => 'order_total',
+     'order_id' => 'order_id',
+   ),
+   'info' => array(
+     'counter' => array(
+       'separator' => '',
+     ),
+     'name' => array(
+       'sortable' => 0,
+       'separator' => '<br/>',
+     ),
+     'primary_email' => array(
+       'sortable' => 0,
+       'separator' => '',
+     ),
+     'order_total' => array(
+       'sortable' => 1,
+       'separator' => '',
+     ),
+     'order_id' => array(
+       'sortable' => 1,
+       'separator' => '',
+     ),
+   ),
+   'default' => 'order_id',
+ ));
+ $handler = $view->new_display('page', 'Page', 'page_1');
+ $handler->override_option('sorts', array(
+   'order_id' => array(
+     'order' => 'ASC',
+     'id' => 'order_id',
+     'table' => 'uc_orders',
+     'field' => 'order_id',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('path', 'admin/attendees/data/t-shirts');
+ $handler->override_option('menu', array(
+   'type' => 'tab',
+   'title' => 'T-Shirts',
+   'description' => '',
+   'weight' => '0',
+   'name' => 'navigation',
+ ));
+ $handler->override_option('tab_options', array(
+   'type' => 'none',
+   'title' => '',
+   'description' => '',
+   'weight' => 0,
+   'name' => 'navigation',
+ ));
+ $handler = $view->new_display('block', 'Sponsor List', 'block_1');
+ $handler->override_option('relationships', array(
+   'uid' => array(
+     'label' => 'Order user',
+     'required' => 0,
+     'id' => 'uid',
+     'table' => 'uc_orders',
+     'field' => 'uid',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('fields', array(
+   'value' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_user' => 0,
+     'exclude' => 1,
+     'id' => 'value',
+     'table' => 'profile_values_profile_first',
+     'field' => 'value',
+     'relationship' => 'uid',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+   ),
+   'value_1' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 1,
+       'text' => '[value] [value_1] ',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_user' => 1,
+     'exclude' => 0,
+     'id' => 'value_1',
+     'table' => 'profile_values_profile_last',
+     'field' => 'value',
+     'relationship' => 'uid',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+   ),
+   'name' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 1,
+       'text' => '([name])',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_user' => 0,
+     'overwrite_anonymous' => 0,
+     'anonymous_text' => '',
+     'exclude' => 0,
+     'id' => 'name',
+     'table' => 'users',
+     'field' => 'name',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+   ),
+ ));
+ $handler->override_option('sorts', array(
+   'order_id' => array(
+     'order' => 'DESC',
+     'id' => 'order_id',
+     'table' => 'uc_orders',
+     'field' => 'order_id',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('filters', array(
+   'uid' => array(
+     'operator' => 'in',
+     'value' => '',
+     'group' => '0',
+     'exposed' => TRUE,
+     'expose' => array(
+       'use_operator' => 0,
+       'operator' => 'uid_op',
+       'identifier' => 'uid',
+       'label' => 'Username',
+       'optional' => 1,
+       'remember' => 1,
+       'reduce' => 0,
+     ),
+     'id' => 'uid',
+     'table' => 'users',
+     'field' => 'uid',
+     'relationship' => 'none',
+   ),
+   'order_status' => array(
+     'operator' => 'in',
+     'value' => array(
+       'processing' => 'processing',
+       'paypal_pending' => 'paypal_pending',
+       'payment_received' => 'payment_received',
+       'completed' => 'completed',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'order_status',
+     'table' => 'uc_orders',
+     'field' => 'order_status',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+     'relationship' => 'none',
+   ),
+   'created' => array(
+     'operator' => '>=',
+     'value' => array(
+       'type' => 'date',
+       'value' => '20120101 00:00:00',
+       'min' => '',
+       'max' => '',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'created',
+     'table' => 'uc_orders',
+     'field' => 'created',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('access', array(
+   'type' => 'none',
+ ));
+ $handler->override_option('title', 'Individual Sponsors');
+ $handler->override_option('style_plugin', 'grid');
+ $handler->override_option('style_options', array(
+   'grouping' => '',
+   'columns' => '4',
+   'alignment' => 'horizontal',
+   'fill_single_line' => 1,
+ ));
+ $handler->override_option('block_description', 'Individual Sponsors');
+ $handler->override_option('block_caching', -1);
