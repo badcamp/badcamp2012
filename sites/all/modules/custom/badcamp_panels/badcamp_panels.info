@@ -1,0 +1,6 @@
+name = BADCamp Panels
+description = BADCamp's custom panels - in code.
+dependencies[] = panels
+dependencies[] = page_manager
+package = BADCamp
+core = 6.x
