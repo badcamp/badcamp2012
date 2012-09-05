@@ -30,7 +30,7 @@ body {
 }
 
 #page-wrapper {
-  background-image: transparent url('../images/background.png') center -300px no-repeat;
+  background: transparent url('../images/background.png') center -300px no-repeat;
 }
 
 #page-wrapper,
