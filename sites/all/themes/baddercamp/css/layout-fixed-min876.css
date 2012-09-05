@@ -406,14 +406,7 @@ body.front .view-id-slideshow {
   margin-bottom: 10px;
 }
 .view-events .node h2.title a {
-  display: block;
-  color: #447b97;
-  font-weight: bold;
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-align: center;
-  line-height: 23px;
-  border-bottom: 1px solid #bababa;
-  padding: 5px;
 }
 .view-events .node .content {
   margin: 0;
@@ -431,11 +424,6 @@ body.front .view-id-slideshow {
 }
 .view-events .node ul.links li a {
   display: block;
-  text-transform: uppercase;
-  color: #525252;
-  font-weight: bold;
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-decoration: none;
 }
 .view-events .node ul.links li a:before {
   content: '- ';
