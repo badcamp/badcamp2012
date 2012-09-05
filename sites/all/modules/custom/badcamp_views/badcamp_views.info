@@ -1,0 +1,6 @@
+name = Badcamp views
+description = BADCamp views - in code.
+dependencies[] = views
+
+package = BADCamp
+core = 6.x
