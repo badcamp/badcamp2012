@@ -1,0 +1,691 @@
+<?php
+
+/*
+ * COD Schedule override.
+ */
+
+ $view = new view;
+ $view->name = 'cod_schedule';
+ $view->description = 'Session Schedule';
+ $view->tag = 'cod session';
+ $view->base_table = 'node';
+ $view->core = 0;
+ $view->api_version = '2';
+ $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+ $handler = $view->new_display('default', 'Defaults', 'default');
+ $handler->override_option('relationships', array(
+   'flag_content_rel' => array(
+     'label' => 'flag: session_schedule',
+     'required' => 0,
+     'flag' => 'session_schedule',
+     'user_scope' => 'current',
+     'id' => 'flag_content_rel',
+     'table' => 'node',
+     'field' => 'flag_content_rel',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Override',
+     ),
+   ),
+ ));
+ $handler->override_option('fields', array(
+   'title' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 1,
+       'text' => '<strong>[title]</strong>',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_node' => 1,
+     'exclude' => 0,
+     'id' => 'title',
+     'table' => 'node',
+     'field' => 'title',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Override',
+     ),
+   ),
+   'field_track_value' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_node' => 0,
+     'label_type' => 'none',
+     'format' => 'default',
+     'multiple' => array(
+       'group' => TRUE,
+       'multiple_number' => '',
+       'multiple_from' => '',
+       'multiple_reversed' => FALSE,
+     ),
+     'exclude' => 1,
+     'id' => 'field_track_value',
+     'table' => 'node_data_field_track',
+     'field' => 'field_track_value',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'field_experience_value' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 1,
+       'text' => '[field_track_value], [field_experience_value] ',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 1,
+     'empty_zero' => 0,
+     'link_to_node' => 0,
+     'label_type' => 'none',
+     'format' => 'default',
+     'multiple' => array(
+       'group' => 1,
+       'multiple_number' => '',
+       'multiple_from' => '',
+       'multiple_reversed' => 0,
+     ),
+     'exclude' => 0,
+     'id' => 'field_experience_value',
+     'table' => 'node_data_field_experience',
+     'field' => 'field_experience_value',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'field_speakers_uid' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_node' => 0,
+     'label_type' => 'none',
+     'format' => 'user_full_name',
+     'multiple' => array(
+       'group' => 1,
+       'multiple_number' => '',
+       'multiple_from' => '',
+       'multiple_reversed' => 0,
+     ),
+     'exclude' => 0,
+     'id' => 'field_speakers_uid',
+     'table' => 'node_data_field_speakers',
+     'field' => 'field_speakers_uid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'ops' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_type' => '',
+     'exclude' => 0,
+     'id' => 'ops',
+     'table' => 'flag_content',
+     'field' => 'ops',
+     'relationship' => 'flag_content_rel',
+     'override' => array(
+       'button' => 'Override',
+     ),
+   ),
+   'field_session_details_value' => array(
+     'label' => '',
+     'alter' => array(
+       'alter_text' => 0,
+       'text' => '',
+       'make_link' => 0,
+       'path' => '',
+       'link_class' => '',
+       'alt' => '',
+       'prefix' => '',
+       'suffix' => '',
+       'target' => '',
+       'help' => '',
+       'trim' => 0,
+       'max_length' => '',
+       'word_boundary' => 1,
+       'ellipsis' => 1,
+       'html' => 0,
+       'strip_tags' => 0,
+     ),
+     'empty' => '',
+     'hide_empty' => 0,
+     'empty_zero' => 0,
+     'link_to_node' => 0,
+     'label_type' => 'none',
+     'format' => 'default',
+     'multiple' => array(
+       'group' => TRUE,
+       'multiple_number' => '',
+       'multiple_from' => '',
+       'multiple_reversed' => FALSE,
+     ),
+     'exclude' => 0,
+     'id' => 'field_session_details_value',
+     'table' => 'node_data_field_session_details',
+     'field' => 'field_session_details_value',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+ ));
+ $handler->override_option('filters', array(
+   'type' => array(
+     'operator' => 'in',
+     'value' => array(
+       'session' => 'session',
+       'schedule_item' => 'schedule_item',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'type',
+     'table' => 'node',
+     'field' => 'type',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Override',
+     ),
+   ),
+   'status' => array(
+     'operator' => '=',
+     'value' => '1',
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'status',
+     'table' => 'node',
+     'field' => 'status',
+     'relationship' => 'none',
+   ),
+   'field_accepted_value' => array(
+     'operator' => '=',
+     'value' => array(
+       'value' => '1',
+       'min' => '',
+       'max' => '',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_accepted_value',
+     'table' => 'node_data_field_accepted',
+     'field' => 'field_accepted_value',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'field_session_slot_nid' => array(
+     'operator' => 'not empty',
+     'value' => array(),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_session_slot_nid',
+     'table' => 'node_data_field_session_slot',
+     'field' => 'field_session_slot_nid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+     'reduce_duplicates' => 0,
+   ),
+   'field_session_room_nid' => array(
+     'operator' => 'not empty',
+     'value' => array(),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_session_room_nid',
+     'table' => 'node_data_field_session_room',
+     'field' => 'field_session_room_nid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+     'reduce_duplicates' => 0,
+   ),
+ ));
+ $handler->override_option('access', array(
+   'type' => 'role',
+   'role' => array(
+     7 => 7,
+   ),
+ ));
+ $handler->override_option('cache', array(
+   'type' => 'none',
+ ));
+ $handler->override_option('title', 'Session Schedule');
+ $handler->override_option('header', '<p style="background-color: white; border-top: 3px solid black; padding: 8px;">Also be sure to check out our <a href="http://2011.badcamp.net/program/bofs">Birds of a Feather gatherings</a> and the <a href="http://2011.badcamp.net/program/bofs/drupal-drop">Drupal Drop-in</a> room, many other events are happening concurrently.</p>');
+ $handler->override_option('header_format', '2');
+ $handler->override_option('header_empty', 0);
+ $handler->override_option('footer', '<p style="background-color: white; border-top: 3px solid black; padding: 8px;">Also be sure to check out our <a href="http://2011.badcamp.net/program/bofs">Birds of a Feather gatherings</a> and the <a href="http://2011.badcamp.net/program/bofs/drupal-drop">Drupal Drop-in</a> room, many other events are happening concurrently.</p>');
+ $handler->override_option('footer_format', '2');
+ $handler->override_option('footer_empty', 0);
+ $handler->override_option('empty', 'The schedule is empty. Please create one or more rooms and time slots, and assign a session or schedule item to them. For help with scheduling, please see the <a href="http://drupal.org/documentation/build/cod/">COD Documentation</a>.');
+ $handler->override_option('empty_format', '1');
+ $handler->override_option('items_per_page', 0);
+ $handler->override_option('link_display', 'page_1');
+ $handler->override_option('style_plugin', 'cod_session_schedule');
+ $handler->override_option('style_options', array(
+   'schedule_days' => array(
+     '2011-10-22' => '2011-10-22',
+     '2011-10-23' => '2011-10-23',
+   ),
+   'schedule_interactive' => '0',
+   'interactive_type' => 'session',
+   'room_queue' => '1',
+   'time_queue' => '',
+ ));
+ $handler->override_option('row_options', array(
+   'inline' => array(
+     'field_track_value' => 'field_track_value',
+     'field_experience_value' => 'field_experience_value',
+   ),
+   'separator' => '',
+   'hide_empty' => 0,
+ ));
+ $handler = $view->new_display('page', 'Schedule', 'page_1');
+ $handler->override_option('filters', array(
+   'type' => array(
+     'operator' => 'in',
+     'value' => array(
+       'schedule_item' => 'schedule_item',
+       'session' => 'session',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'type',
+     'table' => 'node',
+     'field' => 'type',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+   ),
+   'status' => array(
+     'operator' => '=',
+     'value' => '1',
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'status',
+     'table' => 'node',
+     'field' => 'status',
+     'relationship' => 'none',
+   ),
+   'field_accepted_value' => array(
+     'operator' => '=',
+     'value' => array(
+       'value' => '1',
+       'min' => '',
+       'max' => '',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_accepted_value',
+     'table' => 'node_data_field_accepted',
+     'field' => 'field_accepted_value',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'field_session_slot_nid' => array(
+     'operator' => 'not empty',
+     'value' => array(),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_session_slot_nid',
+     'table' => 'node_data_field_session_slot',
+     'field' => 'field_session_slot_nid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+     'reduce_duplicates' => 0,
+   ),
+   'field_session_room_nid' => array(
+     'operator' => 'not empty',
+     'value' => array(),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_session_room_nid',
+     'table' => 'node_data_field_session_room',
+     'field' => 'field_session_room_nid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+     'reduce_duplicates' => 0,
+   ),
+ ));
+ $handler->override_option('header', '<h2>Friday October 21st, 2011</h2>
+ <table class="session-calendar">
+ <tbody><tr>
+   <th>Time</th>
+   <th><span class="room-label">International House</span></th>
+   <th><span class="room-label">The Marsh</span></th>
+   <th><span class="room-label">Wheeler Hall (Room 315)</span></th>
+   <th><span class="room-label">UC Berkeley / SFSU</span></th>
+   <th><span class="room-label">CHX Coder Lounge</span></th>
+   </tr>
+
+   <tr class="even ">
+   <td class="time-label">All Day</td>
+   <td colspan="1" class="session occupied">
+    <div class="views-item type-schedule_item">
+    <div class="views-field-title">
+     <span class="field-content"><a href="/west-coast-core-developer-summit"><strong>Core Developer Summit</strong></a><br /> 10:00am - 7:00pm</span></div>
+    </div>
+   </td>
+   <td colspan="1" class="session occupied">
+    <div class="views-item type-schedule_item">
+    <div class="views-field-title">
+     <span class="field-content"><a href="/drupal-non-profit-summit"><strong>Non Profit Summit</strong></a><br /> 10:00am - 6:00pm</span></div>
+    </div>
+   </td>
+   <td colspan="1" class="session occupied">
+    <div class="views-item type-schedule_item">
+    <div class="views-field-title">
+     <span class="field-content"><a href="/higher-education-drupal-summit"><strong>Higher Education Summit</strong></a><br /> 10:00am - 6:00pm</span></div>
+    </div>
+   </td>
+   <td colspan="1" class="session occupied">
+    <div class="views-item type-schedule_item">
+    <div class="views-field-title">
+     <span class="field-content"><a href="/program/training"><strong>Free Drupal Training</strong></a><br /> 9:30am - 5:00pm</span></div>
+    </div>
+   </td>
+   <td colspan="1" class="session occupied">
+    <div class="views-item type-schedule_item">
+    <div class="views-field-title">
+     <span class="field-content"><a href="/program/sprints"><strong>Code Sprints</strong></a></span></div>
+    </div>
+   </td>
+   </tr>
+
+   <tr class="even ">
+   <td class="time-label">7:00PM&nbsp;-<br>12:00AM</td>
+   <td colspan="5" class="session occupied">
+    <div class="views-item type-schedule_item">
+    <div class="views-field-title"><span class="field-content"><a href="/pre-conference-party-jupiter"><strong>Pre-Conference Party & Pre-Registration</strong></a></span></div>
+    <div class="views-field-field-session-details-value">
+    <div class="field-content"><br><p>It is all happening on the second floor of Jupiter at 2181 Shattuck in Berkeley! Come for a drink and to pick up your badge early.</p></div>
+    </div>
+    </div>
+   </td>
+   </tr>
+ </tbody></table>');
+ $handler->override_option('path', 'program/schedule/all');
+ $handler->override_option('menu', array(
+   'type' => 'default tab',
+   'title' => 'Schedule',
+   'description' => '',
+   'weight' => '0',
+   'name' => 'primary-links',
+ ));
+ $handler->override_option('tab_options', array(
+   'type' => 'normal',
+   'title' => 'Session schedule',
+   'description' => '',
+   'weight' => '0',
+   'name' => 'primary-links',
+ ));
+ $handler = $view->new_display('block', 'Primary Sessions Block', 'block_1');
+ $handler->override_option('block_description', 'Primary Sessions');
+ $handler->override_option('block_caching', -1);
+ $handler = $view->new_display('page', 'Your schedule', 'page_4');
+ $handler->override_option('filters', array(
+   'type' => array(
+     'operator' => 'in',
+     'value' => array(
+       'session' => 'session',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'type',
+     'table' => 'node',
+     'field' => 'type',
+     'relationship' => 'none',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+   ),
+   'status' => array(
+     'operator' => '=',
+     'value' => '1',
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'status',
+     'table' => 'node',
+     'field' => 'status',
+     'relationship' => 'none',
+   ),
+   'field_accepted_value' => array(
+     'operator' => '=',
+     'value' => array(
+       'value' => '1',
+       'min' => '',
+       'max' => '',
+     ),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_accepted_value',
+     'table' => 'node_data_field_accepted',
+     'field' => 'field_accepted_value',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+   ),
+   'field_session_slot_nid' => array(
+     'operator' => 'not empty',
+     'value' => array(),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_session_slot_nid',
+     'table' => 'node_data_field_session_slot',
+     'field' => 'field_session_slot_nid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+     'reduce_duplicates' => 0,
+   ),
+   'field_session_room_nid' => array(
+     'operator' => 'not empty',
+     'value' => array(),
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'field_session_room_nid',
+     'table' => 'node_data_field_session_room',
+     'field' => 'field_session_room_nid',
+     'override' => array(
+       'button' => 'Override',
+     ),
+     'relationship' => 'none',
+     'reduce_duplicates' => 0,
+   ),
+   'flagged' => array(
+     'operator' => '=',
+     'value' => '1',
+     'group' => '0',
+     'exposed' => FALSE,
+     'expose' => array(
+       'operator' => FALSE,
+       'label' => '',
+     ),
+     'id' => 'flagged',
+     'table' => 'flag_content',
+     'field' => 'flagged',
+     'relationship' => 'flag_content_rel',
+     'override' => array(
+       'button' => 'Use default',
+     ),
+   ),
+ ));
+ $handler->override_option('title', 'Your schedule');
+ $handler->override_option('empty', 'Your schedule is empty. You can add sessions to your personal schedule from the <a href="/program/schedule">main schedule.</a>');
+ $handler->override_option('path', 'program/schedule/your-schedule');
+ $handler->override_option('menu', array(
+   'type' => 'tab',
+   'title' => 'Your schedule',
+   'description' => '',
+   'weight' => '0',
+   'name' => 'primary-links',
+ ));
+ $handler->override_option('tab_options', array(
+   'type' => 'none',
+   'title' => '',
+   'description' => '',
+   'weight' => '0',
+   'name' => 'navigation',
+ ));
+ 
