@@ -9,6 +9,72 @@ function badcamp_blocks_feature_default_fe_block_settings() {
   // baddercamp
   $theme = array();
 
+  $theme['block-schedule_of_events'] = array(
+    'module' => 'block',
+    'theme' => 'baddercamp',
+    'status' => '1',
+    'weight' => '-31',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => 'sponsors
+program/schedule',
+    'title' => '',
+    'cache' => '-1',
+    'machine_name' => 'schedule_of_events',
+  );
+
+  $theme['block-contact'] = array(
+    'module' => 'block',
+    'theme' => 'baddercamp',
+    'status' => '1',
+    'weight' => '-29',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => 'sponsors
+program/schedule
+logistics/ride-share*',
+    'title' => '',
+    'cache' => '-1',
+    'machine_name' => 'contact',
+  );
+
+  $theme['block-hashtags'] = array(
+    'module' => 'block',
+    'theme' => 'baddercamp',
+    'status' => '1',
+    'weight' => '-25',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => 'sponsors
+program/schedule
+logistics/ride-share*',
+    'title' => '',
+    'cache' => '-1',
+    'machine_name' => 'hashtags',
+  );
+
+  $theme['block-scholarship'] = array(
+    'module' => 'block',
+    'theme' => 'baddercamp',
+    'status' => '1',
+    'weight' => '-27',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => 'sponsors
+program/schedule',
+    'title' => '',
+    'cache' => '-1',
+    'machine_name' => 'scholarship',
+  );
+
   $theme['menu-primary-links'] = array(
     'module' => 'menu',
     'delta' => 'primary-links',
@@ -62,21 +128,6 @@ program/schedule',
     'status' => '1',
     'weight' => '-28',
     'region' => 'sidebar_first',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '1',
-    'pages' => 'sponsors',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-Sponsors-block_3'] = array(
-    'module' => 'views',
-    'delta' => 'Sponsors-block_3',
-    'theme' => 'baddercamp',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '1',
