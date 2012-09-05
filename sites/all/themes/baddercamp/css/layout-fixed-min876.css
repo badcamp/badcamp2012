@@ -453,3 +453,26 @@ body.front .view-id-slideshow {
   margin-top: -16px;
   padding-top: 16px;
 }
+
+
+/**
+ * Attendees page
+ */
+.view-attendees .views-row .views-cell {
+   width: 25%;
+   height: 235px;
+   overflow: hidden;
+   float: left;
+}
+.view-attendees .views-row .views-cell div {
+  text-align: center;
+  max-width: 160px;
+  color: #525252;
+}
+.view-attendees .views-row .views-cell div a {
+  display: block;
+  text-transform: uppercase;
+  color: #447b97;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  text-decoration: none;
+}
