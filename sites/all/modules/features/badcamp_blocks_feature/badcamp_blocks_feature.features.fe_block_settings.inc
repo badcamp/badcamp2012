@@ -55,9 +55,9 @@ program/schedule',
     'cache' => '1',
   );
 
-  $theme['views-Sponsors-block_1'] = array(
+  $theme['views-badcamp_sponsors-block_1'] = array(
     'module' => 'views',
-    'delta' => 'Sponsors-block_1',
+    'delta' => 'badcamp_sponsors-block_1',
     'theme' => 'baddercamp',
     'status' => '1',
     'weight' => '-27',
@@ -70,9 +70,9 @@ program/schedule',
     'cache' => '-1',
   );
 
-  $theme['views-Sponsors-block_3'] = array(
+  $theme['views-badcamp_sponsors-block_3'] = array(
     'module' => 'views',
-    'delta' => 'Sponsors-block_3',
+    'delta' => 'badcamp_sponsors-block_3',
     'theme' => 'baddercamp',
     'status' => '1',
     'weight' => '-26',
