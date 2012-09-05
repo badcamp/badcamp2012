@@ -2,7 +2,8 @@ name = Verdant Rideshare for Events
 description = Intended for a conference's website, to coordinate ridesharing among attendees going to the same location. (One of 3: flight, carpool, and roomshare)
 core = 6.x
 version = "6.x-0.31"
-package = Verdant Share
+
+package = BADCamp
 dependencies[] = views
 dependencies[] = views_ui
 dependencies[] = text
@@ -14,7 +15,6 @@ dependencies[] = flag
 dependencies[] = gmap_taxonomy
 dependencies[] = gmap
 dependencies[] = install_profile_api  
-/* content profile import */
 dependencies[] = location
 dependencies[] = location_node
 dependencies[] = php
@@ -22,5 +22,4 @@ dependencies[] = contact
 dependencies[] = fieldgroup
 dependencies[] = auto_nodetitle
 dependencies[] = content_taxonomy_options
-			/* php filter for the smart header in the view, not sure if will
-			ultimately need? */ 
+

@@ -3,3 +3,4 @@ description = a collection of customizations for badcamp
 version = 6.x-1.0
 core = 6.x
 
+package = BADCamp
