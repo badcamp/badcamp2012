@@ -471,13 +471,25 @@ body.front .view-id-slideshow {
  * Sponsors page.
  */
 .view-badcamp-sponsors .views-row .views-cell {
-  height: 235px;
+  height: 225px; /* default height */
   overflow: hidden;
   text-align: center;
 }
+.view-badcamp-sponsors .views-row .views-cell .views-field-field-logo-fid {
+  max-height: 180px;
+}
+/* different sizes */
 #block-views-badcamp_sponsors-block_1 .view-badcamp-sponsors .views-row .views-cell {
   height: 200px;
-  overflow: hidden;
+}
+#block-views-badcamp_sponsors-block_1 .view-badcamp-sponsors .views-row .views-field-field-logo-fid {
+  height: 137px;
+}
+#block-views-badcamp_sponsors-block_3 .view-badcamp-sponsors .views-row .views-cell {
+  height: 125px;
+}
+#block-views-badcamp_sponsors-block_3 .view-badcamp-sponsors .views-row .views-field-field-logo-fid {
+  height: 87px;
 }
 .view-badcamp-sponsors .views-row .views-cell .views-field-title a {
   display: block;
