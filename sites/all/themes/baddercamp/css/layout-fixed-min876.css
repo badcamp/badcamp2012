@@ -486,6 +486,10 @@ body.front .view-id-slideshow {
   padding-top: 16px;
 }
 
+.pane-badcamp-sponsors-panel-pane-1 .view-badcamp-sponsors .views-row .views-cell {
+  height: 100px;
+}
+
 
 /**
  * Attendees page
