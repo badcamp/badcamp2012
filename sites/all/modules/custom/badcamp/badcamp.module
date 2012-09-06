@@ -74,6 +74,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     // Remove all the ugly help text.
     unset($form['account']['name']['#description']);
     unset($form['account']['mail']['#description']);
+    unset($form['account']['pass']['#description']);
     unset($form['signup']['#description']);
 
     // Unset unsightly fieldset labels

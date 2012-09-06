@@ -535,3 +535,78 @@ span.anchor-right {
   width: 20%;
   float: left;
 }
+
+/**
+ * Profile pages.
+ */
+h2.pane-title {
+  color: #447b97;
+  border-bottom: 1px solid #bababa;
+}
+#badcamp-registration-events .form-item,
+#badcamp-signup-form .form-item {
+  width: 25%;
+  float: left;
+  margin-top: 0;
+}
+#badcamp-registration-events .form-item .form-radios .form-item,
+#badcamp-signup-form .form-item .form-radios .form-item {
+  width: auto;
+  float: none;
+}
+#badcamp-registration-events .form-item .form-radios .form-item label,
+#badcamp-signup-form .form-item .form-radios .form-item label {
+  display: block;
+  font-size: 11px;
+}
+#badcamp-signup-form #edit-profile-volunteer-wrapper {
+  clear: both;
+  width: 50%;
+  float: left;
+}
+#badcamp-signup-form #edit-profile-want-job-wrapper {
+  width: 50%;
+  float: left;
+}
+#user-register .submit-box,
+#badcamp-signup-form .submit-box {
+  clear: both;
+}
+
+/**
+ * User registration
+ */
+#user-register .camp-message {
+  margin: 10px 0 20px 0;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+#user-register .camp-message a {
+  text-transform: uppercase;
+}
+#user-register fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  float: left;
+}
+#user-register #badcamp-registration-events {
+  float: none;
+  width: 100%;
+}
+#user-register fieldset input.form-text {
+  width: 280px;
+}
+#user-register .submit-box {
+  text-align: right;
+}
+#user-register .submit-box input {
+  font-size: 14px;
+  padding: 5px 20px;
+}
+#user-register div.small {
+  margin: 20px 0 50px 0;
+  font-size: 12px;
+}
