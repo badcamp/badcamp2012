@@ -61,7 +61,8 @@
         <?php print $title; ?>
       </h3>
     <?php endif; ?>
-    by <?php print $author; ?>, <?php print $created; ?>
+    <div><?php print $created; ?></div>
+    <div><?php print $author; ?> says...</div>
     <?php if ($new): ?>
       <span class="new"><?php print $new; ?>!</span>
     <?php endif; ?>

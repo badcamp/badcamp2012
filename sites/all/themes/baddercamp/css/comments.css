@@ -34,6 +34,7 @@
 }
 
 .comment.last /* The last comment in the list of comments */ {
+  border: 0;
 }
 
 .comment.odd /* An odd-numbered comment in the list of comments */ {
@@ -78,6 +79,13 @@
   margin: 20px 15px;
   padding: 15px 0;
 }
+.comment .submitted a {
+  color: #333333;
+  text-decoration: none;
+}
+.comment .submitted a:hover {
+  text-decoration: underline;
+}
 
 .comment .content /* Comment's content wrapper */ {
   clear: left;
@@ -102,7 +110,7 @@
 }
 
 .indented /* Nested comments are indented */ {
-  background: transparent url('../images/reply.png') top left no-repeat;
+  background: transparent url('../images/reply.png') 0 30px no-repeat;
   margin-left: 0;
   padding-left: 50px;
 }
@@ -113,7 +121,7 @@
 
 #comments .box {
   background: transparent url('../images/bg-comment-form.png') top center no-repeat;
-  margin: 20px -25px 0 -25px;
+  margin: 40px -25px 0 -25px;
   padding-top: 63px;
 }
 #comments .box .box-inner {
