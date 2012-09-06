@@ -149,9 +149,12 @@ body {
 }
 
 #content .section .section-inner {
-  margin: 0 60px;
-  background-color: #ffffff;
-  padding: 10px 20px;
+  position: relative;
+  margin: 0 60px 0 60px;
+  padding: 10px 25px 0 25px;
+  background: #ffffff url('../images/bg-page-bottom.png') bottom center no-repeat;
+  margin-bottom: -22px;
+  padding-bottom: 22px;
 }
 
 .sidebar-first #content .section {
@@ -314,8 +317,6 @@ body.no-sidebars #navigation .section .region-navigation {
 
 
 
-
-
 /*
  * Blocks in the sidebar.
  */
@@ -446,6 +447,7 @@ body.front .view-id-slideshow {
 }
 .view-events .node h2.title a {
   text-align: center;
+  border-bottom: 1px solid #bababa;
 }
 .view-events .node .content {
   margin: 0;

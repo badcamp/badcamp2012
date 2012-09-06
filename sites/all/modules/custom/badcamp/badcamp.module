@@ -64,7 +64,6 @@ function badcamp_display_block() {
  */
 function badcamp_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register') {
-    
     // Add message above form.
     $form['message'] = array(
       '#type' => 'markup',
@@ -159,6 +158,14 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     
     // unset destination parameter
     $form['#action'] = 'register';
+  }
+
+  // Comment form.
+  if ($form_id == 'comment_form') {
+    // Shorten the comment box.
+    $form['comment_filter']['comment']['#rows'] = 5;
+    // Change submit button text.
+    $form['submit']['#value'] = t('Post');
   }
 }
 

@@ -38,14 +38,14 @@
 /**
  * Node teasers
  */
+.node h2.title,
 .node h2.title a {
   display: block;
   color: #447b97;
   font-weight: bold;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   line-height: 23px;
-  border-bottom: 1px solid #bababa;
-  padding: 5px;
+  padding: 5px 0;
 }
 
 /* All nodes are given a node-type-FOO class that describes the type of
@@ -75,25 +75,27 @@
 
 .node .meta /* Wrapper for submitted and terms data */ {
   border-bottom: 1px solid #bababa;
-  padding: 8px 20px;
+  padding-bottom: 10px;
 }
 
 .node .submitted /* The "posted by" information */ {
-  color: #BABABA;
 }
 .node .submitted a {
-  color: #BABABA;
+  color: #333333;
   text-decoration: none;
 }
 .node .submitted a:hover {
-  color: #525252;
   text-decoration: underline;
+}
+.node .submitted .comment-count {
+  color: #447b97;
 }
 
 .node .terms /* Node terms (taxonomy) */ {
 }
 
 .node .content /* Node's content wrapper */ {
+  margin: 0;
 }
 
 .node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
@@ -101,11 +103,12 @@
   text-align: right;
 }
 .node ul.links li a {
-  text-transform: uppercase;
   color: #525252;
+  font-size: 12px;
   font-weight: bold;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .preview .node /* Preview of the content before submitting new or updated content */ {

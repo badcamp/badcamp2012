@@ -5,7 +5,7 @@
 
 
 #comments /* Wrapper for the list of comments and its title */ {
-  margin: 1em 0;
+  margin: 1em 0 0 0;
   background: transparent url('../images/divide.png') top center no-repeat;
   padding-top: 15px;
 }
@@ -13,6 +13,8 @@
 #comments h2.title /* Heading for the list of comments */ {
   color: #447b97;
   border-bottom: 1px solid #bababa;
+  margin: 5px 0;
+  padding: 5px 0;
 }
 
 .comment /* Wrapper for a single comment */ {
@@ -87,6 +89,16 @@
 }
 
 .comment ul.links /* Comment links. See also the ul.links declaration in the pages.css. */ {
+  display: block;
+  text-align: right;
+}
+.comment ul.links li a {
+  color: #525252;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .indented /* Nested comments are indented */ {
@@ -97,6 +109,18 @@
 
 .preview .comment /* Preview of the comment before submitting new or updated comment */ {
   /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+}
+
+#comments .box {
+  background: transparent url('../images/bg-comment-form.png') top center no-repeat;
+  margin: 20px -25px 0 -25px;
+  padding-top: 63px;
+}
+#comments .box .box-inner {
+  border: 1px solid #bababa;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 10px 50px 30px 50px;
 }
 
 #comments .box h2 {

@@ -79,6 +79,16 @@
   <?php elseif ($node->type == 'news'): ?>
     <h2 class="title"><?php print $title; ?></h2>
   <?php endif; ?>
+  
+  <?php if ($display_submitted): ?>
+    <div class="meta">
+      <?php if ($display_submitted): ?>
+        <span class="submitted">
+          by <?php print $name; ?>, <?php print $date; ?> / <span class="comment-count"><?php print $comment_count; ?></span>
+        </span>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
 
   <?php if ($unpublished): ?>
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
@@ -87,16 +97,6 @@
   <div class="content">
     <?php print $content; ?>
   </div>
-
-  <?php if ($display_submitted): ?>
-    <div class="meta">
-      <?php if ($display_submitted): ?>
-        <span class="submitted">
-          by <?php print $name; ?>, <?php print $date; ?> / <?php print $comment_count; ?>
-        </span>
-      <?php endif; ?>
-    </div>
-  <?php endif; ?>
 
   <?php print $links; ?>
 </div><!-- /.node -->
