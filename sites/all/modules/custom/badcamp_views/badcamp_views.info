@@ -1,5 +1,7 @@
 name = Badcamp views
 description = BADCamp views - in code.
+dependencies[] = cod_sponsors
+dependencies[] = cod_news
 dependencies[] = views
 
 package = BADCamp
