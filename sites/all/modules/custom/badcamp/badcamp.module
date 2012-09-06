@@ -26,7 +26,7 @@ function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
         break;
       case 'signup_form':
         $block = array(
-          'subject' => t('Sign up for BADCamp daily events'), 
+          'subject' => t('Daily Event Attendance'), 
           'content' => drupal_get_form('badcamp_signup_form'),
         );
         break;
@@ -228,6 +228,12 @@ function badcamp_signup_form() {
       $already_signedup_for[] = $nid;
     }
     if ($dates) {
+      $form['welcome'] = array(
+        '#type' => 'markup',
+        '#value' => '<p>' . t('Please select wich daily events you would like 
+          to attend.  <small>(You may return to this page at any time and change your 
+          choices.)</small>') . '</p>',
+      );
       ksort($dates);
       $form['badcamp_signup'] = array(
         '#tree' => TRUE,

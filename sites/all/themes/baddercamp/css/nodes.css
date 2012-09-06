@@ -50,7 +50,6 @@
 .node h2.title, /* Node title */ 
 .node h2.title a {
   display: block;
-  color: #447b97;
   font-weight: bold;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   line-height: 23px;
@@ -78,10 +77,6 @@
 }
 .node .submitted a {
   color: #333333;
-  text-decoration: none;
-}
-.node .submitted a:hover {
-  text-decoration: underline;
 }
 .node .submitted .comment-count {
   color: #447b97;
@@ -99,11 +94,9 @@
   text-align: right;
 }
 .node ul.links li a {
-  color: #525252;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-decoration: none;
   text-transform: uppercase;
 }
 

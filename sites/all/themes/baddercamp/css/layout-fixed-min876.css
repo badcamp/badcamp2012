@@ -563,15 +563,47 @@ body.front .view-id-slideshow {
 .view-orders .views-row {
   height: 70px;
 }
-.view-orders .views-row .views-cell {
-  
-}
 .view-orders .views-row .views-cell a {
   display: block;
-  color: #447b97;
   font-weight: bold;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
   line-height: 23px;
   padding: 0;
+}
+
+/**
+ * Profile page.
+ */
+h2.pane-title {
+  color: #447b97;
+  border-bottom: 1px solid #bababa;
+}
+#badcamp-signup-form .form-item {
+  width: 25%;
+  float: left;
+  margin-top: 0;
+}
+#badcamp-signup-form .form-item .form-radios .form-item {
+  width: auto;
+  float: none;
+}
+#badcamp-signup-form .form-item .form-radios .form-item label {
+  display: block;
+  font-size: 11px;
+}
+#badcamp-signup-form .form-item .form-radios .form-item label a {
+  
+}
+#badcamp-signup-form #edit-profile-volunteer-wrapper {
+  clear: both;
+  width: 50%;
+  float: left;
+}
+#badcamp-signup-form #edit-profile-want-job-wrapper {
+  width: 50%;
+  float: left;
+}
+#badcamp-signup-form .submit-box {
+  clear: both;
 }
