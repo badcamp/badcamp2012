@@ -41,8 +41,8 @@ function badcamp_images_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '620',
-            'height' => '475',
+            'width' => '660',
+            'height' => '495',
           ),
         ),
       ),
