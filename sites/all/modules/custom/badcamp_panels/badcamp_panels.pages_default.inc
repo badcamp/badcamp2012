@@ -448,13 +448,13 @@ function badcamp_panels_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'Sponsors-panel_pane_1';
+    $pane->subtype = 'badcamp_sponsors-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '3',
-      'override_title' => 1,
-      'override_title_text' => 'Core Sponsors',
+      'items_per_page' => '6',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
