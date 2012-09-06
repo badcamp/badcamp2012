@@ -386,8 +386,43 @@ body.front .view-id-slideshow {
 }
 
 /**
- * homepage 
+ * Home page.
  */
+.pane-slideshow-panel-pane-1 {
+  height: 505px;
+  overflow: hidden;
+}
+.pane-slideshow-panel-pane-1 .view-content {
+  height: 495px;
+  overflow: hidden;
+}
+.pane-slideshow-panel-pane-1 .view-footer {
+  height: 45px;
+  position: relative;
+  top: -45px;
+  background-color: #f6f1ef;
+  opacity: 0.75;
+  z-index: 21 !important;
+  padding: 5px;
+}
+.pane-slideshow-panel-pane-1 .view-footer h2 {
+  color: #525252;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 35px;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  margin: 0;
+}
+
+.view-front .views-row {
+  padding: 0 20px;
+}
+.view-front .views-row p {
+  font-size: 14px;
+  line-height: 23px;
+}
+
 .view-events {
   padding-top: 15px;
 }
