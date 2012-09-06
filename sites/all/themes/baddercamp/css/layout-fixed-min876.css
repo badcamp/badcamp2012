@@ -379,7 +379,9 @@ body.front .view-id-slideshow {
   display: block;
 }
 
-/* Line up the events on the homepage */
+/**
+ * homepage 
+ */
 .view-events {
   padding-top: 15px;
 }
@@ -388,10 +390,6 @@ body.front .view-id-slideshow {
   height: 230px;
   border-top: 1px solid #bababa;
   padding-top: 10px;
-}
-.view-events .views-row .views-cell {
-  width: 33%;
-  float: left;
 }
 .view-events .views-row .views-cell .node {
   padding: 0 10px 15px 10px;
@@ -447,10 +445,8 @@ body.front .view-id-slideshow {
  * Attendees page
  */
 .view-attendees .views-row .views-cell {
-   width: 25%;
    height: 235px;
    overflow: hidden;
-   float: left;
 }
 .view-attendees .views-row .views-cell div {
   text-align: center;
@@ -463,4 +459,17 @@ body.front .view-id-slideshow {
   color: #447b97;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-decoration: none;
+}
+
+/**
+ * Sponsors page.
+ */
+.view-badcamp-sponsors .views-row .views-cell {
+  height: 235px;
+  overflow: hidden;
+  text-align: center;
+}
+#block-views-badcamp_sponsors-block_1 .view-badcamp-sponsors .views-row .views-cell {
+  height: 200px;
+  overflow: hidden;
 }
