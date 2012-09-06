@@ -3,7 +3,7 @@ description = BADCamp views - in code.
 dependencies[] = cod_sponsors
 dependencies[] = cod_news
 dependencies[] = views
-;dependencies[] = badcamp_images
+dependencies[] = badcamp_images
 
 package = BADCamp
 core = 6.x
