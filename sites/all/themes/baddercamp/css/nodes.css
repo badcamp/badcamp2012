@@ -35,18 +35,7 @@
 
 .node-teaser /* A node displayed as teaser */ {
 }
-/**
- * Node teasers
- */
-.node h2.title,
-.node h2.title a {
-  display: block;
-  color: #447b97;
-  font-weight: bold;
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  line-height: 23px;
-  padding: 5px 0;
-}
+
 
 /* All nodes are given a node-type-FOO class that describes the type of
  * content that it is. If you create a new content type called
@@ -58,7 +47,14 @@
 .node-type-story /* Story content node */ {
 }
 
-.node h2.title /* Node title */ {
+.node h2.title, /* Node title */ 
+.node h2.title a {
+  display: block;
+  color: #447b97;
+  font-weight: bold;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  line-height: 23px;
+  padding: 5px 0;
 }
 
 .marker /* "New" or "Updated" marker for content that is new or updated for the current user */ {

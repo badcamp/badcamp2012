@@ -500,6 +500,10 @@ span.anchor-right {
   -webkit-animation-delay:1s; */
 }
 
+/* all views - Jen */
+.view-filters {
+  padding-bottom: 20px;
+}
 
 /* grid views - Jen */
 .views-view-grid .views-row {

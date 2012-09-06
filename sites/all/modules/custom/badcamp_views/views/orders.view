@@ -457,7 +457,7 @@
  $handler->override_option('access', array(
    'type' => 'none',
  ));
- $handler->override_option('title', 'Individual Sponsors');
+ $handler->override_option('title', '2012 Individual Sponsors');
  $handler->override_option('style_plugin', 'grid');
  $handler->override_option('style_options', array(
    'grouping' => '',
