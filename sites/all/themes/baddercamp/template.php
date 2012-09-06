@@ -101,7 +101,7 @@ function baddercamp_preprocess_page(&$vars, $hook) {
   global $user;
   if (!$user->uid) {
     $vars['account_links'] = l(t('Log in'), 'user/login', array('attributes' => array('id' => 'magical-login-box-link', 'class' => 'closed-box')));
-    $vars['account_information'] = '<h2>' . t('Login to your account') . '</h2>' . '<p>' . t('Please enter your username and password to login to the site') . '</p>' . '<p>' . t('Not registered? !registration', array('!registration' => l(t('Click here to begin registration.'), 'user/register'))) . '</p>';
+    $vars['account_information'] = '<h2>' . t('Login to your account') . '</h2>' . '<p>' . t('Returning 2011 attendee? Log in now!') . '</p>' . '<p>' . t('Not registered yet? !registration', array('!registration' => l(t('Sign up!'), 'user/register'))) . '</p>';
     $vars['account_box'] = '<h2>' . t('User Login') . '</h2>' . drupal_get_form('baddercamp_user_login');
   }
   else {
@@ -110,28 +110,27 @@ function baddercamp_preprocess_page(&$vars, $hook) {
     $vars['account_box'] = '';
   }
 
+  // Change the page titles on news items.
+  if (arg(0) == 'node' && is_numeric(arg(1)) && !arg(2)) {
+    $node = node_load(arg(1)); // Free on node page.
+    if ($node->type == 'news') {
+      // Change the titles.
+      $vars['title'] = t('Recent News');
+      $vars['head_title'] = t('Recent news') . ': ' . check_plain($node->title);
+    }
+  }
+
+  // Set the regiser page title to something sane.
+  if (arg(0) == 'user' && arg(1) == 'register') {
+    $vars['title'] = 'Register for BADCamp 2012!';
+  }
+
   // The magic that adds anchors around the page titles.
   if ($vars['title'] != '') {
     $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . trim($vars['title']) . '<span class="anchor anchor-right">&nbsp;</span>';
   }
   else {
     $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . t('BADCamp 2012') . '<span class="anchor anchor-right">&nbsp;</span>';
-  }
-
-  // Change the page titles on news items.
-  if (arg(0) == 'node' && is_numeric(arg(1)) && !arg(2)) {
-    $node = node_load(arg(1)); // Free on node page.
-    if ($node->type == 'news') {
-      // Change the title.
-      $vars['title'] = t('Recent News');
-      // @TODO - this is not working.  Do we care?
-      $variables['head_title'] = t('Recent news') . ': ' . $title;
-    }
-  }
-
-  // Set the regiser page title to something sane.
-  if (arg(0) == 'user' && arg(1) == 'register') {
-    $variables['title'] = 'Register for BADCamp 2012!';
   }
 }
 
