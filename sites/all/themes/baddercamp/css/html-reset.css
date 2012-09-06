@@ -601,6 +601,7 @@ h2.pane-title {
 }
 #user-register .submit-box {
   text-align: right;
+  padding-right: 30px;
 }
 #user-register .submit-box input {
   font-size: 14px;
@@ -609,4 +610,14 @@ h2.pane-title {
 #user-register div.small {
   margin: 20px 0 50px 0;
   font-size: 12px;
+}
+
+/**
+ * Log in & Password forms.
+ */
+#user-login,
+#user-pass {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 40px;
 }

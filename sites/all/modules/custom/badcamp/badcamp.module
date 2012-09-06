@@ -168,6 +168,11 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     // Change submit button text.
     $form['submit']['#value'] = t('Post');
   }
+  
+  if ($form_id == 'user_login') {
+    unset($form['name']['#description']);
+    unset($form['pass']['#description']);
+  }
 }
 
 /**
