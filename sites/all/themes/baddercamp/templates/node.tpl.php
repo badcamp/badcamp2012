@@ -76,6 +76,8 @@
 
   <?php if (!$page && $title): ?>
     <h2 class="title"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+  <?php elseif ($node->type == 'news'): ?>
+    <h2 class="title"><?php print $title; ?></h2>
   <?php endif; ?>
 
   <?php if ($unpublished): ?>

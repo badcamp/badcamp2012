@@ -118,6 +118,17 @@ function baddercamp_preprocess_page(&$vars, $hook) {
     $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . t('BADCamp 2012') . '<span class="anchor anchor-right">&nbsp;</span>';
   }
 
+  // Change the page titles on news items.
+  if (arg(0) == 'node' && is_numeric(arg(1)) && !arg(2)) {
+    $node = node_load(arg(1)); // Free on node page.
+    if ($node->type == 'news') {
+      // Change the title.
+      $vars['title'] = t('Recent News');
+      // @TODO - this is not working.  Do we care?
+      $variables['head_title'] = t('Recent news') . ': ' . $title;
+    }
+  }
+
   // Set the regiser page title to something sane.
   if (arg(0) == 'user' && arg(1) == 'register') {
     $variables['title'] = 'Register for BADCamp 2012!';
