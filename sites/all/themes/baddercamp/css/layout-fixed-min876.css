@@ -501,3 +501,6 @@ body.front .view-id-slideshow {
   text-decoration: none;
   font-size: 12px;
 }
+.view-badcamp-sponsors .view-header h3 {
+  border-bottom: 1px solid #bababa;
+}
