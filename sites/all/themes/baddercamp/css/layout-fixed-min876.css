@@ -149,8 +149,7 @@ body {
 }
 
 #content .section .section-inner {
-  position: relative;
-  margin: 0 60px 0 60px;
+  margin: 0 60px;
   padding: 10px 25px 0 25px;
   background: #ffffff url('../images/bg-page-bottom.png') bottom center no-repeat;
   margin-bottom: -22px;
@@ -390,7 +389,7 @@ body.front .view-id-slideshow {
  * Home page.
  */
 .pane-slideshow-panel-pane-1 {
-  height: 505px;
+  height: 525px;
   overflow: hidden;
 }
 .pane-slideshow-panel-pane-1 .view-content {
@@ -416,6 +415,10 @@ body.front .view-id-slideshow {
   margin: 0;
 }
 
+.view-front {
+  background: url("../images/divide.png") no-repeat scroll center top transparent;
+  padding-top: 15px;
+}
 .view-front .views-row {
   padding: 0 20px;
 }
