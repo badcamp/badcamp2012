@@ -17,6 +17,7 @@ li a.active {
  * Navigation bar
  */
 #navigation {
+  margin: 0 0 10px 0;
 }
 
 .region-navigation {

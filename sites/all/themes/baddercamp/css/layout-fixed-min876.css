@@ -162,12 +162,11 @@ body {
   padding-right: 280px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
 }
 
-
 /*
- * Make room for nav
+ * Make room above nav.
  */
 #content .section h1.title {
-  margin-bottom: 95px;
+  margin-bottom: 10px;
 }
 
 
@@ -176,17 +175,12 @@ body {
  */
 #navigation {
   background: transparent url('../images/nav-left.png') top left no-repeat;
-
   float: left; /* LTR */
   width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
-  
-  position: absolute;
-  top: 70px;
-  left: 20px; /* LTR */
-  /*width: 780px;*/
+
   width: 100%;
   overflow: visible;
   max-width: 780px;
