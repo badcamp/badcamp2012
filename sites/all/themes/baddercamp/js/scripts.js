@@ -16,7 +16,9 @@ Drupal.behaviors.badcampLogin = function(context) {
     // Toggle the Login Box
     $('#login-dropdown-wrapper').slideToggle('slow');
 
-    // TODO - Change the link to say Close
+    // Toggle the Login Text
+    var text = $('#magical-login-box-link').text();
+    $('#magical-login-box-link').text(text == "Log in" ? "Close" : "Log in");
 
     // Return False for Good Measure
     return false;
