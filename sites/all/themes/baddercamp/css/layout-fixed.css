@@ -350,3 +350,8 @@ body {
   overflow-y: hidden;
 }
 */
+
+/* Hide the slideshow on the small viewports */
+body.front .pane-slideshow-panel-pane-1 {
+  display: none;
+}

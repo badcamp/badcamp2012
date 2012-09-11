@@ -222,10 +222,7 @@ body {
 */
 
 /* Special Pages */
-/* Hide the slideshow on the min720*/
-body.front .view-id-slideshow {
-  display: none;
-}
+
 /* Line up the events on the homepage */
 #block-views-events-block_1 .views-row {
   width: 100%;
@@ -237,12 +234,6 @@ body.front .view-id-slideshow {
 
 #content-area {
   padding: 0 30px;
-}
-
-.pane-slideshow-panel-pane-1,
-.pane-slideshow-panel-pane-1 .view-content,
-.pane-slideshow-panel-pane-1 .view-footer {
-  display: none;
 }
 
 .view-front {
