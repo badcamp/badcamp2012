@@ -25,6 +25,31 @@ Drupal.behaviors.badcampLogin = function(context) {
   });
 }
 
+// Mobile navigation.
+Drupal.behaviors.badcampMobileNav = function(context) {
+  $topLevel = $('#block-menu-primary-links li.expanded');
+
+  $topLevel.each(function() {
+    // Collapse the expanded sub menus.
+    $(this).find('ul').css('display', 'none').addClass('collapsed');
+
+    $(this).children('a').after('<a class="expand-arrow" href="#">Expand &darr;</a>').siblings('a.expand-arrow').click(function() {
+      var $childMenu = $(this).siblings('ul');
+
+      if ($childMenu.is('.collapsed')) {
+        $(this).html('Collapse &uarr;');
+        $topLevel.siblings('ul:not(.collapsed)').slideUp().addClass('collapsed');
+        $childMenu.slideDown().removeClass('collapsed');
+      }
+      else {
+        $(this).html('Expand &darr;');
+        $childMenu.slideUp().addClass('collapsed');
+      }
+      return false;
+    });
+  });
+}
+
 // ask not for whom the bell tolls
 Drupal.behaviors.bells = function(context) {
   // Only run on page load, not any AJAX attachments of behaviors.

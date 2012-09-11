@@ -207,24 +207,41 @@ body {
   list-style-image: none;
 }
 
-#block-menu-primary-links ul li{
-	border-bottom: solid 1px #c8c8c8;
+#block-menu-primary-links ul li {
+  border-bottom: solid 1px #c8c8c8;
+  position: relative;
+}
+#block-menu-primary-links ul li.last {
+  border-bottom: none;
 }
 
 #block-menu-primary-links ul li.leaf.last{
-	border:none;
+  border:none;
 }
 #block-menu-primary-links ul a {
   font-family: superclarendon;
   font-weight: normal;
   text-transform: uppercase;
-	text-decoration:none;
-  color:#853809;
-	letter-spacing: 2px;
-	line-height:36px;
+  text-decoration:none;
+  color: #853809;
+  letter-spacing: 2px;
+  line-height: 36px;
 }
 
-#block-menu-primary-links ul li ul a{
+#block-menu-primary-links ul a.expand-arrow {
+  position: absolute;
+  display: inline;
+  padding: 0 10px;
+  margin: 0;
+  top: 0;
+  right: 0;
+  border: 0;
+  text-transform: lowercase;
+  font-size: 90%;
+  letter-spacing: 0;
+}
+
+#block-menu-primary-links ul li ul a {
   text-transform: none;
   color:#565656;
 	letter-spacing: 0;
