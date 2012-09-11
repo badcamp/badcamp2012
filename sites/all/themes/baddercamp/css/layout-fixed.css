@@ -351,7 +351,10 @@ body {
 }
 */
 
-/* Hide the slideshow on the small viewports */
+/*
+ * Home page.
+ */
+/* Hide the slideshow on the s viewport */
 body.front .pane-slideshow-panel-pane-1 {
-  display: none;
+ display: none;
 }
