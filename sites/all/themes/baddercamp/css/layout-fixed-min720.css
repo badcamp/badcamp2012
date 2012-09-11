@@ -77,10 +77,14 @@ body {
   margin-right: 0;
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
+#content {
+  padding-top: 10px;
+}
 
-.sidebar-first #content {
-  margin-left: 0;
-  margin-right: 0;
+#content .section .section-inner {
+  margin: 0 3em;
+  padding: 0;
+  background-color: #fff;
 }
 
 #content .section {
@@ -151,8 +155,9 @@ body {
 }
 
 .region-sidebar-first .section {
-  margin: 0;
-  padding: 0;
+  padding: 30px;
+  margin: 0 3em;
+  background-color: #fff;
 }
 
 /*
@@ -162,6 +167,12 @@ body {
 }
 
 #footer .section {
+  padding: 30px;
+  margin: 0 3em;
+}
+
+#footer-message {
+  text-align: center;
 }
 
 /*
@@ -209,4 +220,94 @@ body.front .view-id-slideshow {
 /* Line up the events on the homepage */
 #block-views-events-block_1 .views-row {
   width: 100%;
+}
+
+/**
+ * Home page.
+ */
+ 
+#content-area {
+  padding: 0 30px;
+}
+
+.pane-slideshow-panel-pane-1,
+.pane-slideshow-panel-pane-1 .view-content,
+.pane-slideshow-panel-pane-1 .view-footer {
+  display: none;
+}
+
+.view-front {
+  background: url("../images/divide.png") no-repeat scroll center top transparent;
+  padding-top: 15px;
+}
+.view-front .views-row {
+  padding: 0 20px;
+}
+
+.view-front .views-row p {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.view-events {
+  padding-top: 15px;
+}
+.view-events .views-row {
+  clear: left;
+  height: 230px;
+  border-top: 1px solid #bababa;
+  padding-top: 10px;
+}
+.view-events .views-row .views-cell .node {
+  padding: 0 10px 15px 10px;
+}
+.view-events .views-row .col-first .node {
+  padding: 0 20px 0 0;
+}
+.view-events .views-row .col-last .node {
+  padding: 0 0 0 20px;
+}
+.view-events .node h2.title {
+  margin-bottom: 10px;
+}
+.view-events .node h2.title a {
+  text-align: center;
+  border-bottom: 1px solid #bababa;
+}
+.view-events .node .content {
+  margin: 0;
+  height: 140px;
+  font-size: 12px;
+  line-height: 23px;
+  overflow: hidden;
+  text-align: justify;
+}
+.view-events .node .content p {
+  margin-top: 0;
+}
+.view-events .node ul.links {
+  text-align: center;
+}
+.view-events .node ul.links li a {
+  display: block;
+}
+.view-events .node ul.links li a:before {
+  content: '- ';
+}
+.view-events .node ul.links li a:after {
+  content: ' -';
+}
+/* new markers */
+.view-events #node-521,
+.view-events #node-497,
+.view-events #node-493,
+.view-events #node-496,
+.view-events #node-498 {
+  background: transparent url('../images/new.png') top center no-repeat;
+  margin-top: -16px;
+  padding-top: 16px;
+}
+
+.pane-badcamp-sponsors-panel-pane-1 .view-badcamp-sponsors .views-row .views-cell {
+  height: 100px;
 }
