@@ -17,9 +17,16 @@ li a.active {
  * Navigation bar
  */
 #navigation {
-}
 
+}
 .region-navigation {
+  background-color: #8f3c0a;
+  text-align: center;
+  height: 20px; /* 55 - 15 - 15 */
+  padding: 15px 25px;
+}
+.region-navigation ul {
+  margin: 0 auto;
 }
 
 /*
