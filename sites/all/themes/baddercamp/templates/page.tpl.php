@@ -180,7 +180,7 @@
         <?php endif; ?>
 
         <?php if ($primary_links || $navigation): ?>
-          <div id="navigation"><div class="section clearfix">
+          <div id="navigation"><div class="inner clearfix">
             <?php print $navigation; ?>
           </div></div>
         <?php endif; ?>
