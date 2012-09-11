@@ -70,7 +70,7 @@ body {
 }
 
 #pirateship{
-	display:none;
+  display:none;
 }
 /*
  * Main (container for everything else)
@@ -95,7 +95,7 @@ body {
 #content,
 .no-sidebars #content {
   background-color:#f4f4f3;
-	float: none; /* only one column. */
+  float: none; /* only one column. */
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
@@ -113,7 +113,7 @@ body {
 
 /* hide anchor for mobile */
 .anchor{
-	display:none;
+  display:none;
 }
 
 .node .content {
@@ -146,51 +146,37 @@ body {
 }
 
 /* Hiding Large Menu on mobile */
-#block-nice_menus-1{
-	display:none;
+#block-nice_menus-1 {
+display:none;
 }
 
 
 /*
  * Primary Menu
  */
-#top-navigation{
-		background: url("../images/mobile-nav-left.png") no-repeat scroll;
-		background-color: #f0ebe9;
+
+#block-menu-primary-links .content {
+  margin: 0 30px;
 }
 
-#top-navigation .section{
-		background: url("../images/mobile-nav-right.png") no-repeat scroll top right;
-}
-
-#block-menu-primary-links .content{
-	margin: 0 30px;
-}
-
-#top-navigation h2 {
+#block-menu-primary-links h2 {
   display:none;
 }
 
-.region-top-navigation{
-	margin: 30px;
-	background: url("../images/menu-bg-red.png") repeat-x scroll center top;
-  padding-top: 33px;
-}
-
-#block-menu-primary-links{
-	background:#ffffff;
-	border:solid 1px #b2b2b2;
-	  -webkit-border-bottom-right-radius: 12px;
+#block-menu-primary-links {
+  background:#ffffff;
+  border:solid 1px #b2b2b2;
+  -webkit-border-bottom-right-radius: 12px;
   -webkit-border-bottom-left-radius: 12px;
   -moz-border-radius-bottomright: 12px;
-	-moz-border-radius-bottomleft: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
-#block-menu-primary-links ul{
-	margin:0;
-	padding:0;
+#block-menu-primary-links ul {
+  margin:0;
+  padding:0;
 
 }
 #block-menu-primary-links ul a {
@@ -241,15 +227,15 @@ body {
 #block-menu-primary-links ul li ul a {
   text-transform: none;
   color:#565656;
-	letter-spacing: 0;
-	font-family: georgia;
-	font-size:15px;
-	line-height:29px;
+  letter-spacing: 0;
+  font-family: georgia;
+  font-size:15px;
+  line-height:29px;
 }
 
-#block-menu-primary-links ul li ul{
-	background: url("../images/mobile-menu-bg-grey.png") #e8e8e8;
-	border: solid 1 px #d6d6d6;
+#block-menu-primary-links ul li ul {
+  background: url("../images/mobile-menu-bg-grey.png") #e8e8e8;
+  border: solid 1px #d6d6d6;
 }
 
 
@@ -276,11 +262,11 @@ body {
  */
 
 .block-badcamp{
-	display:none;
+  display:none;
 }
 
 .mobile #block-block-2 .content {
-	text-align:center;
+  text-align:center;
   background: url("../images/bg-block.png") repeat scroll center top transparent;
   box-shadow: 0 0 65px -25px #000000 inset, 0 0 6px -1px #000000;
   color: #FFFFFF;
@@ -291,13 +277,13 @@ body {
 .mobile #block-block-2 .content a {
   color: #ffffff;
   text-transform: uppercase;
-	line-height: 22px;
+  line-height: 22px;
 }
 
 .mobile #block-block-2 h2.title {
   color: #dcb685;
   text-transform: uppercase;
-	letter-spacing: 5px;
+  letter-spacing: 5px;
 }
 
 .mobile #block-block-2 h4{

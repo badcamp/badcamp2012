@@ -83,8 +83,11 @@ body {
 
 #content .section .section-inner {
   margin: 0 3em;
-  padding: 0;
-  background-color: #fff;
+  padding: 10px 0 22px;
+}
+
+#content-area {
+  background-color: #ffffff;
 }
 
 #content .section {
@@ -97,40 +100,22 @@ body {
 }
 
 /*
+ * Page title.
+ */
+#content h1.title {
+  margin: 5px 0 10px 0;
+  background-color: transparent;
+  color: #447b97;
+  text-align: center;
+}
+
+/*
  * Navigation
 */
-
-/* Hide the mobile navigation region*/
-#top_navigation{
-  display:none;
-}
-
-#navigation #block-nice_menus-1,
-#navigation #block-menu-primary-links h2.title {
-  display: none;
-}
-
 #navigation {
-  float: none;
-  max-width: 875px;
-  margin-left: 0; 
-  margin-right: 0;
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
-  height: auto;
+  max-width: 740px;
+  margin: 0 50px 20px 50px;
 }
-
-.with-navigation #content,
-.with-navigation .region-sidebar-first {
-  margin-top: 0; /* Not needed since nav is below content. */
-}
-
-#navigation .section {
-}
-
-#top-navigation { /* hide the mobile menu on big desktops */
-  display: none;
-}
-
 
 /*
  * First sidebar
