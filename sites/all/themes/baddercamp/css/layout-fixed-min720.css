@@ -2,14 +2,14 @@
  * @file
  *
  * This layout is for tablets.
- */
+*/
 
 
 /*
  * Body
- */
+*/
 body {
-  
+
 }
 
 #page-wrapper,
@@ -22,9 +22,9 @@ body {
    * If you want to make the page a fixed width and centered in the viewport,
    * this is the standards-compliant way to do that. See also the ie6.css file
    * for the necessary IE5/IE6quirks hack to center a div.
-   */margin-left: auto;
-   margin-right: auto;
-   max-width: 875px;
+  */margin-left: auto;
+  margin-right: auto;
+  max-width: 875px;
 }
 
 #page-inner {
@@ -33,7 +33,7 @@ body {
 
 /*
  * Header
- */
+*/
 #header {
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 #header #logo{
-	float:left;
+  float:left;
 }
 
 #search-box {
@@ -52,12 +52,12 @@ body {
 }
 
 #pirateship{
-	display:none;
+  display:none;
 }
 
 /*
  * Main (container for everything else)
- */
+*/
 #main-wrapper {
   position: relative;
   margin-top: 0px;
@@ -69,7 +69,7 @@ body {
 
 /*
  * Content
- */
+*/
 #content,
 .no-sidebars #content {
   float: none; /* LTR */
@@ -93,16 +93,16 @@ body {
 }
 
 .anchor{
-	display:inline;
+  display:inline;
 }
 
 /*
  * Navigation
- */
+*/
 
 /* Hide the mobile navigation region*/
 #top_navigation{
-	display:none;
+  display:none;
 }
 
 #navigation #block-nice_menus-1,
@@ -145,7 +145,7 @@ body {
 
 /*
  * First sidebar
- */
+*/
 .region-sidebar-first {
   float: none;
   max-width: 875px;
@@ -157,12 +157,12 @@ body {
 .region-sidebar-first .section {
   padding: 30px;
   margin: 0 3em;
-  background-color: #fff;
+  background: #ffffff url('../images/bg-page-bottom.png') bottom center no-repeat;
 }
 
 /*
  * Footer
- */
+*/
 #footer {
 }
 
@@ -177,13 +177,13 @@ body {
 
 /*
  * Closure
- */
+*/
 .region-page-closure /* See also the #page-wrapper declaration above that this div shares. */ {
 }
 
 /*
  * Prevent overflowing content
- */
+*/
 #header,
 #content,
 #navigation,
@@ -205,7 +205,7 @@ body {
  * bottom of the viewport. Uncomment this CSS property to fix this.
  * Note: with some over-large content, this property might cause scrollbars
  * to appear on the #page-wrapper div.
- */
+*/
 /*
 #page-wrapper {
   overflow-y: hidden;
@@ -224,8 +224,8 @@ body.front .view-id-slideshow {
 
 /**
  * Home page.
- */
- 
+*/
+
 #content-area {
   padding: 0 30px;
 }
@@ -252,31 +252,30 @@ body.front .view-id-slideshow {
 .view-events {
   padding-top: 15px;
 }
+.views-view-grid.col-3 .views-row .views-cell {
+  width:100%;
+}
 .view-events .views-row {
   clear: left;
-  height: 230px;
+}
+.view-events .views-row .views-cell {
+  width: 100%;
   border-top: 1px solid #bababa;
-  padding-top: 10px;
 }
 .view-events .views-row .views-cell .node {
-  padding: 0 10px 15px 10px;
+  padding: 10px 0 15px 0;
 }
-.view-events .views-row .col-first .node {
-  padding: 0 20px 0 0;
-}
-.view-events .views-row .col-last .node {
-  padding: 0 0 0 20px;
-}
+
 .view-events .node h2.title {
   margin-bottom: 10px;
 }
 .view-events .node h2.title a {
-  text-align: center;
-  border-bottom: 1px solid #bababa;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 .view-events .node .content {
   margin: 0;
-  height: 140px;
   font-size: 12px;
   line-height: 23px;
   overflow: hidden;
@@ -286,10 +285,16 @@ body.front .view-id-slideshow {
   margin-top: 0;
 }
 .view-events .node ul.links {
-  text-align: center;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 .view-events .node ul.links li a {
   display: block;
+  color: #333;
+}
+.view-events .node ul.links li a:hover {
+  text-decoration: none;
 }
 .view-events .node ul.links li a:before {
   content: '- ';
@@ -304,7 +309,7 @@ body.front .view-id-slideshow {
 .view-events #node-496,
 .view-events #node-498 {
   background: transparent url('../images/new.png') top center no-repeat;
-  margin-top: -16px;
+  margin-top: -8px;
   padding-top: 16px;
 }
 
