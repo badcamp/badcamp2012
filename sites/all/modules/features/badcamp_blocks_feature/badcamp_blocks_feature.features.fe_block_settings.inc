@@ -9,52 +9,6 @@ function badcamp_blocks_feature_default_fe_block_settings() {
   // baddercamp
   $theme = array();
 
-  $theme['menu-primary-links'] = array(
-    'module' => 'menu',
-    'delta' => 'primary-links',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-27',
-    'region' => 'navigation',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Small Viewport Menu',
-    'cache' => '-1',
-  );
-
-  $theme['nice_menus-1'] = array(
-    'module' => 'nice_menus',
-    'delta' => '1',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-27',
-    'region' => 'navigation',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Large Menu',
-    'cache' => '-1',
-  );
-
-  $theme['on_the_web-web'] = array(
-    'module' => 'on_the_web',
-    'delta' => 'web',
-    'theme' => 'baddercamp',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'sidebar_first',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'sponsors
-program/schedule',
-    'title' => '',
-    'cache' => '1',
-  );
-
   $theme['views-badcamp_sponsors-block_1'] = array(
     'module' => 'views',
     'delta' => 'badcamp_sponsors-block_1',
@@ -83,6 +37,22 @@ program/schedule',
     'pages' => 'sponsors',
     'title' => '',
     'cache' => '-1',
+  );
+
+  $theme['on_the_web-web'] = array(
+    'module' => 'on_the_web',
+    'delta' => 'web',
+    'theme' => 'baddercamp',
+    'status' => '1',
+    'weight' => '-22',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => 'sponsors
+program/schedule',
+    'title' => '',
+    'cache' => '1',
   );
 
   $export['baddercamp'] = $theme;
