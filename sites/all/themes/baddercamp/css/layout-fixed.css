@@ -242,10 +242,11 @@ body {
 #block-menu-primary-links ul li ul a {
   text-transform: none;
   color:#565656;
-	letter-spacing: 0;
-	font-family: georgia;
-	font-size:15px;
-	line-height:29px;
+  letter-spacing: 0;
+  font-family: georgia;
+  font-size:15px;
+  line-height:29px;
+  padding-right: 0;
 }
 
 #block-menu-primary-links ul li ul{
