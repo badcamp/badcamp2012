@@ -134,7 +134,7 @@
       </div>
       <div id="account-links-triangle"></div>
     </div>
-    
+
     <div id="page-inner">
     <div id="account-links-header"></div>
     <div id="account-links-wrapper"><div id="account-links"><?php print $account_links; ?></div></div>
@@ -169,21 +169,21 @@
           <div id="mission"><?php print $mission; ?></div>
         <?php endif; ?>
 
-      <?php if ($top_navigation): ?>
-        <div id="top-navigation"><div class="section clearfix">
-         <?php print $top_navigation; ?>
-        </div></div>
-      <?php endif; ?>
+        <?php if ($top_navigation): ?>
+          <div id="top-navigation"><div class="section clearfix">
+           <?php print $top_navigation; ?>
+          </div></div>
+        <?php endif; ?>
 
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>
         <?php endif; ?>
 
-      <?php if ($primary_links || $navigation): ?>
-        <div id="navigation"><div class="section clearfix">
-          <?php print $navigation; ?>
-        </div></div>
-      <?php endif; ?>
+        <?php if ($primary_links || $navigation): ?>
+          <div id="navigation"><div class="section clearfix">
+            <?php print $navigation; ?>
+          </div></div>
+        <?php endif; ?>
 
         <?php print $messages; ?>
         <?php if ($tabs): ?>
