@@ -32,3 +32,17 @@ Drupal.behaviors.bells = function(context) {
     $('#bells')[0].play();
   });
 }
+
+// add mobile class to body
+Drupal.behaviors.mobileclass = function (context) {
+	if ($(window).width() < 720){
+			$("body").addClass("mobile");
+		}
+		else {
+			$("body").removeClass("mobile");
+	}	
+};
+
+// pass mobile class on both doc ready and window resize
+$(document).ready(Drupal.behaviors.mobileclass);
+$(window).resize(Drupal.behaviors.mobileclass);

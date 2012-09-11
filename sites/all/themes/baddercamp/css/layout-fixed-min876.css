@@ -143,6 +143,10 @@ body {
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
 }
 
+#content-area {
+    margin: 0;
+}
+
 #content .section,
 .no-sidebars #content .section {
   margin: 0;

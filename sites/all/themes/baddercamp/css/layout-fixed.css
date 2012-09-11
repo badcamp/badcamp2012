@@ -92,7 +92,8 @@ body {
  */
 #content,
 .no-sidebars #content {
-  float: none; /* only one column. */
+  background-color:#f4f4f3;
+	float: none; /* only one column. */
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to #content .section. */
@@ -117,9 +118,14 @@ body {
   margin: 0 20px;
 }
 
+#content-area {
+ margin: 0 30px;
+}
+
 /*
  * Navigation
  */
+
 #navigation {
   float: none; /* LTR */
   max-width: 719px;
@@ -159,6 +165,7 @@ body {
  */
 #top-navigation{
 		background: url("../images/mobile-nav-left.png") no-repeat scroll;
+		background-color: #f0ebe9;
 }
 
 #top-navigation .section{
@@ -220,6 +227,7 @@ body {
   color:#853809;
 	letter-spacing: 2px;
 	line-height:36px;
+	background-image: url();
 }
 
 #block-menu-primary-links ul li ul a{
@@ -252,6 +260,47 @@ body {
 .region-sidebar-first .section {
   margin: 0; /* only one column. */
   padding: 0;
+}
+
+
+/*
+ * Bottom Menu
+ */
+
+.block-badcamp{
+	display:none;
+}
+
+.mobile #block-block-2 .content {
+	text-align:center;
+  background: url("../images/bg-block.png") repeat scroll center top transparent;
+  box-shadow: 0 0 65px -25px #000000 inset, 0 0 6px -1px #000000;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.mobile #block-block-2 .content a {
+  color: #ffffff;
+  text-transform: uppercase;
+	line-height: 22px;
+}
+
+.mobile #block-block-2 h2.title {
+  color: #dcb685;
+  text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.mobile #block-block-2 h4{
+  border-top: 1px solid #32383f;
+  color: #DCB685;
+  font-family: nimbus-sans-condensed;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 8px 0;
+  padding-top: 7px;
+  text-transform: uppercase;
 }
 
 /*

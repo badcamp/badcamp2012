@@ -155,6 +155,15 @@ body {
   padding: 0;
 }
 
+
+/*
+ * Bottom Menu
+ */
+
+.block-badcamp{
+	display:block;
+}
+
 /*
  * Footer
  */
