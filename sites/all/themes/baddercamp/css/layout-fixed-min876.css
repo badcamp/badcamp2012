@@ -224,10 +224,10 @@ body.no-sidebars #navigation .region-navigation {
   padding-bottom: 15px;
 }
 #navigation .region-navigation ul ul a {
-  padding-top: 1;
-  padding-bottom: 1;
-  line-height: 15px;
-  height: 15px;
+  line-height: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #navigation .section .block {
