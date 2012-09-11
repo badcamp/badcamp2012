@@ -379,7 +379,7 @@ body.front .pane-slideshow-panel-pane-1 {
   overflow: hidden;
 }
 .pane-slideshow-panel-pane-1 .view-footer {
-  height: 45px;
+  height: 35px; /* 45 - 5 - 5 */
   position: relative;
   top: -45px;
   background-color: #f6f1ef;
@@ -391,7 +391,7 @@ body.front .pane-slideshow-panel-pane-1 {
   color: #525252;
   text-align: center;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 22px;
   line-height: 35px;
   font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
   margin: 0;
