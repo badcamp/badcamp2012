@@ -206,9 +206,10 @@ display:none;
   text-transform: uppercase;
   text-decoration:none;
   color:#853809;
-  letter-spacing: 2px;
-  line-height:36px;
+  letter-spacing: 0;
+  line-height: 36px;
   background-image: none;
+  padding-right: 75px;
 }
 
 #block-menu-primary-links ul a.expand-arrow {
@@ -231,6 +232,7 @@ display:none;
   font-family: georgia;
   font-size:15px;
   line-height:29px;
+  padding-right: 0;
 }
 
 #block-menu-primary-links ul li ul {
