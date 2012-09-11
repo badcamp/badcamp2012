@@ -1,6 +1,6 @@
   ; The name and description of the theme used on the admin/build/themes page.
 name        = badderCamp 2012
-description = A Zen sub-theme for BADCamp 2012, created by David Hwang, Meghan Sweet, Jen Lampton, and Matt Cheney - designed by Darius Garza.
+description = A Zen sub-theme for BADCamp 2012, created by David Hwang, Meghan Sweet, Jen Lampton, Nate Haug, and Matt Cheney - designed by Darius Garza.
 
   ; The screenshot used on the admin/build/themes page.
 screenshot = screenshot.png
