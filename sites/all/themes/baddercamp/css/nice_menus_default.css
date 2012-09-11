@@ -89,17 +89,17 @@ ul.nice-menu-down .menuparent a {
 }
 
 ul.nice-menu-down li.menuparent {
-  background: transparent url(arrow-down.png) right center no-repeat; /* LTR */
+  background: transparent url('../images/arrow-down.png') right center no-repeat; /* LTR */
 }
 
 ul.nice-menu-down li.menuparent:hover {
-  background: transparent url(arrow-down.png) right center no-repeat; /* LTR */
+  background: transparent url('../images/arrow-down.png') right center no-repeat; /* LTR */
 }
 
 ul.nice-menu-down li li.menuparent {
-  background: transparent url(arrow-right.png) right center no-repeat; /* LTR */
+  background: transparent url('../images/arrow-right.png') right center no-repeat; /* LTR */
 }
 
 ul.nice-menu-down li li.menuparent:hover {
-  background: transparent url(arrow-right.png) right center no-repeat; /* LTR */
+  background: transparent url('../images/arrow-right.png') right center no-repeat; /* LTR */
 }
