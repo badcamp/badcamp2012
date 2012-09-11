@@ -48,7 +48,7 @@ Drupal.behaviors.badcampMobileNav = function(context) {
       return false;
     });
   });
-}
+};
 
 // ask not for whom the bell tolls
 Drupal.behaviors.bells = function(context) {
@@ -68,4 +68,18 @@ Drupal.behaviors.bells = function(context) {
   $('#footer')
     .append('<audio id="whistle" style="display: none;"><source src="/sites/all/themes/baddercamp/sounds/whistle.ogg" type="audio/ogg" /><source src="/sites/all/themes/baddercamp/sounds/whistle.mp3" type="audio/mpeg" /></audio>')
     .bind('click', playSound);
-}
+};
+
+// add mobile class to body
+Drupal.behaviors.mobileclass = function (context) {
+	if ($(window).width() < 720){
+			$("body").addClass("mobile");
+		}
+		else {
+			$("body").removeClass("mobile");
+	}	
+};
+
+// pass mobile class on both doc ready and window resize
+$(document).ready(Drupal.behaviors.mobileclass);
+$(window).resize(Drupal.behaviors.mobileclass);
