@@ -439,9 +439,9 @@ h3 {
 
 /* added anchor span - Jen */
 span.anchor {
-  background: transparent url('../images/anchor-bullet.png') center no-repeat;
-  width: 12px;
+  background: transparent url('../images/anchor-bullet.png') center 4px no-repeat;
   height: 14px;
+  padding: 0 3px;
 }
 span.anchor-left {
   margin-right: 30px;

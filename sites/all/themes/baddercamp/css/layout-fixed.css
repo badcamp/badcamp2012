@@ -35,7 +35,9 @@ body {
 /*
  * Pre-header login block 
  */
-
+#login-dropdown-pirate {
+  display:none;
+}
 
 
 

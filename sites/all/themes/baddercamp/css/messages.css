@@ -4,7 +4,9 @@
  *
  * Sensible styling for Drupal's error/warning/status messages.
  */
-
+div.messages {
+  clear: both;
+}
 
 div.messages,
 div.status,
