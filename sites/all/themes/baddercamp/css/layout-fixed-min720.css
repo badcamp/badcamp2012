@@ -226,14 +226,11 @@ body {
 .view-events {
   padding-top: 15px;
 }
-.views-view-grid.col-3 .views-row .views-cell {
-  width:100%;
-}
 .view-events .views-row {
   clear: left;
 }
 .view-events .views-row .views-cell {
-  width: 100%;
+  width: 100% !important;
   border-top: 1px solid #bababa;
 }
 .view-events .views-row .views-cell .node {
@@ -289,4 +286,12 @@ body {
 
 .pane-badcamp-sponsors-panel-pane-1 .view-badcamp-sponsors .views-row .views-cell {
   height: 100px;
+}
+
+
+/* hidden blocks */
+#block-badcamp-blimp,
+#block-block-8,
+#block-block-7 {
+  display: none;
 }

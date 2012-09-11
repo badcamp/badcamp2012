@@ -552,3 +552,10 @@ body.front .pane-slideshow-panel-pane-1 {
   line-height: 23px;
   padding: 0;
 }
+
+/* unhide blocks */
+#block-badcamp-blimp,
+#block-block-8,
+#block-block-7 {
+  display: block;
+}
