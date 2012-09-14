@@ -131,7 +131,7 @@ body {
 .region-sidebar-first .section {
   padding: 30px;
   margin: 0 3em;
-  background: #ffffff url('../images/bg-page-bottom.png') bottom center no-repeat;
+  /*background: #ffffff url('../images/bg-page-bottom.png') bottom center no-repeat;*/
 }
 
 
@@ -147,6 +147,13 @@ body {
  * Footer
 */
 #footer {
+  background: transparent url('../images/wood.jpg') 0 100px repeat-x;
+  height: 200px;
+  position: relative;
+  z-index: 10;
+}
+#footer .section #footer-message {
+  margin-top: 105px;
 }
 
 #footer .section {
@@ -268,17 +275,6 @@ body {
 .view-events .node ul.links li a:after {
   content: ' -';
 }
-/* new markers */
-.view-events #node-521,
-.view-events #node-497,
-.view-events #node-493,
-.view-events #node-496,
-.view-events #node-498 {
-  background: transparent url('../images/new.png') top center no-repeat;
-  margin-top: -8px;
-  padding-top: 16px;
-}
-
 .pane-badcamp-sponsors-panel-pane-1 .view-badcamp-sponsors .views-row .views-cell {
   height: 100px;
 }

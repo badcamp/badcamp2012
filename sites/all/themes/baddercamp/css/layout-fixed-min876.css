@@ -127,7 +127,6 @@ body {
 #main-wrapper {
   position: relative;
   margin-top: 0px;
-
 }
 
 #main {
@@ -137,6 +136,7 @@ body {
  * Content
  */
 #content {
+	background: #f0ebe8 url('../images/content-bg.png') top center no-repeat;
   float: left; /* LTR */
   width: 100% !important;
   margin-left: 0; /* LTR */
