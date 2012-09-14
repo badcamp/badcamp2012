@@ -155,7 +155,7 @@ display:none;
  * Primary Menu
  */
 #top-navigation{
-	margin:50px 30px 13px;
+	margin:50px 30px 0;
 }
 
 #top-navigation{
@@ -276,18 +276,49 @@ display:none;
   padding: 0;
 }
 
-.mobile .region-sidebar-first{
-   text-align: center;
+.mobile .region-sidebar-first p{
+  text-align: center;
 }
 
+.mobile #block-block-7,
+.mobile #block-block-4,
+.mobile #block-block-6{
+	border-bottom: solid 1px #d6d6d6;
+	margin:0 50px;
+}
 
+.mobile #block-block-2{
+	margin-bottom:40px;
+}
+
+.mobile .region-sidebar-first h2.title {
+	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
+  font-weight: bold;
+  line-height: 23px;
+  padding: 5px 0;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #447B97;
+  font-size:15px;
+  text-align:center;
+}
+
+.mobile #block-on_the_web-web{
+	margin: 60px 0 -16px;
+  text-align: center;
+  z-index: -1;
+}
+
+.mobile #block-on_the_web-web h2{
+	display:none;
 }
 
 /*
  * Bottom Menu
  */
 
-.block-badcamp{
+#block-badcamp-blimp{
   display:none;
 }
 
@@ -296,7 +327,7 @@ display:none;
   background: url("../images/bg-block.png") repeat scroll center top transparent;
   box-shadow: 0 0 65px -25px #000000 inset, 0 0 6px -1px #000000;
   color: #FFFFFF;
-	margin:50px 0 10px 0;
+	margin:0 0 10px 0;
   padding: 20px;
 }
 
@@ -323,13 +354,16 @@ display:none;
   text-transform: uppercase;
 }
 
+
 /*
  * Footer
  */
 
 #footer {
-  background: transparent url('../images/wood.jpg') 0 100px repeat-x;
+  background: transparent url('../images/wood.jpg') 0 0 repeat-x;
   height: 200px;
+  position: relative;
+  z-index: 10;
 }
 
 #footer .section {
@@ -342,7 +376,6 @@ display:none;
   color: #fff;
   letter-spacing: 2px;
   text-align: center;
-  margin-top: 105px;
 }
 
 #footer .section a {
@@ -392,5 +425,47 @@ display:none;
  */
 /* Hide the slideshow on the s viewport */
 body.front .pane-slideshow-panel-pane-1 {
- display: none;
+  display: none;
+}
+
+/* new markers */
+.view-events #node-521,
+.view-events #node-497,
+.view-events #node-493,
+.view-events #node-496,
+.view-events #node-498 {
+  background: transparent url('../images/new.png') top center no-repeat;
+  margin-top: -8px;
+  padding-top: 16px;
+}
+
+.view-events .views-row .views-cell {
+  width: 100%;
+  border-top: 1px solid #bababa;
+}
+
+.mobile.front .product-body{
+	text-align:center;
+	margin-bottom:50px;
+}
+
+.mobile.front .views-view-grid.col-3 .product-body{
+	  text-align:left;
+}
+
+.mobile .views-view-grid.col-3 .views-row .views-cell {
+  float: left;
+  width: 100%;
+}
+
+.mobile .view-badcamp-sponsors .views-view-grid.col-3 .views-row .views-cell{
+width:33%;	
+}
+
+body.front #content{
+	background:#ffffff;
+}
+
+.top-nav-wrapper{
+	background-color:#F4F4F3;
 }

@@ -170,9 +170,9 @@
         <?php endif; ?>
 
         <?php if ($top_navigation): ?>
-          <div id="top-navigation"><div class="section clearfix">
+          <div class="top-nav-wrapper"><div id="top-navigation"><div class="section clearfix">
            <?php print $top_navigation; ?>
-          </div></div>
+          </div></div></div>
         <?php endif; ?>
 
         <?php if ($title): ?>
