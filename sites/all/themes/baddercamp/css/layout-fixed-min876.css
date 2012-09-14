@@ -186,8 +186,12 @@ body {
 #navigation #block-nice_menus-1 {
   display: block;
 }
+
+#top-navigation{
+	display:none;
+}
 /* Hide the small menu. and any titles */
-#navigation #block-menu-primary-links,
+#top-navigation,
 #navigation h2.title {
   display: none;
 }
