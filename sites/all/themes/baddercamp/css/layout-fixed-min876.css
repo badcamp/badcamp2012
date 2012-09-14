@@ -398,6 +398,7 @@ body.front .pane-slideshow-panel-pane-1 {
 }
 .view-events .views-row .views-cell {
   border: 0;
+  width: 33%;
 }
 .view-events .views-row .views-cell .node {
   padding: 0 10px 15px 10px;

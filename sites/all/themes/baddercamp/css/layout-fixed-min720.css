@@ -197,11 +197,6 @@ body {
 
 /* Special Pages */
 
-/* Line up the events on the homepage */
-#block-views-events-block_1 .views-row {
-  width: 100%;
-}
-
 /**
  * Home page.
 */
@@ -230,7 +225,7 @@ body {
   clear: left;
 }
 .view-events .views-row .views-cell {
-  width: 100% !important;
+  width: 100%;
   border-top: 1px solid #bababa;
 }
 .view-events .views-row .views-cell .node {
