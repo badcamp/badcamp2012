@@ -34,13 +34,13 @@ body {
    * to use a 14px font size on the page, delete the 12px declarations.
    */
 
-  /* Use a 12px base font size with a 16px line height */
-  font-size: 0.75em; /* 16px x .75 = 12px */
-  line-height: 1.333em; /* 12px x 1.333 = 16px */
-
   /* Use a 14px base font size with a 18px line height */
   font-size: 0.875em; /* 16px x .875 = 14px */
   line-height: 1.286em; /* 14px x 1.286 = 18px */
+  
+  /* Use a 16px base font size with a 26px line height */
+  font-size: 1em; /* 16px x 1 = 16px */
+  line-height: 1.625em; /* 16px x 1.625 = 26px */
 }
 
 body,
@@ -620,4 +620,35 @@ h2.pane-title {
   width: 50%;
   margin: 0 auto;
   padding-top: 40px;
+}
+
+/* 
+ * summit content styles 
+ */
+.node-type-event .product-body h2 {
+  font-family: nimbus-sans-condensed;
+  color: #4b4b4b;
+  font-size: 25.5px;
+  line-height: 35.5px;
+}
+.node-type-event .product-body h3 {
+  text-transform: uppercase;
+  font-family: nimbus-sans-extended;
+  color: #447b97;
+  font-size: 15.5px;
+  padding-top: 30px;
+  background: transparent url('../images/divide.png') top center no-repeat;
+}
+.node-type-event .product-body table {
+  width: 100%;
+}
+.node-type-event .product-body table tbody tr {
+  border-top: 1px solid #bababa;
+}
+.node-type-event .product-body table td {
+  padding: 15px 15px 15px 0;
+}
+.node-type-event .product-body table span.title {
+  font-family: nimbus-sans-extended;
+  text-transform: uppercase;
 }

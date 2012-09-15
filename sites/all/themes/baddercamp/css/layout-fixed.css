@@ -155,18 +155,18 @@ display:none;
  * Primary Menu
  */
 #top-navigation{
-	margin:50px 30px 0;
+  margin:50px 30px 0;
 }
 
 #top-navigation{
 }
 
 #block-menu-primary-links{
-	background: url('../images/mobile-nav-left.png') top left no-repeat;
+  background: url('../images/mobile-nav-left.png') top left no-repeat;
 }
 
 .region-top-navigation{
-	background: url('../images/mobile-nav-right.png') top right no-repeat;
+  background: url('../images/mobile-nav-right.png') top right no-repeat;
 
 }
 
@@ -175,7 +175,7 @@ display:none;
 }
 
 #block-menu-primary-links h2 {
-		background: url('../images/menu-bg-red.png') repeat;
+    background: url('../images/menu-bg-red.png') repeat;
     height: 34px;
     padding: 0 25px;
     text-indent: -99999px;
@@ -283,16 +283,19 @@ display:none;
 .mobile #block-block-7,
 .mobile #block-block-4,
 .mobile #block-block-6{
-	border-bottom: solid 1px #d6d6d6;
-	margin:0 50px;
+  border-bottom: solid 1px #d6d6d6;
+  margin: 0 50px;
+}
+.mobile #block-block-7 {
+  margin-top: 30px;
 }
 
 .mobile #block-block-2{
-	margin-bottom:40px;
+  margin-bottom: 40px;
 }
 
 .mobile .region-sidebar-first h2.title {
-	font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
+font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif;
   font-weight: bold;
   line-height: 23px;
   padding: 5px 0;
@@ -305,13 +308,13 @@ display:none;
 }
 
 .mobile #block-on_the_web-web{
-	margin: 60px 0 -16px;
+  margin: 50px 0 -12px;
   text-align: center;
   z-index: -1;
 }
 
 .mobile #block-on_the_web-web h2{
-	display:none;
+  display:none;
 }
 
 /*
@@ -327,7 +330,7 @@ display:none;
   background: url("../images/bg-block.png") repeat scroll center top transparent;
   box-shadow: 0 0 65px -25px #000000 inset, 0 0 6px -1px #000000;
   color: #FFFFFF;
-	margin:0 0 10px 0;
+  margin:0 0 10px 0;
   padding: 20px;
 }
 
@@ -358,10 +361,8 @@ display:none;
 /*
  * Footer
  */
-
 #footer {
   background: transparent url('../images/wood.jpg') 0 0 repeat-x;
-  height: 200px;
   position: relative;
   z-index: 10;
 }
@@ -369,7 +370,6 @@ display:none;
 #footer .section {
   background: transparent url('../images/parrot.png') 920px 20px no-repeat;
   padding: 30px;
-  height: 140px;
 }
 
 #footer .section #footer-message {
@@ -445,12 +445,12 @@ body.front .pane-slideshow-panel-pane-1 {
 }
 
 .mobile.front .product-body{
-	text-align:center;
-	margin-bottom:50px;
+  text-align:center;
+  margin-bottom: 30px;
 }
 
 .mobile.front .views-view-grid.col-3 .product-body{
-	  text-align:left;
+    text-align:left;
 }
 
 .mobile .views-view-grid.col-3 .views-row .views-cell {
@@ -459,15 +459,15 @@ body.front .pane-slideshow-panel-pane-1 {
 }
 
 .mobile .view-badcamp-sponsors .views-view-grid.col-3 .views-row .views-cell{
-width:33%;	
+width:33%;  
 }
 
 body.mobile.front #content{
-	background:#ffffff;
+  background:#ffffff;
 }
 
 .top-nav-wrapper{
-	background-color:#F4F4F3;
+  background-color:#F4F4F3;
 }
 
 
@@ -476,6 +476,6 @@ body.mobile.front #content{
  */
 
 .view-attendees img{
-	width:90%;
-	height:90%;
+  width:90%;
+  height:90%;
 }
