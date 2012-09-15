@@ -17,13 +17,92 @@ li a.active {
  * Navigation bar
  */
 #navigation {
-
+  text-align: center;
 }
-#navigation .block {
+#navigation .inner .region {
+}
+#navigation .inner .region .block {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px 0;
+}
+#navigation ul.nice-menu,
+#navigation ul.dynamic-persistent-menu-menu {
+  background-color: #8F3C0A;
+  clear: left; /* TODO remove me */
+  list-style: none outside none;
+  float: none !important;
+  width: 500px;
+  height: 45px; /* 25 + 15 + 15 */
+  padding: 0;
   margin: 0;
 }
-.region-navigation ul {
-  margin: 0 auto;
+#navigation ul li {
+  display: block;
+  float: left;
+  height: 45px; /* 25 + 15 + 15 */
+  padding: 0;
+  margin: 0;
+}
+
+#navigation ul a {
+  display: block;
+  line-height: 25px;
+  height: 25px; /* 55 - 15 - 15 */ 
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#navigation ul ul a {
+  line-height: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+#navigation ul.dynamic-persistent-menu-sub-menu {
+  background-color: #38180B;
+  margin: 0;
+  padding: 5px 15px 0;
+  z-index: 25 !important;
+  display: block;
+  width: 13.5em;
+}
+#navigation ul.dynamic-persistent-menu-sub-menu li {
+  float: none;
+  width: 13.5em;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #8F3C0A;
+}
+#navigation ul.dynamic-persistent-menu-sub-menu li a {
+  padding: 5px;
+}
+
+/*
+ * Specifc sub menus.
+ */
+#navigation #dynamic-persistent-menu-sub-menu534 {
+  margin-left: 0;
+}
+#navigation #dynamic-persistent-menu-sub-menu648 {
+  margin-left: 94px;
+}
+#navigation #dynamic-persistent-menu-sub-menu608 {
+  margin-left: 192px;
+}
+#navigation #dynamic-persistent-menu-sub-menu2765 {
+  margin-left: 254px;
+}
+#navigation #dynamic-persistent-menu-sub-menu443 {
+  margin-left: 358px;
+  width: 15em;
+}
+#navigation #dynamic-persistent-menu-sub-menu443 li {
+  width: 15em;
 }
 
 /*
@@ -33,16 +112,4 @@ li a.active {
 }
 
 #secondary-menu {
-}
-
-/*
- * Menu blocks
- */
-.block-menu {
-}
-
-/*
- * "Menu block" blocks. See http://drupal.org/project/menu_block
- */
-.block-menu_block {
 }

@@ -146,7 +146,7 @@ body {
 }
 
 /* Hiding Large Menu on mobile */
-#block-nice_menus-1 {
+#block-dynamic_persistent_menu-0 {
 display:none;
 }
 
