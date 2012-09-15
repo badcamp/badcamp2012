@@ -21,7 +21,6 @@
  *   margin, border, padding, overflow
  */
 
-
 /*
  * Body
  */
@@ -121,7 +120,6 @@ body.login-dropdown #page-wrapper {
   background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
 } */
 
-
 .region-header {
   clear: both; /* Clear the logo */
 }
@@ -172,7 +170,6 @@ body.login-dropdown #page-wrapper {
   padding-right: 280px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
 }
 
-
 /*
  * Page title.
  */
@@ -183,7 +180,6 @@ body.login-dropdown #page-wrapper {
   text-align: center;
 }
 
-
 /*
  * Navigation
  */
@@ -192,8 +188,9 @@ body.login-dropdown #page-wrapper {
   display: block;
 }
 
-#top-navigation{
-	display:none;
+#top-navigation,
+#block-menu-primary-links {
+  display:none;
 }
 /* Hide the small menu. and any titles */
 #top-navigation,
