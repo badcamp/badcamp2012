@@ -17,12 +17,14 @@ $(document).ready(function()
         {
           subMenu = dynamic_persistent_menu_get_sub_menu(overMenu);
           $('#' + subMenu).hide();
+          $('#' + subMenu).css('z-index', 0);
           $('#' + overMenu).removeClass('dynamic-persistent-menu-children-active');
         }
         // Show the submenu of the current menu.
         overMenu = this.id;
         subMenu = dynamic_persistent_menu_get_sub_menu(overMenu);
         $('#' + subMenu).show();
+        $('#' + subMenu).css('z-index', 50);
         $('#' + this.id).addClass('dynamic-persistent-menu-children-active')
     }
     ).mouseout(
@@ -40,7 +42,7 @@ $(document).ready(function()
           }
         }
       ).mouseout(
-dynamic_persistent_menu_set_timeout
+        dynamic_persistent_menu_set_timeout
       )
       return false;
 });
