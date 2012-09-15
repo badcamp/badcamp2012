@@ -22,7 +22,7 @@ li a.active {
 #navigation .inner .region {
 }
 #navigation .inner .region .block {
-  width: 500px;
+  width: 550px;
   margin: 0 auto;
   text-align: center;
   padding: 5px 0;
@@ -33,7 +33,7 @@ li a.active {
   clear: left; /* TODO remove me */
   list-style: none outside none;
   float: none !important;
-  width: 500px;
+  width: 550px;
   height: 45px; /* 25 + 15 + 15 */
   padding: 0;
   margin: 0;
@@ -51,6 +51,7 @@ li a.active {
   line-height: 25px;
   height: 25px; /* 55 - 15 - 15 */ 
   padding: 10px;
+  font-family: superclarendon;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
