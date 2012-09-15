@@ -184,7 +184,7 @@ body.login-dropdown #page-wrapper {
  * Navigation
  */
 /* Show the large menu */
-#navigation #block-nice_menus-1 {
+#navigation #block-dynamic_persistent_menu-0 {
   display: block;
 }
 
@@ -221,18 +221,6 @@ body.no-sidebars #navigation {
   background-color: #8f3c0a;
   text-align: center;
   padding: 0 25px;
-}
-#navigation .region-navigation ul a {
-  line-height: 25px;
-  height: 25px; /* 55 - 15 - 15 */ 
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-#navigation .region-navigation ul ul a {
-  line-height: 20px;
-  height: 20px;
-  padding-top: 5px;
-  padding-bottom: 3px;
 }
 
 
