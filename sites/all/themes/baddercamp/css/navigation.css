@@ -81,6 +81,7 @@ li a.active {
 }
 #navigation ul.dynamic-persistent-menu-sub-menu li a {
   padding: 5px;
+  text-transform: none;
 }
 
 /*
