@@ -31,10 +31,10 @@ stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]  = css/layout-fixed.css
 
 ; Medium- this layout is for tablets
-stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
+;stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min720.css
 
 ; Large- this layout is for desktops
-stylesheets[screen and (min-width: 876px)][] = css/layout-fixed-min876.css
+stylesheets[screen and (min-width: 720px)][] = css/layout-fixed-min876.css
 
 ; Stylesheets ==================================================================
 

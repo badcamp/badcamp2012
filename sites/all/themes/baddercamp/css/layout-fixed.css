@@ -462,7 +462,7 @@ body.front .pane-slideshow-panel-pane-1 {
 width:33%;	
 }
 
-body.front #content{
+body.mobile.front #content{
 	background:#ffffff;
 }
 
