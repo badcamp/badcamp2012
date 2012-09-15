@@ -262,6 +262,27 @@ body.no-sidebars #navigation {
 }
 
 
+/*
+ * Footer
+*/
+#footer {
+  background: transparent url('../images/wood.jpg') 0 100px repeat-x;
+  height: 200px;
+  position: relative;
+  z-index: 10;
+}
+#footer .section #footer-message {
+  margin-top: 105px;
+}
+
+#footer .section {
+  padding: 30px;
+  margin: 0 3em;
+}
+
+#footer-message {
+  text-align: center;
+}
 
 /*
  * Blocks in the sidebar.
@@ -464,6 +485,15 @@ body.front .pane-slideshow-panel-pane-1 {
   text-decoration: none;
 }
 
+.view-attendees .views-field-name{
+	font-style:italic;
+	font-size:12px;
+}
+
+.view-attendees .views-field-value-3{
+	font-size:12px;
+}
+
 /**
  * Sponsors page.
  */
@@ -530,3 +560,4 @@ body.front .pane-slideshow-panel-pane-1 {
 #block-block-7 {
   display: block;
 }
+

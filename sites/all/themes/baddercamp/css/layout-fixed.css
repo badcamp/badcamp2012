@@ -469,3 +469,13 @@ body.mobile.front #content{
 .top-nav-wrapper{
 	background-color:#F4F4F3;
 }
+
+
+/**
+ * Attendees page
+ */
+
+.view-attendees img{
+	width:90%;
+	height:90%;
+}
