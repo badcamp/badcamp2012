@@ -52,6 +52,10 @@ body {
   background: transparent url('../images/bg-skyline.png') center 0 no-repeat;
 }
 
+#header #logo {
+  float: left;
+}
+
 #pirateship{
   display:inline-block;
 }
