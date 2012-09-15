@@ -26,3 +26,4 @@ features[fe_block_settings][] = "menu-primary-links"
 features[fe_block_settings][] = "on_the_web-web"
 features[fe_block_settings][] = "views-badcamp_sponsors-block_1"
 features[fe_block_settings][] = "views-badcamp_sponsors-block_3"
+

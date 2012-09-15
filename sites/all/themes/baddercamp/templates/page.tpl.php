@@ -211,7 +211,7 @@
     </div></div><!-- /#main, /#main-wrapper -->
     </div><!-- /#page-inner -->
     
-    <?php if ($footer || $footer_message || $secondary_links): ?>
+    <?php if ($footer_message): ?>
       <div id="footer"><div class="section">
 
         <?php if ($footer_message): ?>
