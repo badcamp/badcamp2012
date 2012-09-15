@@ -50,6 +50,7 @@ body {
 
 #page-inner {
   background: transparent none;
+  background: transparent url('../images/bg-skyline.png') center 0 no-repeat;
 }
 
 #pirateship{
@@ -61,6 +62,10 @@ body {
  */
 #login-dropdown-pirate {
   display:block;
+}
+
+body.login-dropdown #page-wrapper {
+    background: url("../images/background.png") no-repeat scroll center -28px transparent;
 }
 
 /*

@@ -8,14 +8,14 @@ Drupal.behaviors.typekit = function(context) {
 
 // Login magic
 Drupal.behaviors.badcampLogin = function(context) {
-  $('#magical-login-box-link').bind('click', function(e) {
+	$('#magical-login-box-link').bind('click', function(e) {
 
     // Prevent Default Link Behavior
     e.preventDefault();
 
     // Toggle the Login Box
-    $('#login-dropdown-wrapper').slideToggle('slow');
-
+    $('#login-dropdown-wrapper').slideToggle('slow', function() {});
+		
     // Toggle the Login Text
     var text = $('#magical-login-box-link').text();
     $('#magical-login-box-link').text(text == "Log in" ? "Close" : "Log in");
