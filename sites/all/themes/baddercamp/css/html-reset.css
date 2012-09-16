@@ -652,3 +652,23 @@ h2.pane-title {
   font-family: nimbus-sans-extended;
   text-transform: uppercase;
 }
+
+
+/* profile pages */
+.pane-profile-fields {
+  padding-top: 30px;
+}
+.profile-profile-profile_first {
+  float: left;
+  margin-right: 10px;
+}
+.views-field-model {
+  padding: 25px;
+}
+span.individual20 {
+  display: block;
+  width: 114px;
+  height: 114px;
+  background: transparent url('../images/individualsponsor2012.png') top left no-repeat;
+  text-indent: -9999px;
+}

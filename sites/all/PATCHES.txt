@@ -8,3 +8,7 @@ Contrib:
 dynamic_persistant_menu
 http://drupal.org/node/356761#comment-6482374
 DO NOT UPGRADE THIS MODULE (no link to patch - actually, no patch) 
+
+uc_views
+http://drupal.org/node/1786210#comment-6483876
+Prevent an error on newer versions of PHP
