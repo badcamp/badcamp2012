@@ -648,7 +648,7 @@ h2.pane-title {
 .node-type-event .product-body table td {
   padding: 15px 15px 15px 0;
 }
-.node-type-event .product-body table span.title {
+.node-type-event .product-body table div.event-title {
   font-family: nimbus-sans-extended;
   text-transform: uppercase;
 }

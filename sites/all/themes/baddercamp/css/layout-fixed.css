@@ -475,7 +475,15 @@ body.mobile.front #content{
  * Attendees page
  */
 
-.view-attendees img{
+.view-attendees img {
   width:90%;
   height:90%;
+}
+
+.views-field-name {
+  font-style:italic;
+  font-size:12px;
+}
+.views-field-value-3 {
+  font-size:12px;
 }

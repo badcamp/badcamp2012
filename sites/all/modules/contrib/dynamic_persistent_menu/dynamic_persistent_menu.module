@@ -99,11 +99,7 @@ function theme_dynamic_persistent_menu($menu_name, $mlid, $timeout) {
     if ($link['hidden'] == 0) {
       if($link['has_children']) {
         if ($link['in_active_trail']) {
-          $display = 'block';
           $over_menu_default = $link['mlid'];
-        }
-        else {
-          $display = 'none';
         }
       }
       
@@ -121,7 +117,7 @@ function theme_dynamic_persistent_menu($menu_name, $mlid, $timeout) {
           }
         }
         if ($submenu_items !='') {
-          $submenu .= '<ul class="dynamic-persistent-menu-sub-menu" id="dynamic-persistent-menu-sub-menu'. $link['mlid'] .'" style="display:'. $display  .'">';
+          $submenu .= '<ul class="dynamic-persistent-menu-sub-menu" id="dynamic-persistent-menu-sub-menu'. $link['mlid'] .'" style="display:none">';
           $submenu .= $submenu_items;
           $submenu .= '</ul>';
         }

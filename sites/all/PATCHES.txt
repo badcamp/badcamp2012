@@ -1,0 +1,10 @@
+Core:
+=====
+no patches to maintain
+
+Contrib:
+=========
+
+dynamic_persistant_menu
+http://drupal.org/node/356761#comment-6482374
+DO NOT UPGRADE THIS MODULE (no link to patch - actually, no patch) 
