@@ -662,13 +662,18 @@ h2.pane-title {
   float: left;
   margin-right: 10px;
 }
-.views-field-model {
+
+.view-badges .views-field-nothing {
   padding: 25px;
 }
-span.individual20 {
+.view-badges .views-field-nothing span.field-content {
   display: block;
+  background: transparent url('../images/individualsponsor2012.png') top left no-repeat;
   width: 114px;
   height: 114px;
-  background: transparent url('../images/individualsponsor2012.png') top left no-repeat;
   text-indent: -9999px;
+}
+.view-display-id-panel_pane_1 .views-field-nothing span.field-content {
+  /* make it use the old badge for 2011 */
+  background: transparent url('../images/individualsponsor.png') top left no-repeat;
 }
