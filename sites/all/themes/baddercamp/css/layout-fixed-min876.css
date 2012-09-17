@@ -546,6 +546,27 @@ body.front .pane-slideshow-panel-pane-1 {
   padding: 0;
 }
 
+/* Buy individ sponsorship */
+.pane-buy-sponsorship-panel-pane-1 {
+  background: url("../images/divide.png") no-repeat scroll center top transparent;
+  margin-top: 30px;
+  padding-top: 15px;
+}
+.pane-buy-sponsorship-panel-pane-1 h2.pane-title {
+  border: 0;
+}
+.pane-buy-sponsorship-panel-pane-1 .pane-content {
+  background: url("../images/divide.png") no-repeat scroll center bottom transparent;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+.view-buy-sponsorship .col-first .node {
+  padding-right: 50px;
+}
+.view-buy-sponsorship .build-mode-full {
+  min-height: 150px;
+}
+
 /* unhide blocks */
 #block-badcamp-blimp,
 #block-block-8,
@@ -556,6 +577,11 @@ body.front .pane-slideshow-panel-pane-1 {
 /* put back mising anchors */
 .anchor {
   display: inline;
+}
+
+/* clean up nodes */
+.build-mode-full {
+  min-height: 415px;
 }
 
 /* clean up session add form */

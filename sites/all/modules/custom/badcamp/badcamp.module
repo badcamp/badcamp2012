@@ -174,10 +174,6 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     // Make a 3rd column
     $form['colthree'] = array('#type' => 'fieldset', '#weight' => 20);
 
-    // Add sponsor information
-    // $form['colthree']['profile_individually_sponsor'] = array('#type' => 'checkbox', '#title' => 'I want to individually sponsor BADCamp ($25-$50)');
-
-
     // Update volunteer and job information
     $form['colthree']['profile_volunteer'] = $form['Personal information']['profile_volunteer'];
     unset($form['Personal information']['profile_volunteer']);
@@ -210,8 +206,10 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'comment_form') {
     // Shorten the comment box.
     $form['comment_filter']['comment']['#rows'] = 5;
-    // Change submit button text.
-    $form['submit']['#value'] = t('Post');
+    if (array_key_exists('submit', $form)) {
+      // Change submit button text.
+      $form['submit']['#value'] = t('Post');
+    }
   }
   
   if ($form_id == 'user_login') {
@@ -335,6 +333,9 @@ function badcamp_signup_form() {
   return $form;
 }
 
+/* 
+ * Disable radio button if the user is NOT currently signed up for that event
+ */
 function badcamp_disable_signups($element) {
   // Get the NIDs that are disabled.
   $disabled_nids = array_diff_key($element['#nids'], array_filter($element['#nids']));
@@ -346,6 +347,8 @@ function badcamp_disable_signups($element) {
           $element[$date][$nid]['#disabled'] = TRUE;
           $element[$date][$nid]['#attributes']['disabled'] = 'disabled';
         }
+        // Mark as full.
+        $element[$date][$nid]['#title'] .= ' <span class="full">FULL</span>';
       }
     }
   }

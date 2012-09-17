@@ -454,7 +454,10 @@ span.anchor-right {
 .node .product-info {
   display: none;
 }
-
+/* show for indiv sponsorships */
+.node-type-product .product-info {
+  display: block;
+}
 
 
 /**
@@ -573,6 +576,9 @@ h2.pane-title {
 #badcamp-signup-form .submit-box {
   clear: both;
 }
+.full {
+  color: #8F3C0A;
+}
 
 /**
  * User registration
@@ -640,16 +646,16 @@ h2.pane-title {
   padding-top: 30px;
   background: transparent url('../images/divide.png') top center no-repeat;
 }
-.node-type-event .product-body table {
+.product-body table {
   width: 100%;
 }
-.node-type-event .product-body table tbody tr {
+.product-body table tbody tr {
   border-top: 1px solid #bababa;
 }
-.node-type-event .product-body table td {
+.product-body table td {
   padding: 15px 15px 15px 0;
 }
-.node-type-event .product-body table div.event-title {
+.product-body table div.event-title {
   font-family: nimbus-sans-extended;
   text-transform: uppercase;
 }
