@@ -53,7 +53,7 @@ li a.active {
   display: block;
   line-height: 25px;
   height: 25px; /* 55 - 15 - 15 */ 
-  padding: 10px;
+  padding: 10px 7px;
   font-family: superclarendon;
   color: #fff;
   text-transform: uppercase;
