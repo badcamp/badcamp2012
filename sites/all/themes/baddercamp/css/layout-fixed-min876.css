@@ -586,3 +586,12 @@ div.form-radios div.form-item {
   width: 100%;
   float: none;
 }
+#field_slides_values {
+  width: 100%;
+}
+#field_speakers_values {
+  margin-bottom: 0;
+}
+div.description {
+  font-size: 13px;
+}
