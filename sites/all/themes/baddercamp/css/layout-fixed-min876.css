@@ -562,3 +562,7 @@ body.front .pane-slideshow-panel-pane-1 {
   display: block;
 }
 
+
+.anchor {
+  display: inline;
+}

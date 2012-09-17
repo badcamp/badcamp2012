@@ -706,3 +706,18 @@ h2.pane-title {
 .views-exposed-form .views-submit-button {
   padding: .5em 0 0 0;
 }
+
+/* badcamp submit a sessionlink */
+#block-badcamp-add_session,
+#block-badcamp-add_session_two {
+  background: url("../images/divide.png") no-repeat scroll center top transparent;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+}
+#block-badcamp-add_session .content,
+#block-badcamp-add_session_two .content {
+  background: url("../images/divide.png") no-repeat scroll center bottom transparent;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}

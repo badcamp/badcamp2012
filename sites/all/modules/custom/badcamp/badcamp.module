@@ -14,6 +14,12 @@ function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
     $blocks['signup_form'] = array(
       'info' => t('Signup form'), 
     );
+    $blocks['add_session'] = array(
+      'info' => t('BADCamp session link'), 
+    );
+    $blocks['add_session_two'] = array(
+      'info' => t('BADCamp session link no 2'), 
+    );
     return $blocks;
   }
   elseif ($op == 'view') {
@@ -30,9 +36,41 @@ function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
           'content' => drupal_get_form('badcamp_signup_form'),
         );
         break;
+      case 'add_session':
+        $block = array(
+          'subject' => '', 
+          'content' => badcamp_add_session(),
+        );
+        break;
+      case 'add_session_two':
+        $block = array(
+          'subject' => '', 
+          'content' => badcamp_add_session(),
+        );
+        break;
     }
     return $block;
   }
+}
+
+/**
+ * Determines weather to show the node add link or not.
+ */
+function badcamp_add_session() {
+  global $user;
+  if ($user->uid == 0) {
+    $output = '<div class="add-session logged-out">';
+    $output .= t('Please log in to submit a session of your own.');
+    $output .= '</div>';
+  }
+  else {
+    $output = '<div class="add-session logged-in">';
+    if (user_access('create session content')) {
+      $output .= l(t('Submit a session'), 'node/add/session');
+    }
+    $output .= '</div>';
+  }
+  return $output;
 }
 
 /**
