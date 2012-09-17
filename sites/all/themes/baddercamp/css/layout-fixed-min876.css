@@ -363,6 +363,7 @@ body.no-sidebars #navigation {
 
 body.front .pane-slideshow-panel-pane-1 {
   height: 525px;
+  width: 660px;
   overflow: hidden;
   display: block;
 }
