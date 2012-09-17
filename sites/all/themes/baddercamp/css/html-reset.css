@@ -677,3 +677,21 @@ h2.pane-title {
   /* make it use the old badge for 2011 */
   background: transparent url('../images/individualsponsor.png') top left no-repeat;
 }
+
+
+/* sessions page */
+.view-sessions table thead th {
+  text-transform: uppercase;
+  font-family: nimbus-sans-extended;
+  font-size: 15.5px;
+}
+.view-sessions table tbody tr {
+  border-top: 1px solid #BABABA;
+}
+.view-sessions table tbody tr td {
+  padding: 10px 5px;
+}
+.view-sessions table tbody tr td.views-field-title a:first-of-type {
+  font-family: nimbus-sans-extended;
+  text-transform: uppercase;
+}

@@ -62,8 +62,6 @@ function dynamic_persistent_menu_reset()
   {
     $('#' + dynamic_persistent_menu_get_sub_menu(overMenu)).hide();
     $('#' + overMenu).removeClass('dynamic-persistent-menu-children-active');
-    overMenu = overMenuDefault;
-    $('#' + dynamic_persistent_menu_get_sub_menu(overMenu)).show();
   }
 }
 
