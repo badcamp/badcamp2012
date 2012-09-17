@@ -115,15 +115,6 @@ body.login-dropdown #page-wrapper {
   color: #4f7c8e;
 }
 
-/* #pirateship {
-  position: absolute;
-  right: 60px;
-  bottom: 15px;
-  width: 200px;
-  height: 215px;
-  background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
-} */
-
 .region-header {
   clear: both; /* Clear the logo */
 }

@@ -493,11 +493,12 @@ span.anchor-right {
 
 #pirateship {
   position:absolute;
+  top: 29px;
   right: 60px;
   bottom: 27px;
   display:inline-block;
   width:200px;
-  height:215px;
+  height:210px;
   background: transparent url('../images/pirate-ship.png') bottom center no-repeat;
   -webkit-animation:ship 8000ms infinite both ease-in-out;
   -moz-animation:ship 8000ms infinite both ease-in-out;
