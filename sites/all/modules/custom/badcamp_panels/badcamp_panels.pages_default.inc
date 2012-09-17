@@ -499,18 +499,7 @@ function badcamp_panels_default_page_manager_pages() {
   $page->admin_description = 'register';
   $page->path = 'register';
   $page->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'role',
-        'settings' => array(
-          'rids' => array(
-            0 => 1,
-          ),
-        ),
-        'context' => 'logged-in-user',
-        'not' => FALSE,
-      ),
-    ),
+    'plugins' => array(),
     'logic' => 'and',
   );
   $page->menu = array(
@@ -535,7 +524,7 @@ function badcamp_panels_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'register';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'Register page',
     'no_blocks' => 0,
@@ -545,18 +534,7 @@ function badcamp_panels_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'role',
-          'settings' => array(
-            'rids' => array(
-              0 => 1,
-            ),
-          ),
-          'context' => 'logged-in-user',
-          'not' => FALSE,
-        ),
-      ),
+      'plugins' => array(),
       'logic' => 'and',
     ),
   );
@@ -628,13 +606,28 @@ function badcamp_panels_default_page_manager_pages() {
   $handler->task = 'page';
   $handler->subtask = 'register';
   $handler->handler = 'http_response';
-  $handler->weight = 1;
+  $handler->weight = -30;
   $handler->conf = array(
     'title' => 'Redirect to user',
     'contexts' => array(),
     'relationships' => array(),
     'code' => '301',
     'destination' => 'user',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 2,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['register'] = $page;
