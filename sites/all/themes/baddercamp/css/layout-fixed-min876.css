@@ -562,7 +562,27 @@ body.front .pane-slideshow-panel-pane-1 {
   display: block;
 }
 
-
+/* put back mising anchors */
 .anchor {
   display: inline;
+}
+
+/* clean up session add form */
+fieldset.group-audience {
+  padding: 0 30px;
+}
+fieldset.group-audience div.form-item {
+  width: 50%;
+  float: left;
+  margin: 0;
+}
+div.body-field-wrapper {
+  clear: left;
+}
+div.form-radios {
+  margin: 0 0 1em 0;
+}
+div.form-radios div.form-item {
+  width: 100%;
+  float: none;
 }

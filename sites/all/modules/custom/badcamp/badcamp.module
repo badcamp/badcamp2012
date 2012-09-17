@@ -54,7 +54,7 @@ function badcamp_block($op = 'list', $delta = 0, $edit = array()) {
 }
 
 /**
- * Determines weather to show the node add link or not.
+ * Block view callback: Determines weather to show the node add link or not.
  */
 function badcamp_add_session() {
   global $user;
@@ -95,6 +95,13 @@ function badcamp_display_block() {
   $output = '<div class="badcamp-attendee-count">' . badcamp_get_signup_count() . '</div>';
   $output .= '<div class="badcamp-attending">attending</div>';
   return $output;
+}
+
+/**
+ * Hide ugly stuff on session node form.
+ */
+function badcamp_form_session_node_form_alter(&$form, &$form_state) {
+  $form['revision_information']['#access'] = FALSE;
 }
 
 /**
