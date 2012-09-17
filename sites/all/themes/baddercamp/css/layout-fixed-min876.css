@@ -152,7 +152,8 @@ body.login-dropdown #page-wrapper {
 }
 
 #content-area {
-    margin: 0;
+  margin: 0;
+  padding-bottom: 30px;
 }
 
 #content .section,
