@@ -691,7 +691,7 @@ h2.pane-title {
 .view-sessions table tbody tr td {
   padding: 10px 5px;
 }
-.view-sessions table tbody tr td.views-field-title a:first-of-type {
+.view-sessions table tbody tr td.views-field-title > a:first-of-type {
   font-family: nimbus-sans-extended;
   text-transform: uppercase;
 }
