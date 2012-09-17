@@ -328,7 +328,7 @@ body.no-sidebars #navigation {
   background: transparent url('../images/ropes.png') bottom center no-repeat;
 }
 #block-badcamp-blimp .content {
-  background: transparent url('../images/attending.png') top center no-repeat;
+  background: transparent url('../images/attending.png') bottom center no-repeat;
   -webkit-box-shadow: 0 8px 6px -8px black;
   -moz-box-shadow:    0 8px 6px -8px black;
   box-shadow:         0 8px 6px -8px black;
@@ -337,7 +337,7 @@ body.no-sidebars #navigation {
   margin: 0 -6px 10px -6px;
 }
 #block-badcamp-blimp .content .badcamp-attendee-count {
-  margin: 23px;
+  margin: 32px 0 15px 0;
   font-size: 35px;
 }
 #block-badcamp-blimp .content .badcamp-attending {
