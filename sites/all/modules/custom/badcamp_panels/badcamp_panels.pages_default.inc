@@ -502,18 +502,7 @@ function badcamp_panels_default_page_manager_pages() {
     'plugins' => array(),
     'logic' => 'and',
   );
-  $page->menu = array(
-    'type' => 'normal',
-    'title' => 'Register',
-    'name' => 'primary-links',
-    'weight' => '20',
-    'parent' => array(
-      'type' => 'none',
-      'title' => '',
-      'name' => 'navigation',
-      'weight' => '0',
-    ),
-  );
+  $page->menu = array();
   $page->arguments = array();
   $page->conf = array();
   $page->default_handlers = array();
