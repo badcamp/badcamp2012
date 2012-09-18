@@ -29,7 +29,7 @@ body {
 }
 
 #page-wrapper {
-  background: transparent url('../images/background.png') center -300px no-repeat;
+  background: transparent url('../images/background.jpg') center -300px no-repeat;
 }
 
 #page-wrapper,
@@ -164,6 +164,10 @@ body.login-dropdown #page-wrapper {
 .sidebar-first #content .section {
   padding-left: 0; /* LTR */
   padding-right: 280px; /* LTR */ /* The width + right margin of .region-sidebar-second. */
+}
+
+body.no-sidebars #content .section .section-inner {
+    background: none repeat scroll 0 0 #FFFFFF;
 }
 
 /*

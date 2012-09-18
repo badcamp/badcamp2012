@@ -94,7 +94,7 @@ body {
  */
 #content,
 .no-sidebars #content {
-  background-color:#f4f4f3;
+ /* background-color:#f4f4f3; */
   float: none; /* only one column. */
   margin-left: 0; /* only one column. */
   margin-right: 0; /* only one column. */
@@ -480,4 +480,9 @@ body.mobile.front #content{
 }
 .views-field-value-3 {
   font-size:12px;
+}
+
+.view-attendees .views-row .views-cell img{
+  width:90%;
+  height:auto;
 }
