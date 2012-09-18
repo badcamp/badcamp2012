@@ -281,7 +281,7 @@ function badcamp_signup_form() {
         '#type' => 'markup',
         '#value' => '<p>' . t('Please select wich daily events you would like 
           to attend.  <small>(You may return to this page at any time and change your 
-          choices.)</small>') . '</p>',
+          choices.) The <span class="full">*</span> indicates that the event is FULL.</small>') . '</p>',
       );
       ksort($dates);
       $form['badcamp_signup'] = array(
@@ -322,13 +322,13 @@ function badcamp_signup_form() {
   $form['submit'] = array(
     '#value' => (count($already_signedup_for)) ? t('Update BADCamp Signups') : t('Signup for BADCamp'),
     '#type' => 'submit',
-    '#weight' => 12,
+    '#weight' => 13,
     '#prefix' => '<div class="submit-box">',
     '#suffix' => '</div>',
   );
   
   $form['clear']['#value'] = '<div class="clear-block"></div>';
-  $form['clear']['#weight'] = 13;
+  $form['clear']['#weight'] = 14;
   
   return $form;
 }
@@ -348,7 +348,7 @@ function badcamp_disable_signups($element) {
           $element[$date][$nid]['#attributes']['disabled'] = 'disabled';
         }
         // Mark as full.
-        $element[$date][$nid]['#title'] .= ' <span class="full">FULL</span>';
+        $element[$date][$nid]['#title'] = str_replace('</a>', '<span class="full">*</span></a>', $element[$date][$nid]['#title']);
       }
     }
   }

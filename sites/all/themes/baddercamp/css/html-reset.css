@@ -551,17 +551,28 @@ h2.pane-title {
 #badcamp-signup-form .form-item {
   width: 25%;
   float: left;
-  margin-top: 0;
+  margin: 0;
 }
 #badcamp-registration-events .form-item .form-radios .form-item,
 #badcamp-signup-form .form-item .form-radios .form-item {
   width: auto;
   float: none;
+  margin-bottom: 5px;
 }
 #badcamp-registration-events .form-item .form-radios .form-item label,
 #badcamp-signup-form .form-item .form-radios .form-item label {
   display: block;
   font-size: 11px;
+}
+#badcamp-registration-events .form-item .form-radios .form-item input.form-radio,
+#badcamp-signup-form .form-item .form-radios .form-item input.form-radio {
+  float: left;
+}
+#badcamp-registration-events .form-item .form-radios .form-item a,
+#badcamp-signup-form .form-item .form-radios .form-item a {
+  display: block;
+  margin-left: 18px;
+  line-height: 17px;
 }
 #badcamp-signup-form #edit-profile-volunteer-wrapper {
   clear: both;
@@ -575,9 +586,15 @@ h2.pane-title {
 #user-register .submit-box,
 #badcamp-signup-form .submit-box {
   clear: both;
+  padding-top: 10px;
+}
+.full-block {
+  clear: both;
+  text-align: center;
 }
 .full {
-  color: #8F3C0A;
+  color: #FF0000;
+  font-size: 12px;
 }
 
 /**
