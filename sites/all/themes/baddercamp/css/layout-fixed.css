@@ -59,6 +59,12 @@ body {
   max-width: 80%;
 }
 
+#site-slogan {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 30px;
+}
+
 #header .section {
 }
 
@@ -123,6 +129,7 @@ body {
 #content-area {
  margin: 0 30px;
 }
+
 
 /*
  * Navigation
@@ -486,3 +493,71 @@ body.mobile.front #content{
   width:90%;
   height:auto;
 }
+
+/**
+ * Sponsor page
+ */
+
+
+.page-sponsors .view-badcamp-sponsors .views-field-field-logo-fid img{
+	width:90%;
+	height:auto;
+}
+
+.page-sponsors .region-content-bottom{
+	margin: 0 30px;
+	background:#ffffff;
+}
+
+.page-sponsors #content-area{
+	background:#ffffff;
+}
+
+.view-badcamp-sponsors .view-header h3 {
+  border-bottom: 1px solid #bababa;
+}
+
+.view-badcamp-sponsors .views-row .views-cell .views-field-title a {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #BABABA;
+  font-weight: bold;
+  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  text-decoration: none;
+  font-size: 12px;
+  line-height:18px;
+  margin:10px 0 0;
+}
+
+
+/**
+ * Session Page
+
+
+.view-badcamp-sessions .views-field-title a{
+	 font-family: "Nimbus Sans L",sans-serif;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 5px 0;
+  letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.view-badcamp-sessions .views-field-title p{
+font-size: 14px;
+    line-height: 23px;
+}
+
+.view-badcamp-sessions .views-field-field-track-value{
+		 font-family: "Nimbus Sans L",sans-serif;
+    font-weight: bold;
+    line-height: 23px;
+    padding: 5px 0;
+  letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+  color: #DCB685;
+}
+
+ */

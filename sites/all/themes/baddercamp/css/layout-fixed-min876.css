@@ -283,7 +283,6 @@ body.no-sidebars #navigation {
 
 #footer .section {
   padding: 30px;
-  margin: 0 3em;
 }
 
 #footer-message {
@@ -366,10 +365,10 @@ body.no-sidebars #navigation {
 
 
 body.front .pane-slideshow-panel-pane-1 {
-  height: 525px;
-  width: 660px;
   overflow: hidden;
-  display: block;
+	height:auto;
+	width:100%;
+	display:block;
 }
 .pane-slideshow-panel-pane-1 .view-content {
   height: 495px;
@@ -514,19 +513,6 @@ body.front .pane-slideshow-panel-pane-1 {
 }
 #block-views-badcamp_sponsors-block_3 .view-badcamp-sponsors .views-row .views-field-field-logo-fid {
   height: 87px;
-}
-.view-badcamp-sponsors .views-row .views-cell .views-field-title a {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  color: #BABABA;
-  font-weight: bold;
-  font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-decoration: none;
-  font-size: 12px;
-}
-.view-badcamp-sponsors .view-header h3 {
-  border-bottom: 1px solid #bababa;
 }
 
 /**

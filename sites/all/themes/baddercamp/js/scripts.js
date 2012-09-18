@@ -33,16 +33,16 @@ Drupal.behaviors.badcampMobileNav = function(context) {
     // Collapse the expanded sub menus.
     $(this).find('ul').css('display', 'none').addClass('collapsed');
 
-    $(this).children('a').after('<a class="expand-arrow" href="#">Expand &darr;</a>').siblings('a.expand-arrow').click(function() {
+    $(this).children('a').after('<a class="expand-arrow" href="#">&darr;</a>').siblings('a.expand-arrow').click(function() {
       var $childMenu = $(this).siblings('ul');
 
       if ($childMenu.is('.collapsed')) {
-        $(this).html('Collapse &uarr;');
+        $(this).html('&uarr;');
         $topLevel.siblings('ul:not(.collapsed)').slideUp().addClass('collapsed');
         $childMenu.slideDown().removeClass('collapsed');
       }
       else {
-        $(this).html('Expand &darr;');
+        $(this).html('&darr;');
         $childMenu.slideUp().addClass('collapsed');
       }
       return false;
