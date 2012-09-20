@@ -50,6 +50,13 @@ textarea {
   margin: 0.4em 0;
 }
 
+html.js input.form-autocomplete {
+  background-position: 100% 5px;
+}
+html.js input.throbbing {
+  background-position: 100% -15px; /* LTR */
+}
+
 .form-submit /* The submit button */ {
   color: #f2f2f2;
   background-color: #525a65;

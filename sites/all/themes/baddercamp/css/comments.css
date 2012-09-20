@@ -75,9 +75,9 @@
 }
 
 .comment .submitted /* The "posted by" information */ {
-  float: left;
-  margin: 20px 15px;
-  padding: 15px 0;
+  margin: 10px 15px 10px 100px;
+  padding: 25px 0;
+  border-bottom: 1px solid #BABABA;
 }
 .comment .submitted a {
   color: #333333;
@@ -85,7 +85,6 @@
 
 .comment .content /* Comment's content wrapper */ {
   clear: left;
-  border-top: 1px solid #bababa;
   padding-top: 10px;
 }
 
