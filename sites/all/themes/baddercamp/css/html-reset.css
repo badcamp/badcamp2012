@@ -601,10 +601,15 @@ h2.pane-title {
  * User registration
  */
 #user-register .camp-message {
-  margin: 10px 0 20px 0;
-  padding: 10px 0;
-  font-size: 14px;
-  font-weight: bold;
+  background: url("/sites/all/themes/baddercamp/images/divide.png") no-repeat scroll center top transparent;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+}
+#user-register .camp-message .inner {
+  background: url("/sites/all/themes/baddercamp/images/divide.png") no-repeat scroll center bottom transparent;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
 }
 #user-register .camp-message a {
   text-transform: uppercase;
