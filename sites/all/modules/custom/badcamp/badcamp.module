@@ -3,6 +3,53 @@
 define('BADCAMP_DATE_FORMAT', 'D, M jS');
 
 /**
+ * Implements hook_nodeapi().
+ * Adds the sponsors view to the summit nodes.
+ */
+function badcamp_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'view':
+      if ($node->type == 'event') {
+        $argument = NULL;
+        switch ($node->nid){
+          case 26: // Core
+            $argument = 'core';
+            break;
+          case 27: // NP
+            $argument = 'np';
+            break;
+          case 28: // HE
+            $argument = 'ed';
+            break;
+          case 493: // Biz
+            $argument = 'cash';
+            break;
+          case 496: // Product
+            $argument = 'prod';
+            break;
+          case 497: // UX
+            $argument = 'ux';
+            break;
+          case 498: // Mobile
+            $argument = 'mob';
+            break;
+          case 521: // DevOps
+            $argument = 'devops';
+            break;
+        }
+        if ($argument != NULL) {
+          $output = views_embed_view('badcamp_sponsors', 'panel_pane_2', $argument);
+          $node->content['badcamp_summit_sponsors'] = array(
+            '#value' => $output, 
+            '#weight' => 11,
+          );
+        }
+      }
+      break;
+  }
+}
+
+/**
  * Implements hook_block().
  * Adds a block with the current number of event signups.
  */
@@ -112,7 +159,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     // Add message above form.
     $form['message'] = array(
       '#type' => 'markup',
-      '#value' => '<div class="camp-message">' . t('Already have an account? <a href="@url">Log in</a> to sign up for 2012 events!', array('@url' => url('user/login'))) . '</div>',
+      '#value' => '<div class="camp-message"><div class="inner">' . t('Already have an account? <a href="@url">Log in</a> to sign up for 2012 events!', array('@url' => url('user/login'))) . '</div></div>',
       '#weight' => -11,
     );
 

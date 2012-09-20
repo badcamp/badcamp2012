@@ -493,7 +493,7 @@ body.front .pane-slideshow-panel-pane-1 {
 /**
  * Sponsors page.
  */
-.view-badcamp-sponsors .views-row .views-cell {
+.page-sponsors .view-badcamp-sponsors .views-row .views-cell {
   height: 225px; /* default height */
   overflow: hidden;
   text-align: center;
