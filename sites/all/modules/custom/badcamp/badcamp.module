@@ -326,9 +326,10 @@ function badcamp_signup_form() {
     if ($dates) {
       $form['welcome'] = array(
         '#type' => 'markup',
-        '#value' => '<p>' . t('Please select wich daily events you would like 
-          to attend.  <small>(You may return to this page at any time and change your 
-          choices.) The <span class="full">*</span> indicates that the event is FULL.</small>') . '</p>',
+        '#value' => '<p>' . t('Please select which daily events you would like 
+        to attend.  <small>(You may return to this page at any time and change 
+        your choices.) The <span class="full">*</span> indicates that the 
+        event is FULL.</small>') . '</p>',
       );
       ksort($dates);
       $form['badcamp_signup'] = array(
