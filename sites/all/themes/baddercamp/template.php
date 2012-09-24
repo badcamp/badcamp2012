@@ -103,6 +103,9 @@ function baddercamp_preprocess_page(&$vars, $hook) {
     $vars['account_links'] = l(t('Log in'), 'user/login', array('attributes' => array('id' => 'magical-login-box-link', 'class' => 'closed-box')));
     $vars['account_information'] = '<h2>' . t('Login to your account') . '</h2>' . '<p>' . t('Returning 2011 attendee? Log in now!') . '</p>' . '<p>' . t('Not registered yet? !registration', array('!registration' => l(t('Sign up!'), 'user/register'))) . '</p>';
     $vars['account_box'] = '<h2>' . t('User Login') . '</h2>' . drupal_get_form('baddercamp_user_login');
+
+    // Capture the messages that come back in a less than idael way
+    $vars['messages'] .= theme_status_messages();
   }
   else {
     $vars['account_links'] = l(t('My Profile'), 'user') . ' &middot; ' . l(t('Logout'), 'logout');

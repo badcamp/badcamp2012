@@ -240,7 +240,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
       '#value' => '<div class="small">' .t('When you register for the camp you will be added to our mailing list so we can keep you informed with the latest news.') . '</div>',
     );
   }
-  else if ($form_id == 'user_login_block') {
+  else if ($form_id == 'user_login_block' || $form_id == 'baddercamp_user_login') {
     // remove only create account link.
     $options = array('attributes' => array('title' => 'Request new password via e-mail.'));
     $form['links']['#value'] = l(t('Request new password'), 'user/password');
