@@ -44,6 +44,13 @@ function badcamp_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
             '#weight' => 11,
           );
         }
+        if ($node->nid == 599) {
+          $output = views_embed_view('jobs', 'block');
+          $node->content['badcamp_jobs'] = array(
+            '#value' => $output, 
+            '#weight' => 11,
+          );
+        }
       }
       break;
   }
