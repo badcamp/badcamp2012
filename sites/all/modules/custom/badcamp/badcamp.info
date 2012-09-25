@@ -4,3 +4,5 @@ version = 6.x-1.0
 core = 6.x
 
 package = BADCamp
+
+dependancies[] = badcamp_views

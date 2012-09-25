@@ -635,3 +635,8 @@ div.form-radios div.form-item {
 div.description {
   font-size: 13px;
 }
+
+/* job listings */
+.view-jobs table {
+  width: 100%;
+}

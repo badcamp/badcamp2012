@@ -21,7 +21,7 @@ function badcamp_panels_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Sponsor',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -89,7 +89,7 @@ function badcamp_panels_default_page_manager_handlers() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'sponsor_attendees-panel_pane_1';
+    $pane->subtype = 'jobs-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -102,7 +102,7 @@ function badcamp_panels_default_page_manager_handlers() {
     $pane->position = 1;
     $display->content['new-2'] = $pane;
     $display->panels['middle'][1] = 'new-2';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $handlers['node_view_panel_context'] = $handler;
