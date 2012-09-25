@@ -1,4 +1,4 @@
-/**
+107/**
  * @file
  *
  * This layout is for Desktops.
@@ -105,12 +105,16 @@ body.login-dropdown #page-wrapper {
   margin-right: -820px;
 }
 #site-slogan {
-  background: transparent url('../images/tagline-head.png') top center no-repeat;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 30px;
+ 	background: url("../images/tagline-head.png") no-repeat scroll center top transparent;
+  font-family: nimbus-sans-extended;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 23px;
   margin: 10px;
+  padding: 30px;
+  text-transform: uppercase;
 }
+
 #site-slogan .camp-location {
   color: #4f7c8e;
 }
@@ -205,6 +209,7 @@ body.no-sidebars #content .section .section-inner {
   height: 62px;
   max-width: 748px;
   min-width: 550px;
+  margin-bottom:-7px;
 }
 body.no-sidebars #navigation {
   max-width: 1060px;
@@ -352,6 +357,21 @@ body.no-sidebars #navigation {
   height: 190px;
 }
 
+/* Event block 
+
+.region-sidebar-first .section #block-block-2 .content a{
+	color:#ffffff;
+	text-transform: uppercase;
+	font-size:13px;
+}
+
+.region-sidebar-first .section #block-block-2 .content strong{
+	color:#DCB685;
+	text-transform: uppercase;
+	font-size:13px;
+}
+
+*/
 
 /* all three column views */
 .views-view-grid.col-3 .views-row .views-cell {
@@ -363,12 +383,25 @@ body.no-sidebars #navigation {
  * Home page.
  */
 
+body.front .pane-badcamp-news-panel-pane-1{  
+	background: url("../images/divide.png") no-repeat scroll center top transparent;
+  margin-top: 30px;
+  padding-top: 15px;
+}
 
+body.front .pane-badcamp-news-panel-pane-1 .views-row{
+	background: url("../images/divide.png") no-repeat scroll center bottom transparent;
+	margin-bottom:50px;
+}
 body.front .pane-slideshow-panel-pane-1 {
   overflow: hidden;
 	height:auto;
 	width:100%;
 	display:block;
+}
+
+body.front .product-body{
+	text-align:center;
 }
 .pane-slideshow-panel-pane-1 .view-content {
   height: 495px;
