@@ -1,0 +1,4 @@
+<?php
+
+$conf['file_directory_temp'] = NULL;
+$db_url = 'mysql://root:@localhost/badcamp2012';
