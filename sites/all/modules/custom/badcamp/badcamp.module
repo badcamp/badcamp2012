@@ -213,14 +213,30 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
           'id' => 'badcamp-registration-events'
         ),
       );
+      $optional_nids = array_flip(variable_get('badcamp_signup_optional', array()));
       foreach ($dates_formated as $date => $formated) {
+        $non_optional = array_diff_key($dates[$date], $optional_nids);
+        $optional = array_intersect_key($dates[$date], $optional_nids);
         $form['badcamp_signup'][$date] = array(
           '#type' => 'radios',
-          '#options' => array('' => t('None')) + $dates[$date],
+          '#options' => array('' => t('None')) + $non_optional,
           '#title' => $formated,
           // Hard coded saturday and sunday
           '#default_value' => !empty($dates[$date][3]) ? 3 : (!empty($dates[$date][490]) ? 490 : ''),
+          '#prefix' => '<div class="badcamp-signup-date">',
         );
+        if ($optional) {
+          $form['badcamp_signup'][$date . '_optional'] = array(
+            '#type' => 'checkboxes',
+            '#default_value' => array_intersect(array_keys($optional), $already_signedup_for),
+            '#options' => $optional,
+            '#suffix' => '</div>',
+            '#badcamp_date' => $date,
+          );
+        }
+        else {
+          $form['badcamp_signup'][$date]['#suffix'] = '</div>';
+        }
         $form['#validate'][] = 'badcamp_user_register_combine_signups';
       }
     }
@@ -285,7 +301,12 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
 function badcamp_user_register_combine_signups($form, &$form_state) {
   $signups = array();
   foreach ($form_state['values']['badcamp_signup'] as $date => $value) {
-    if ($value) {
+    if (is_array($value)) {
+      foreach (array_filter($value) as $nid) {
+        $signups[$nid] = 1;
+      }
+    }
+    elseif ($value) {
       $signups[$value] = 1;
     }
   }
