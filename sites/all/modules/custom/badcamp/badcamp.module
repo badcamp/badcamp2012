@@ -299,9 +299,15 @@ function badcamp_user_register_combine_signups($form, &$form_state) {
 function badcamp_signup_sign_up($node, $account) {
   $canceled = 0;
   $notify = arg(0) == 'node';
+  if (in_array($node->nid, variable_get('badcamp_signup_optional', array()))) {
+    return;
+  }
   if (!empty($node->field_dates[0]['value']) && $account->uid && ($date = date_format_date($node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT))) {
     $result = db_query('SELECT nid, sid FROM {signup_log} WHERE uid = %d', $account->uid);
     while ($row = db_fetch_object($result)) {
+      if (in_array($row->nid, variable_get('badcamp_signup_optional', array()))) {
+        continue;
+      }
       $existing_signup_node = node_load($row->nid);
       if (!empty($existing_signup_node->field_dates[0]['value']) && ($date2 = date_format_date($existing_signup_node->field_dates[0]['value'], 'custom', BADCAMP_DATE_FORMAT)) && ($date2 === $date)) {
         signup_cancel_signup($row->sid, $notify);
@@ -320,6 +326,7 @@ function badcamp_signup_form() {
   while ($row = db_fetch_object($query)) {
     $nids[$row->nid] = $row->status;
   }
+  $optional_nids = array_flip(variable_get('badcamp_signup_optional', array()));
   // If there is at least one node, add the Signup fieldset.
   if (!empty($nids)) {
     // Each node gets a checkbox.
@@ -353,12 +360,26 @@ function badcamp_signup_form() {
         ),
       );
       foreach ($dates as $date => $options) {
+        $non_optional = array_diff_key($options, $optional_nids);
+        $optional = array_intersect_key($options, $optional_nids);
         $form['badcamp_signup'][$date] = array(
           '#type' => 'radios',
-          '#options' => array('' => t('None')) + $options,
+          '#options' => array('' => t('None')) + $non_optional,
           '#title' => $dates_formated[$date],
-          '#default_value' => reset(array_intersect(array_keys($options), $already_signedup_for)),
+          '#default_value' => reset(array_intersect(array_keys($non_optional), $already_signedup_for)),
+          '#prefix' => '<div class="badcamp-signup-date">',
         );
+        if ($optional) {
+          $form['badcamp_signup'][$date . '_optional'] = array(
+            '#type' => 'checkboxes',
+            '#default_value' => array_intersect(array_keys($optional), $already_signedup_for),
+            '#options' => $optional,
+            '#suffix' => '</div>',
+          );
+        }
+        else {
+          $form['badcamp_signup'][$date]['#suffix'] = '</div>';
+        }
       }
       $form['#signedup_for'] = $already_signedup_for;
       // If any disabled nids, need to disable them.
@@ -413,6 +434,17 @@ function badcamp_disable_signups($element) {
         $element[$date][$nid]['#title'] = str_replace('</a>', '<span class="full">*</span></a>', $element[$date][$nid]['#title']);
       }
     }
+    if (!empty($element[$date . '_optional']) && ($nids = array_intersect_key($disabled_nids, $element[$date . '_optional']))) {
+      foreach (array_keys($nids) as $nid) {
+        // If the user isn't currently signed up for this event, disable it.
+        if (!in_array($nid, $element[$date . '_optional']['#default_value'])) {
+          $element[$date . '_optional'][$nid]['#disabled'] = TRUE;
+          $element[$date . '_optional'][$nid]['#attributes']['disabled'] = 'disabled';
+        }
+        // Mark as full.
+        $element[$date . '_optional'][$nid]['#title'] = str_replace('</a>', '<span class="full">*</span></a>', $element[$date][$nid]['#title']);
+      }
+    }
   }
   return $element;
 }
@@ -426,14 +458,28 @@ function badcamp_disable_signups($element) {
 function badcamp_signup_form_submit($form, &$form_state) {
   global $user;
   foreach ($form_state['values']['badcamp_signup'] as $date => $nid) {
-    if ($nid && !in_array($nid, $form['#signedup_for'])) {
-      signup_sign_up_user(array('uid' => $user->uid, 'nid' => $nid));
+    if ($form['badcamp_signup'][$date]['#type'] == 'checkboxes') {
+      foreach ($nid as $n => $signedup) {
+        if ($signedup && !in_array($n, $form['#signedup_for'])) {
+          signup_sign_up_user(array('uid' => $user->uid, 'nid' => $n));
+        }
+        elseif (!$signedup) {
+          if ($sid = db_result(db_query('SELECT sid FROM {signup_log} WHERE uid = %d AND nid = %d', $user->uid, $n))) {
+            signup_cancel_signup($sid, FALSE);
+          }
+        }
+      }
     }
-    // 
-    elseif (!$nid && !empty($form['badcamp_signup'][$date]['#default_value'])) {
-      if ($sid = db_result(db_query('SELECT sid FROM {signup_log} WHERE uid = %d AND nid = %d', $user->uid, $form['badcamp_signup'][$date]['#default_value']))) {
-        // The join takes uid and nid, the cancel takes just sid. Inconstant!
-        signup_cancel_signup($sid, FALSE);
+    else {
+      if ($nid && !in_array($nid, $form['#signedup_for'])) {
+        signup_sign_up_user(array('uid' => $user->uid, 'nid' => $nid));
+      }
+      // 
+      elseif (!$nid && !empty($form['badcamp_signup'][$date]['#default_value'])) {
+        if ($sid = db_result(db_query('SELECT sid FROM {signup_log} WHERE uid = %d AND nid = %d', $user->uid, $form['badcamp_signup'][$date]['#default_value']))) {
+          // The join takes uid and nid, the cancel takes just sid. Inconstant!
+          signup_cancel_signup($sid, FALSE);
+        }
       }
     }
   }
