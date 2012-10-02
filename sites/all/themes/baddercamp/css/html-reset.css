@@ -547,28 +547,36 @@ h2.pane-title {
   color: #447b97;
   border-bottom: 1px solid #bababa;
 }
-#badcamp-registration-events .form-item,
-#badcamp-signup-form .form-item {
+#badcamp-registration-events .badcamp-signup-date,
+#badcamp-signup-form .badcamp-signup-date {
   width: 25%;
   float: left;
   margin: 0;
 }
+#badcamp-registration-events .form-checkboxes .form-item,
 #badcamp-registration-events .form-item .form-radios .form-item,
+#badcamp-signup-form .form-checkboxes .form-item,
 #badcamp-signup-form .form-item .form-radios .form-item {
   width: auto;
   float: none;
   margin-bottom: 5px;
 }
+#badcamp-registration-events .form-checkboxes .form-item label,
 #badcamp-registration-events .form-item .form-radios .form-item label,
+#badcamp-signup-form .form-checkboxes .form-item label,
 #badcamp-signup-form .form-item .form-radios .form-item label {
   display: block;
   font-size: 11px;
 }
+#badcamp-registration-events .form-checkboxs .form-item input.form-checkbox,
 #badcamp-registration-events .form-item .form-radios .form-item input.form-radio,
+#badcamp-signup-form .form-checkboxes .form-item input.form-checkbox,
 #badcamp-signup-form .form-item .form-radios .form-item input.form-radio {
   float: left;
 }
+#badcamp-registration-events .form-checkboxes .form-item a,
 #badcamp-registration-events .form-item .form-radios .form-item a,
+#badcamp-signup-form .form-checkboxes .form-item a,
 #badcamp-signup-form .form-item .form-radios .form-item a {
   display: block;
   margin-left: 20px;
