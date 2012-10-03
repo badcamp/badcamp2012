@@ -105,9 +105,8 @@ body.login-dropdown #page-wrapper {
   margin-right: -820px;
 }
 #site-slogan {
- 	background: url("../images/tagline-head.png") no-repeat scroll center top transparent;
+  background: url("../images/tagline-head.png") no-repeat scroll center top transparent;
   font-family: nimbus-sans-extended;
-  font-size: 13px;
   letter-spacing: 0;
   line-height: 23px;
   margin: 10px;
@@ -360,15 +359,15 @@ body.no-sidebars #navigation {
 /* Event block 
 
 .region-sidebar-first .section #block-block-2 .content a{
-	color:#ffffff;
-	text-transform: uppercase;
-	font-size:13px;
+  color:#ffffff;
+  text-transform: uppercase;
+  font-size:13px;
 }
 
 .region-sidebar-first .section #block-block-2 .content strong{
-	color:#DCB685;
-	text-transform: uppercase;
-	font-size:13px;
+  color:#DCB685;
+  text-transform: uppercase;
+  font-size:13px;
 }
 
 */
@@ -384,24 +383,24 @@ body.no-sidebars #navigation {
  */
 
 body.front .pane-badcamp-news-panel-pane-1{  
-	background: url("../images/divide.png") no-repeat scroll center top transparent;
+  background: url("../images/divide.png") no-repeat scroll center top transparent;
   margin-top: 30px;
   padding-top: 15px;
 }
 
 body.front .pane-badcamp-news-panel-pane-1 .views-row{
-	background: url("../images/divide.png") no-repeat scroll center bottom transparent;
-	margin-bottom:50px;
+  background: url("../images/divide.png") no-repeat scroll center bottom transparent;
+  margin-bottom:50px;
 }
 body.front .pane-slideshow-panel-pane-1 {
   overflow: hidden;
-	height:auto;
-	width:100%;
-	display:block;
+  height:auto;
+  width:100%;
+  display:block;
 }
 
 body.front .product-body{
-	text-align:center;
+  text-align:center;
 }
 .pane-slideshow-panel-pane-1 .view-content {
   height: 495px;
