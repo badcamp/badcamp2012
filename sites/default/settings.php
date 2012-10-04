@@ -275,3 +275,13 @@ ini_set('error_reporting', E_ALL & !E_NOTICE);
 if (file_exists('../pantheon6.settings.php')) {
     include_once '../pantheon6.settings.php';
 }
+
+/* Redirect to 2012.badcamp.net */
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+  if ($_SERVER['HTTP_HOST'] == 'badcamp.net' || $_SERVER['HTTP_HOST'] == 'live.badcamp2012.gotpantheon.com') {
+    header('HTTP/1.0 301 Moved Permanently'); 
+    header('Location: http://2012.badcamp.net'. $_SERVER['REQUEST_URI']); 
+    exit();
+  }
+}
+
