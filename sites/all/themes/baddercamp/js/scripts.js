@@ -83,3 +83,16 @@ Drupal.behaviors.mobileclass = function (context) {
 // pass mobile class on both doc ready and window resize
 $(document).ready(Drupal.behaviors.mobileclass);
 $(window).resize(Drupal.behaviors.mobileclass);
+
+
+Drupal.behaviors.fancytables = function(context) {
+  if($('body').is('.page-program-schedule')) {
+
+    // make a proper thead element for this shit
+    $('<thead />').insertBefore('.session-calendar > tbody');
+
+    // COD doesn't provide fucking ids for the individual tables, jesus
+    $('.view-content table:nth-child(2)').attr('id', 'saturday-schedule');
+    $('.view-content table:nth-child(4)').attr('id', 'sunday-schedule');
+  }
+}
