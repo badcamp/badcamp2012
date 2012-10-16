@@ -66,6 +66,10 @@ body {
   font-size:.9em;
 }
 
+#name-and-slogan {
+  display:none;
+}
+
 #header .section {
 }
 
@@ -500,7 +504,7 @@ body.mobile.front #content{
  */
 
 
-.view-badcamp-sponsors .views-field-field-logo-fid img{
+.page-sponsors .view-badcamp-sponsors .views-field-field-logo-fid img{
 	width:90%;
 	height:auto;
 }
@@ -608,9 +612,14 @@ font-size: 14px;
   font-weight: normal;
 }
 
-.session-calendar th {
+.session-calendar th, .tablescroll th {
   font-family: nimbus-sans-condensed, Helvetica, Arial;
   padding:10px;
+  width:170px;
+}
+
+thead tr :first-child {
+  width:36px;
 }
 
 .session-calendar tr.odd {
@@ -620,6 +629,7 @@ font-size: 14px;
 .view-cod-schedule > .view-content {
   width:100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch
 }
 
 

@@ -94,5 +94,13 @@ Drupal.behaviors.fancytables = function(context) {
     // COD doesn't provide fucking ids for the individual tables, jesus
     $('.view-content table:nth-child(2)').attr('id', 'saturday-schedule');
     $('.view-content table:nth-child(4)').attr('id', 'sunday-schedule');
+
+    $('#saturday-schedule thead').append($('#saturday-schedule tbody tr:first-child'));
+    $('#sunday-schedule thead').append($('#sunday-schedule tbody tr:first-child'));
+
+    if ($('body').is('.mobile')) {
+      //$('#saturday-schedule').tableScroll({height:300});
+      //$('#sunday-schedule').tableScroll({height:300});
+    }
   }
 }
