@@ -589,7 +589,7 @@ font-size: 14px;
 }
 
 #saturday-schedule strong, #sunday-schedule strong {
-  letter-spacing: -.5px;
+  letter-spacing: -1px;
 }
 
 .views-field-field-experience-value {
@@ -622,8 +622,11 @@ font-size: 14px;
 
 
 .type-session, .type-schedule_item {
-  width:160px;
   padding: 10px;
+}
+
+.type-session {
+  width: 170px;
 }
 
 .views-field-field-experience-value div {
