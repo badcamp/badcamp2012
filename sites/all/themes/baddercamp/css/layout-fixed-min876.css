@@ -29,7 +29,10 @@ body {
 }
 
 #page-wrapper {
-  background: transparent url('../images/background.jpg') center -300px no-repeat;
+  background: 
+		url('../images/background.jpg') center -300px no-repeat,
+		url('../images/bg-repeat.png') center 0 repeat-y;
+	background-color:#E5E0DE;
 }
 
 #page-wrapper,
