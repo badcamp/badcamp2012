@@ -594,6 +594,7 @@ font-size: 14px;
 
 .views-field-field-experience-value {
   font-style:italic;
+  font-size: .9em;
 }
 
 .session-calendar td {
@@ -626,7 +627,7 @@ font-size: 14px;
 }
 
 .type-session {
-  width: 185px;
+  width: 170px;
 }
 
 .views-field-field-experience-value div {
