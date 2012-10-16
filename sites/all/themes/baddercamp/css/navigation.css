@@ -55,7 +55,7 @@ li a.active {
   line-height: 25px;
   height: 25px; /* 55 - 15 - 15 */ 
   padding: 10px 15px;
-  font-family: Georgia,serif;
+  font-family: superclarendon, Georgia,serif;
   color: #fff;
   text-transform: uppercase;
 }
