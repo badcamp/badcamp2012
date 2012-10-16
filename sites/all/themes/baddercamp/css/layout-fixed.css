@@ -624,6 +624,7 @@ thead tr :first-child {
 .view-cod-schedule > .view-content {
   width:100%;
   overflow: auto;
+  -webkit-overflow-scrolling: touch
 }
 
 
