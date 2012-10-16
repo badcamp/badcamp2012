@@ -99,8 +99,8 @@ Drupal.behaviors.fancytables = function(context) {
     $('#sunday-schedule thead').append($('#sunday-schedule tbody tr:first-child'));
 
     if ($('body').is('.mobile')) {
-      $('#saturday-schedule').tableScroll({height:300});
-      $('#sunday-schedule').tableScroll({height:300});
+      //$('#saturday-schedule').tableScroll({height:300});
+      //$('#sunday-schedule').tableScroll({height:300});
     }
   }
 }

@@ -65,6 +65,10 @@ body {
   padding: 0 30px;
 }
 
+#name-and-slogan {
+  display:none;
+}
+
 #header .section {
 }
 

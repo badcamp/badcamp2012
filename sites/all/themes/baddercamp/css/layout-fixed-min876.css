@@ -60,6 +60,10 @@ body {
   display:inline-block;
 }
 
+#name-and-slogan {
+  display:block;
+}
+
 /*
  * Pre-header login block 
  */
