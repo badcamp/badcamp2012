@@ -584,6 +584,18 @@ font-size: 14px;
  * Session page
  **/
 
+#saturday-schedule, #sunday-schedule {
+  line-height:1.29em;
+}
+
+#saturday-schedule strong, #sunday-schedule strong {
+  letter-spacing: -.5px;
+}
+
+.views-field-field-experience-value {
+  font-style:italic;
+}
+
 .session-calendar td {
   font-family: nimbus-sans-condensed, Helvetica, Arial;
 }
@@ -599,7 +611,8 @@ font-size: 14px;
   padding:10px;
 }
 
-.session-calendar tr {
+.session-calendar tr.odd {
+  background-color: #fff;
 }
 
 .view-cod-schedule > .view-content {
@@ -607,8 +620,9 @@ font-size: 14px;
   overflow: auto;
 }
 
+
 .type-session, .type-schedule_item {
-  min-width:150px;
+  width:160px;
   padding: 10px;
 }
 
