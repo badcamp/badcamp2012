@@ -58,6 +58,7 @@ li a.active {
   font-family: superclarendon, Georgia,serif;
   color: #fff;
   text-transform: uppercase;
+  font-size:14px;
 }
 #navigation ul ul a {
   line-height: 20px;
