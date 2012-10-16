@@ -499,7 +499,7 @@ body.mobile.front #content{
  */
 
 
-.view-badcamp-sponsors .views-field-field-logo-fid img{
+.page-sponsors .view-badcamp-sponsors .views-field-field-logo-fid img{
 	width:90%;
 	height:auto;
 }
@@ -607,9 +607,14 @@ font-size: 14px;
   font-weight: normal;
 }
 
-.session-calendar th {
+.session-calendar th, .tablescroll th {
   font-family: nimbus-sans-condensed, Helvetica, Arial;
   padding:10px;
+  width:170px;
+}
+
+thead tr :first-child {
+  width:36px;
 }
 
 .session-calendar tr.odd {
