@@ -276,7 +276,7 @@ function badcamp_form_alter(&$form, &$form_state, $form_id) {
     $form['links']['#value'] = l(t('Request new password'), 'user/password');
     
     // unset destination parameter
-    $form['#action'] = 'register';
+    $form['#action'] = url('register');
   }
 
   // Comment form.
