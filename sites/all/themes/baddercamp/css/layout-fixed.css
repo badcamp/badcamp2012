@@ -673,7 +673,8 @@ thead tr :first-child {
 .page-program-schedule ul.primary li a,
 .page-program-schedule-all ul.primary li a,
 .page-program-schedule-sunday ul.primary li a,
-.page-program-schedule-saturday ul.primary li a{
+.page-program-schedule-saturday ul.primary li a,
+.page-program-schedule-your-schedule ul.primary li a{
 	background: #fff;
 	border-width: 0;
 	color: #333333;
@@ -690,21 +691,24 @@ thead tr :first-child {
 .page-program-schedule ul.primary li a .tab,
 .page-program-schedule-all ul.primary li a .tab,
 .page-program-schedule-sunday ul.primary li a .tab,
-.page-program-schedule-saturday ul.primary li a .tab{
+.page-program-schedule-saturday ul.primary li a .tab,
+.page-program-schedule-your-schedule li a .tab{
 	background:none;
 }
 
 .page-program-schedule ul.primary,
 .page-program-schedule-all ul.primary,
 .page-program-schedule-sunday ul.primary,
-.page-program-schedule-saturday ul.primary{
+.page-program-schedule-saturday ul.primary,
+.page-program-schedule-your-schedule ul.primary{
 	background:none;
 }
 
 .page-program-schedule  div.tabs,
 .page-program-schedule-all  div.tabs,
 .page-program-schedule-sunday  div.tabs,
-.page-program-schedule-saturday  div.tabs{
+.page-program-schedule-saturday  div.tabs,
+.page-program-schedule-your-schedule  div.tabs{
 	margin: 14px auto;
 	border-bottom: 1px solid #DDDDDD;
 }
