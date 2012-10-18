@@ -645,3 +645,66 @@ thead tr :first-child {
   display:inline;
   padding-right: .25em;
 }
+
+
+/**
+ * Session page round 2
+ **/
+
+.view-codschedule h3{
+	background-color: #2A85B0;
+	color: #FFFFFF;
+	padding: 3px;
+	margin:0;
+}
+
+.view-codschedule .views-row{
+	padding:15px;
+	border: 1px solid #EEEEEE;
+}
+
+.view-codschedule .views-row-even{
+	background:#EEEEEE;
+}
+
+.view-codschedule .views-row-odd{
+}
+
+.page-program-schedule ul.primary li a,
+.page-program-schedule-all ul.primary li a,
+.page-program-schedule-sunday ul.primary li a,
+.page-program-schedule-saturday ul.primary li a{
+	background: #fff;
+	border-width: 0;
+	color: #333333;
+	display: block;
+	font-weight: normal;
+	font-family:nimbus-sans-extended;
+	height: 24px;
+	margin: 0;
+	padding: 0 0 0 5px;
+	font-size:14px;
+	text-decoration: none;
+}
+
+.page-program-schedule ul.primary li a .tab,
+.page-program-schedule-all ul.primary li a .tab,
+.page-program-schedule-sunday ul.primary li a .tab,
+.page-program-schedule-saturday ul.primary li a .tab{
+	background:none;
+}
+
+.page-program-schedule ul.primary,
+.page-program-schedule-all ul.primary,
+.page-program-schedule-sunday ul.primary,
+.page-program-schedule-saturday ul.primary{
+	background:none;
+}
+
+.page-program-schedule  div.tabs,
+.page-program-schedule-all  div.tabs,
+.page-program-schedule-sunday  div.tabs,
+.page-program-schedule-saturday  div.tabs{
+	margin: 14px auto;
+	border-bottom: 1px solid #DDDDDD;
+}
