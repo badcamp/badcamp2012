@@ -670,6 +670,16 @@ thead tr :first-child {
 .view-codschedule .views-row-odd{
 }
 
+.view-codschedule .views-field-field-session-room-nid{
+   background: none repeat scroll 0 0 #43474A;
+    border-radius: 2px 2px 2px 2px;
+    color: #ffffff;
+    float: right;
+    font-family: nimbus-sans-extended;
+    font-size: 15px;
+    padding: 5px;
+}
+
 .page-program-schedule ul.primary li a,
 .page-program-schedule-all ul.primary li a,
 .page-program-schedule-sunday ul.primary li a,
