@@ -654,7 +654,7 @@ thead tr :first-child {
 .view-codschedule h3{
 	background-color: #2A85B0;
 	color: #FFFFFF;
-	padding: 3px;
+	padding: 3px 3px 3px 15px;
 	margin:0;
 }
 
@@ -670,7 +670,7 @@ thead tr :first-child {
 .view-codschedule .views-row-odd{
 }
 
-.view-codschedule .views-field-field-session-room-nid{
+.view-codschedule .views-field-field-session-room-nid .field-content{
    background: none repeat scroll 0 0 #43474A;
     border-radius: 2px 2px 2px 2px;
     color: #ffffff;
@@ -731,4 +731,9 @@ thead tr :first-child {
 	text-transform: uppercase;
 	line-height:19px;
 	letter-spacing:-1px;
+}
+
+body.page-program-schedule{
+	width: 90%;
+	margin: 50px auto;
 }
