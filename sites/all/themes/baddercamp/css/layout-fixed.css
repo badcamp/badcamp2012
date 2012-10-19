@@ -733,7 +733,7 @@ thead tr :first-child {
 	letter-spacing:-1px;
 }
 
-body.page-program-schedule{
+body.page-program-schedule-grid{
 	width: 90%;
 	margin: 50px auto;
 }
