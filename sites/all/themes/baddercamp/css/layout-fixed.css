@@ -606,7 +606,7 @@ font-size: 14px;
   font-family: nimbus-sans-condensed, Helvetica, Arial;
 }
 
-.view-cod-schedule h2 {
+.view-codschedule h2 {
   font-family: nimbus-sans-extended, Helvetica, Arial;
   font-size: 1.5em;
   font-weight: normal;
@@ -626,7 +626,7 @@ thead tr :first-child {
   background-color: #fff;
 }
 
-.view-cod-schedule > .view-content {
+.view-codschedule > .view-content {
   width:100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch
