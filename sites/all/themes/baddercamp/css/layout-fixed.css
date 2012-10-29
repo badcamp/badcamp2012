@@ -736,3 +736,7 @@ body.page-program-schedule-grid{
 	width: 90%;
 	margin: 50px auto;
 }
+
+.front .view-badcamp-sponsors{
+	display:none;
+}

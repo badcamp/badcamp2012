@@ -128,14 +128,17 @@ function baddercamp_preprocess_page(&$vars, $hook) {
     $vars['title'] = 'Register for BADCamp 2012!';
   }
 
-  // The magic that adds anchors around the page titles.
-  if ($vars['title'] != '') {
+//Removing as per Darius's request- mks
+// The magic that adds anchors around the page titles.
+
+ /** if ($vars['title'] != '') {
     $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . trim($vars['title']) . '<span class="anchor anchor-right">&nbsp;</span>';
   }
   else {
     $vars['title'] = '<span class="anchor anchor-left">&nbsp;</span>' . t('BADCamp 2012') . '<span class="anchor anchor-right">&nbsp;</span>';
   }
 }
+**/
 
 /**
  * Super special user login form for BADCamp super login header.
