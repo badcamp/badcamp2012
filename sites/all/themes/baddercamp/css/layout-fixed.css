@@ -740,3 +740,7 @@ body.page-program-schedule-grid{
 .front .view-badcamp-sponsors{
 	display:none;
 }
+
+.logged-in.mobile .pane-profile-fields{
+	margin-left:32px;
+}
