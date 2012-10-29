@@ -167,7 +167,7 @@ display:none;
  * Primary Menu
  */
 #top-navigation{
-  margin:50px 30px 0;
+  margin:50px 5px 0;
 }
 
 #top-navigation{
@@ -206,7 +206,7 @@ display:none;
 
 #block-menu-primary-links ul {
   margin:0;
-  padding:0 33px;
+  padding:0 5px;
 
 }
 #block-menu-primary-links ul a {
@@ -242,11 +242,11 @@ display:none;
 }
 
 #block-menu-primary-links ul a.expand-arrow {
+  position: absolute;
   display: inline;
   padding: 0 10px;
   margin: 0;
   top: 0;
-  right: 0;
   border: 0;
   text-transform: lowercase;
   font-size: 90%;
