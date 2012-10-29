@@ -242,7 +242,6 @@ display:none;
 }
 
 #block-menu-primary-links ul a.expand-arrow {
-  position: absolute;
   display: inline;
   padding: 0 10px;
   margin: 0;
