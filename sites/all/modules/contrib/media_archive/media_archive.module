@@ -101,15 +101,17 @@ function media_archive_request_xml($provider, $url, $args = array(), $cached = T
  * Construct flowplayer style playlist from one or more files
  */
 function _media_archive_flowplayer_playlist($playlist) {
-  foreach ($playlist as $key => $url) {
-    //First item doesn't play automatically
-    if ($key==0) {
-      $fpplaylist["$key"]="{\"url\":\"$url\",\"autoplay\":false}";
+  if (is_array($playlist)) {
+    foreach ($playlist as $key => $url) {
+      //First item doesn't play automatically
+      if ($key==0) {
+        $fpplaylist["$key"]="{\"url\":\"$url\",\"autoplay\":false}";
+      }
+      else {
+        $fpplaylist["$key"]="{\"url\":\"$url\",\"autoplay\":true}";
+      }
     }
-    else {
-      $fpplaylist["$key"]="{\"url\":\"$url\",\"autoplay\":true}";
-    }
+    $output = implode(",\n", $fpplaylist);
   }
-  $output = implode(",\n", $fpplaylist);
   return $output;
 }
