@@ -222,12 +222,24 @@ function baddercamp_preprocess_block(&$vars, $hook) {
 // */
 
 /**
+ * Theme override for archive.org media plugin
+ */
+function baddercamp_emvideo_archive_flash($item, $width, $height, $autoplay) {
+  $embed = str_replace('details', 'embed', $item['embed']);
+  $output = '<iframe src="' . $embed . '" width="' . $width . '" height="' . $height . '" frameborder="0"></iframe>';
+  return $output;
+}
+
+
+/**
  * Call site-external TypeKit js
  * 
  * see invocation in scripts.js
  *
  **/
-drupal_set_html_head('<script type="text/javascript" src="//use.typekit.net/xes0fnw.js"></script>');
+//drupal_set_html_head('<script type="text/javascript" src="//use.typekit.net/xes0fnw.js"></script>');
 
 // site JS call goes in the footer
 drupal_add_js(drupal_get_path('theme', 'baddercamp') .'/js/scripts.js', 'theme', 'footer');
+
+
